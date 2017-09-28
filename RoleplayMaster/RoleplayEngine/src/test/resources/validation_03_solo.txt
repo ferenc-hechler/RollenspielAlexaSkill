@@ -1,0 +1,9 @@
+TITEL: validation_03_solo
+
+[BEGINN]
+Validierungstest, nicht vorhandanes Kapiel wird referenziert.
+WEITER: [2]
+
+[ENDE]
+Und Schluss.
+

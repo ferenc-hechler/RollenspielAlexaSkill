@@ -1,0 +1,3 @@
+Wilkommen zum Abenteuer 'Voices' von feri
+
+Sagt der Mann: VOICE(volume=&QUOT;+1dB&QUOT; pitch=&QUOT;-15%&QUOT; rate=&QUOT;97%&QUOT;|Hallo Frau!) Darauf die Frau: VOICE(volume=&QUOT;-1dB&QUOT; pitch=&QUOT;+20%&QUOT; rate=&QUOT;105%&QUOT;|Oh, hallo Mann!) Das wars auch schon.

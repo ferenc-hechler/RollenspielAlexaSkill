@@ -1,0 +1,283 @@
+TITEL: Tolkien Rätsel
+AUTOR: J.R.R Tolien, gesammelt von Angela und Otto Janko
+DAUER: 30 Minuten
+LETZTEAKTUALISIERUNG: 28. Februar 2017 
+WEBSEITE: http://www.janko.at/Raetsel/Gedichte/index.htm
+
+KURZBESCHREIBUNG:
+Dies ist eine Sammlung von Rätseln aus den Tolkien Geschichten, gesammelt von Angela und Otto Janko.
+
+
+[BEGINN]
+JANEINENTSCHEIDUNG:
+Möchtest Du Hilfen bekommen, wenn Du falsch rätst?
+JA: [H0]
+NEIN: [N0]
+
+
+[N0]
+Du möchtest also die Rätsel ganz ohne Tipps lösen.
+Ich lese dir das Rätsel vor und danach musst du die Lösung sagen.
+Die Lösung besteht immer nur aus einem Wort.
+Möchtest Du das Rätsel nochmal gesagt bekommen, dann sage statt der Lösung die beiden Wörter: 'Wiederhole Rätsel'.
+Möchtest Du Aufgeben, dann sage das Wort 'Aufgeben', es wird dann mit dem nächsten Rätsel fortgesetzt.
+Um die Tolkien Rätsel komplett zu beenden sage: 'Aufhören'.
+Sollte Alexa sich beenden, weil du etwas länger nachdenkst, dann sage einfach 'Alexa starte Rollenspiel', 
+es wird dann an der Stelle fortgesetzt, bei der Du zuletzt warst.
+Auf gehts.
+WEITER: [N1]
+
+
+[H0]
+Sehr gut, ich werde dir Hilfen geben, wenn du nicht weiter kommst.
+Ich lese Dir das Rätsel vor und danach musst du die Lösung sagen.
+Die Lösung besteht immer nur aus einem Wort.
+Möchtest Du das Rätsel nochmal gesagt bekommen, dann sage statt der Lösung die beiden Wörter 'Wiederhole Rätsel'.
+Mit jedem Fehlversuch bekommst du einen weiteren Hinweis.
+Möchtest Du Aufgeben, dann sage das Wort 'Aufgeben', dann wird dir die Lösung verraten und das nächste Rätsel wird vorgelesen.
+Um die Tolkien Rätsel komplett zu beenden sage 'Aufhören'.
+Sollte Alexa sich beenden, weil du etwas länger nachdenkst, dann sage einfach 'Alexa starte Rollenspiel', es wird dann an der Stelle fortgesetzt, bei der Du zuletzt warst.
+Auf gehts.
+WEITER: [H1]
+
+
+[N1]
+Tolkien Rätsel Nummer 1:
+RÄTSEL:
+Atemlos lebt es,
+kalt wie der Tod schwebt es,
+kennt keinen Durst,
+doch dennoch trinkt es,
+trägt ein Kettenhemd,
+doch nie klingt es.
+ANTWORT(Fisch): Richtig! [N2]
+ANTWORT(Fish): Richtig! [N2]
+ANTWORT(aufhören): [ENDE]
+AUFGEBEN: [N2]
+
+
+[H1]
+Tolkien Rätsel Nummer 1 mit Tipps:
+RÄTSEL:
+Atemlos lebt es,
+kalt wie der Tod schwebt es,
+kennt keinen Durst,
+doch dennoch trinkt es,
+trägt ein Kettenhemd,
+doch nie klingt es.
+ANTWORT(Fisch): Sehr gut! [H2]
+ANTWORT(Fish): Sehr gut! [H2]
+ANTWORT(aufhören): [ENDE]
+FEHLVERSUCHE(1): Erster Tipp: Das Rätsel hat Gollum Bilbo in einer Höhle mit einem See gestellt. 
+FEHLVERSUCHE(2): Es handelt sich um ein Tier. 
+FEHLVERSUCHE(3): Der erste Buchstabe ist ein F.  
+FEHLVERSUCHE(4): Es reimt sich auf Tisch.  
+AUFGEBEN: Es wäre der Fisch gewesen [H2]
+
+
+[N2]
+Tolkien Rätsel Nummer 2:
+RÄTSEL:
+Schreit ohne Stimme,
+fliegt ohne Schwinge,
+beißt ohne Zahn,
+murmelt und pfeift -
+kein Mund hat's getan.
+ANTWORT(Wind): Richtig! [N3]
+ANTWORT(aufhören): [ENDE]
+AUFGEBEN: [N3]
+
+
+[H2]
+Tolkien Rätsel Nummer 2 mit Tipps:
+RÄTSEL:
+Schreit ohne Stimme,
+fliegt ohne Schwinge,
+beißt ohne Zahn,
+murmelt und pfeift -
+kein Mund hat's getan.
+ANTWORT(Wind): Richtig! [H3]
+ANTWORT(Luft): Nah dran, aber noch nicht ganz richtig.
+ANTWORT(aufhören): [ENDE]
+FEHLVERSUCHE(1): Das gibt es nur draußen. 
+FEHLVERSUCHE(2): Denk ans Wetter. 
+FEHLVERSUCHE(3): Es bewegt etwas, das man nicht sehen kann. 
+FEHLVERSUCHE(4): Der erste Buchstabe ist ein W.  
+FEHLVERSUCHE(5): Es reimt sich auf Kind.  
+AUFGEBEN: Es wäre der Wind gewesen [H3]
+
+
+[N3]
+Tolkien Rätsel Nummer 3:
+RÄTSEL:
+Man kann es nicht sehen, kann's nicht aufstöbern,
+kann es nicht fressen und kann's auch nicht hören,
+es liegt hinter den Sternen und unterm Gestein,
+rieselt in alle Höhlen hinein,
+kommt zuerst und folgt auch zuletzt,
+Löscht alles Leben, bis keiner mehr schwätzt.
+ANTWORT(Dunkel): Richtig! [N4]
+ANTWORT(Dunkelheit): Richtig, Das Dunkel! [N4]
+ANTWORT(aufhören): [ENDE]
+AUFGEBEN: [N4]
+
+
+[H3]
+Tolkien Rätsel Nummer 3 mit Tipps:
+RÄTSEL:
+Man kann es nicht sehen, kann's nicht aufstöbern,
+kann es nicht fressen und kann's auch nicht hören,
+es liegt hinter den Sternen und unterm Gestein,
+rieselt in alle Höhlen hinein,
+kommt zuerst und folgt auch zuletzt,
+Löscht alles Leben, bis keiner mehr schwätzt.
+ANTWORT(Dunkel): Richtig! [H4]
+ANTWORT(Dunkelheit): Richtig, Das Dunkel! [H4]
+ANTWORT(Schwarz): Nah dran, aber da wo es ist, da ist es schwarz.
+ANTWORT(aufhören): [ENDE]
+FEHLVERSUCHE(1): Das Rätsel ist schwierig.
+FEHLVERSUCHE(2): Viele haben Angst davor. 
+FEHLVERSUCHE(3): Wenn die letzte Kerze ausgeht, dann herrscht es. 
+FEHLVERSUCHE(4): Der erste Buchstabe ist ein D.  
+FEHLVERSUCHE(5): Es reimt sich auf Furunkel.  
+AUFGEBEN: Es wäre das Dunkel gewesen. [H4]
+
+
+[N4]
+Tolkien Rätsel Nummer 4:
+RÄTSEL:
+Etwas, das alles und jeden verschlingt:
+Baum, der rauscht, Vogel, der singt,
+frisst Eisen, zermalmt den härtesten Stein,
+zerbeißt jedes Schwert, zerbricht jeden Schrein,
+Schlägt Könige nieder, schleift ihren Palast,
+trägt mächtigen Fels fort als leichte Last.
+ANTWORT(Zeit): Richtig! [N5]
+ANTWORT(aufhören): [ENDE]
+AUFGEBEN: [N5]
+
+
+[H4]
+Tolkien Rätsel Nummer 4 mit Tipps:
+RÄTSEL:
+Etwas, das alles und jeden verschlingt:
+Baum, der rauscht, Vogel, der singt,
+frisst Eisen, zermalmt den härtesten Stein,
+zerbeißt jedes Schwert, zerbricht jeden Schrein,
+Schlägt Könige nieder, schleift ihren Palast,
+trägt mächtigen Fels fort als leichte Last.
+ANTWORT(Zeit): Richtig! [H5]
+ANTWORT(aufhören): [ENDE]
+FEHLVERSUCHE(1): Sie hat Sprichwörtlich einen Zahn, der an Sachen nagt.
+FEHLVERSUCHE(2): Denk an eine Uhr. 
+FEHLVERSUCHE(3): Sie vergeht manchmal wie im Flug. 
+FEHLVERSUCHE(4): Der erste Buchstabe ist ein Z.  
+FEHLVERSUCHE(5): Es reimt sich auf Kleid.  
+AUFGEBEN: Es wäre die Zeit gewesen. [H5]
+
+
+[N5]
+Tolkien Rätsel Nummer 5:
+RÄTSEL:
+Der Schrein ohne Deckel, Schlüssel, Scharnier,
+birgt einen goldenen Schatz, glaub' es mir.
+ANTWORT(Ei): Richtig! [N6]
+ANTWORT(E): Richtig! [N6]
+ANTWORT(a): Die Spracherkennung hat Probleme mit so kurzen Wörtern. Sage den Artikel dazu. Das Punkt Punkt Punkt. 
+ANTWORT(d): Die Spracherkennung hat Probleme mit so kurzen Wörtern. Sage den Artikel dazu. Das Punkt Punkt Punkt. 
+ANTWORT(aufhören): [ENDE]
+AUFGEBEN: [N6]
+
+
+[H5]
+Tolkien Rätsel Nummer 5 mit Tipps:
+RÄTSEL:
+Der Schrein ohne Deckel, Schlüssel, Scharnier,
+birgt einen goldenen Schatz, glaub' es mir.
+ANTWORT(Ei): Richtig! [H6]
+ANTWORT(E): Richtig! [H6]
+ANTWORT(aufhören): [ENDE]
+ANTWORT(a): Die Spracherkennung hat Probleme mit so kurzen Wörtern. Sage den Artikel dazu. Das Punkt Punkt Punkt. 
+ANTWORT(d): Die Spracherkennung hat Probleme mit so kurzen Wörtern. Sage den Artikel dazu. Das Punkt Punkt Punkt. 
+FEHLVERSUCHE(1): Man kann es spiegeln. 
+FEHLVERSUCHE(2): Man kann es rühren. 
+FEHLVERSUCHE(3): Man kann es kochen.
+FEHLVERSUCHE(4): Es ist auch eine Form. 
+FEHLVERSUCHE(5): Das Wort besteht nur aus zwei Buchstaben.  
+FEHLVERSUCHE(6): Es reimt sich auf Zwei.  
+AUFGEBEN: Es wäre das Ei gewesen. [H6]
+
+
+[N6]
+Tolkien Rätsel Nummer 6:
+RÄTSEL:
+Was hat Wurzeln, die keiner sieht,
+ragt höher als Bäume
+und Wipfelsäume,
+wächst nie und treibt nicht
+und reicht doch ins Licht?
+ANTWORT(Berg): Richtig! [N7]
+ANTWORT(Berge): Richtig! [N7]
+ANTWORT(Gebirge): Richtig! [N7]
+ANTWORT(aufhören): [ENDE]
+AUFGEBEN: [N7]
+
+
+[H6]
+Tolkien Rätsel Nummer 6:
+RÄTSEL:
+Was hat Wurzeln, die keiner sieht,
+ragt höher als Bäume
+und Wipfelsäume,
+wächst nie und treibt nicht
+und reicht doch ins Licht?
+ANTWORT(Berg): Richtig! [H7]
+ANTWORT(Berge): Richtig! [H7]
+ANTWORT(Gebirge): Richtig! [H7]
+ANTWORT(aufhören): [ENDE]
+FEHLVERSUCHE(1): Wer hoch hinaus will, der geht dorthin. 
+FEHLVERSUCHE(2): Oft ist auf der Spitze ein Kreuz. 
+FEHLVERSUCHE(3): Er erste Buchstabe ist ein B.  
+FEHLVERSUCHE(4): Es reimt sich auf Zwerg.  
+AUFGEBEN: Es wäre das Gebirge oder der Berg gewesen. [H7]
+
+
+[N7]
+Tolkien Rätsel Nummer 7:
+RÄTSEL:
+Zweiunddreißig Schimmel auf einem roten Hang -
+erst malmen sie, dann stampfen sie und warten wieder lang.
+ANTWORT(Zähne): Richtig! [N8]
+ANTWORT(Gebiss): nicht schlecht, aber nicht ganz richtig.
+ANTWORT(aufhören): [ENDE]
+AUFGEBEN: [N8]
+
+
+[H7]
+Tolkien Rätsel Nummer 7 mit Tipps:
+RÄTSEL:
+Zweiunddreißig Schimmel auf einem roten Hang -
+erst malmen sie, dann stampfen sie und warten wieder lang.
+ANTWORT(Zähne): Richtig! [H8]
+ANTWORT(Gebiss): nicht schlecht, aber nicht ganz richtig.
+ANTWORT(aufhören): [ENDE]
+FEHLVERSUCHE(1): Drei mal am Tag kommen sie zum Einsatz. 
+FEHLVERSUCHE(2): Wenn man friert, dann klappern sie. 
+FEHLVERSUCHE(3): Er erste Buchstabe ist ein Z.  
+FEHLVERSUCHE(4): Es reimt sich auf Schwäne.  
+AUFGEBEN: Es wären die Zähne gewesen. [H8]
+
+
+[N8]
+WEITER: [ENDE]
+
+
+[H8]
+WEITER: [ENDE]
+
+
+[ENDE]
+Das war es auch schon. Ich hoffe, es hat dir Spaß gemacht.
+Viele weitere Rätsel findest du auf der Webseite janko Punkt A T ;
+
+

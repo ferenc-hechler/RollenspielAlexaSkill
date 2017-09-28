@@ -1,0 +1,12 @@
+TITEL: validation_04_solo
+
+[BEGINN]
+Validierungstest, nicht vorhandanes Kapiel wird referenziert.
+JANEINENTSCHEIDUNG: 
+Weitermachen?
+NEIN: [ENDE] 
+JA: [1]
+
+[ENDE]
+Und Schluss.
+

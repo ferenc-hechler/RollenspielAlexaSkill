@@ -1,0 +1,21 @@
+TITEL: validation_20_solo
+
+[BEGINN]
+Validierungstest, nicht referenziertes Kapiel.
+JANEINENTSCHEIDUNG:
+fertig
+JA: [ENDE]
+NEIN: [2]
+
+[1]
+hier kommt man ja gar nicht hin
+WEITER: [ENDE]
+
+[2]
+Kurzes intermezzo.
+WEITER: [ENDE]
+
+
+[ENDE]
+Und Schluss.
+

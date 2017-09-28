@@ -1,0 +1,22 @@
+Wilkommen zum Abenteuer 'Freund Gegner Test' von feri
+
+Es kommt zum Kampf. Du siehst einen bösen Ork auf dich zustürmen. Dein Hund Bello kommt Dir zur Hilfe. Es findet ein Kampf gegen 2 Gegner  mit Unterstützung von einem Freund statt. Notiere Dir die Daten der Gegner, sage 'Wiederhole alles', wenn ich nochmal die Daten aller Gegner aufzählen soll. Gegner Ork: ; Waffe Knüppel ; Trefferpunkte 1W6 + 2 ; Attacke 11 ; Parade 6 ; Rüstungsschutz 1 ; Lebenspunkte 20 ; Möchtest Du die Daten nochmal gesagt bekommen?
+ > ja
+
+Gegner Ork: ; Waffe Knüppel ; Trefferpunkte 1W6 + 2 ; Attacke 11 ; Parade 6 ; Rüstungsschutz 1 ; Lebenspunkte 20 ; Möchtest Du die Daten nochmal gesagt bekommen?
+ > nein
+
+Gegner Ork Hauptmann: ; Waffe Knüppel ; Trefferpunkte 1W6 + 4 ; Attacke 12 ; Parade 7 ; Rüstungsschutz 2 ; Lebenspunkte 30 ; Möchtest Du die Daten nochmal gesagt bekommen?
+ > ja
+
+Gegner Ork Hauptmann: ; Waffe Knüppel ; Trefferpunkte 1W6 + 4 ; Attacke 12 ; Parade 7 ; Rüstungsschutz 2 ; Lebenspunkte 30 ; Möchtest Du die Daten nochmal gesagt bekommen?
+ > nein
+
+Freund Bello: ; Waffe Biss ; Trefferpunkte 1W6 ; Attacke 8 ; Parade 5 ; Rüstungsschutz 0 ; Lebenspunkte 10 ; Möchtest Du die Daten nochmal gesagt bekommen?
+ > nein
+
+
+Sage mir dann das Ergebnis des Kampfes: 'GEWONNEN' oder 'VERLOREN'
+ > Gewonnen
+
+Du bist ein Held. Und Schluss.

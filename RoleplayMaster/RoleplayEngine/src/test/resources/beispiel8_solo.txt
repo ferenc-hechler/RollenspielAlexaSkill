@@ -1,0 +1,15 @@
+TITEL: Voices
+AUTOR: feri
+
+VOICE(FRAU):         volume="-1dB" pitch="+20%" rate="105%"
+VOICE(MANN):         volume="+1dB" pitch="-15%" rate="97%"
+
+
+[BEGINN]
+Sagt der Mann: V_MANN(Hallo Frau!)
+Darauf die Frau: V_FRAU(Oh, hallo Mann!)
+WEITER: [ENDE]
+
+[ENDE]
+Das wars auch schon.
+

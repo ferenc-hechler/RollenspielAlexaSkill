@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee" version="2.5">
+  <display-name>Rollenspiel Soloabenteuer Rest Service</display-name>
+  <servlet>
+    <servlet-name>SoloAdventureService</servlet-name>
+    <servlet-class>de.hechler.aigames.rest.SoloAdventureRestService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SoloAdventureService</servlet-name>
+    <url-pattern>/rest/solo/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HealthCheckServlet</servlet-name>
+    <servlet-class>de.hechler.aigames.rest.HealthCheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HealthCheckServlet</servlet-name>
+    <url-pattern>/healthcheck</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>de.hechler.aigames.listeners.StartupShutdownListener</listener-class>
+  </listener>
+</web-app>

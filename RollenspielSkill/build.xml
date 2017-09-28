@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="soloabenteuerSkill" default="zip" basedir=".">
+<project name="rollenspielSkill" default="zip" basedir=".">
 
 	<property name="project-name" value="${ant.project.name}" />
 	<property name="folder-to-zip" value="src" />

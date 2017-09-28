@@ -1,0 +1,213 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+
+var col_name=['gray', 'red', 'yellow', '#C00000', '#c0c000'];
+var stopreload=false;
+var cnt=0;
+var playerName;
+var version = -1;
+
+function reset()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/c4',
+		data: {
+			cmd: 'clearSession'
+		},
+		success: function (response) {
+			window.location="index.html";
+		}
+	});
+}
+
+function getGameData()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/c4',
+		data: {
+			cmd: 'getGameData'
+		},
+		success: function (response) {
+		    cnt = cnt + 1
+		    document.getElementById( "cnt" ).value=cnt;
+		    if (response.version) {
+			    version = response.version;
+		    }
+		    if (response.player1Name) {
+		    	playerName = response.player1Name; 
+			    document.getElementById( "player_name" ).innerHTML='Hallo '+playerName;
+		    }
+		    if (response.gameId) {
+			    document.getElementById( "game_id" ).innerHTML='Du bist verbunden mit Spiel-ID '+response.gameId;
+		    }
+		    if (response.fieldView && response.fieldView.field) {
+				setFieldColors(response.fieldView.field);
+		    }
+		    if (!response.active) {
+		    	stopreload = true;
+		    	setTimeout(reset, 15000);
+			}
+		    
+		},
+		error: function (jqXHR, exception) {
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+	    }		
+	});
+}
+
+function loaddata()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/c4',
+		data: {
+			cmd: 'hasChanges',
+			param1: version
+		},
+		success: function (response) {
+		    cnt = cnt + 1
+		    document.getElementById( "cnt" ).value=cnt;
+		    if (response.code === "S_CHANGES_EXIST") {
+		    	setTimeout(getGameData, 1);
+			}
+		    else if (response.code === "E_UNKNOWN_GAMEID") {
+		    	stopreload = true;
+		    	setTimeout(reset, 15000);
+			}
+		},
+		error: function (jqXHR, exception) {
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+	    }		
+	});
+	if (!stopreload) {
+		setTimeout(loaddata, 1000);
+	}
+}
+
+
+
+function setFieldColors(field) {
+	for (var y = 0; y < 6; y++) {
+		for (var x = 0; x < 7; x++) {
+			var i = x+7*(5-y);
+			var box=document.getElementById( 'box_'+i );
+			box.bgColor = col_name[field[y][x]];
+		}
+	}
+}
+
+
+function startload()
+{
+	if (stopreload) {
+		 stopreload=false;
+		 setTimeout(loaddata, 1000);
+	}
+}
+
+function stopload()
+{
+	 stopreload=true;
+}
+
+setTimeout(loaddata, 1000);
+
+
+</script>
+
+</head>
+<body>
+		
+<h1>Vier Gewinnt gegen Alexa</h1>
+
+<p>
+<table>
+<tr><td id="player_name">&nbsp;</td></tr>
+<tr><td id="game_id">&nbsp;</td></tr>
+</table>
+</p>
+
+<p>
+Um einen Zug zu machen sage welche Reihe (1..7) du wählst:
+<code><pre>
+"Reihe ..." 
+</pre></code>
+</p>
+
+<p>
+Um die Spielstärke (1..7) zu ändern sage:
+<code><pre>
+"Spielstärke ..." 
+</pre></code>
+</p>
+
+<p>
+Um ein neues Spiel zu beginnen sage:
+<code><pre>
+"Neu starten" 
+</pre></code>
+</p>
+
+
+<p>
+<table><tr>
+<td><input type="button" onclick="startload();" name="start" value="start"></td>
+<td><input type="button" onclick="stopload();" name="stop" value="stop"></td>
+<td><input type="button" onclick="reset();" name="reset" value="reset"></td>
+<td><input type="text" name="cnt" id="cnt"></td>
+</tr></table>
+</p>
+
+<p>
+<table>
+<tr> <td align="center">1</td> <td align="center">2</td> <td align="center">3</td> <td align="center">4</td> <td align="center">5</td> <td align="center">6</td> <td align="center">7</td> </tr>
+<tr> <td width="50px" height="50px" id="box_35"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_36" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_37" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_38" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_39" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_40" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_41" bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td width="50px" height="50px" id="box_28"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_29" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_30" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_31" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_32" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_33" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_34" bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td width="50px" height="50px" id="box_21"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_22" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_23" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_24" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_25" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_26" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_27" bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td width="50px" height="50px" id="box_14"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_15" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_16" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_17" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_18" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_19" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_20" bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td width="50px" height="50px" id="box_7"   bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_8"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_9"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_10" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_11" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_12" bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_13" bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td width="50px" height="50px" id="box_0"   bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_1"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_2"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_3"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_4"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_5"  bgcolor="gray">&nbsp;</td> <td width="50px" height="50px" id="box_6"  bgcolor="gray">&nbsp;</td> </tr>
+</table>
+</p>
+
+</body>
+</html>

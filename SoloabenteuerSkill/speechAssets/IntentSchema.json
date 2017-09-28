@@ -1,0 +1,83 @@
+{
+  "intents": [
+  
+    {
+      "intent": "AnswerIntent",
+      "slots": [
+        {
+          "name": "answer",
+          "type": "LIST_OF_ANSWERS"
+        }
+      ]
+    },
+
+    {
+      "intent": "StartSoloIntent",
+      "slots": [
+        {
+          "name": "soloname",
+          "type": "LIST_OF_SOLONAMES"
+        }
+      ]
+    },
+
+    {
+      "intent": "ImportUploadIntent",
+      "slots": [
+        {
+          "name": "gameid_letter",
+          "type": "LIST_OF_LETTERS"
+        },
+        {
+          "name": "gameid_number",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    
+    {
+      "intent": "RepeatIntent",
+      "slots": [
+        {
+          "name": "part",
+          "type": "LIST_OF_REPEAT_PARTS"
+        }
+      ]
+    },
+    
+    {
+      "intent": "UserConfigActivateIntent",
+      "slots": [
+        {
+          "name": "flag_name",
+          "type": "LIST_OF_FLAGNAMES"
+        }
+      ]
+    },
+    {
+      "intent": "UserConfigDeactivateIntent",
+      "slots": [
+        {
+          "name": "flag_name",
+          "type": "LIST_OF_FLAGNAMES"
+        }
+      ]
+    },
+
+	{
+	  "intent": "AMAZON.StartOverIntent"
+	},
+	{
+	  "intent": "AMAZON.YesIntent"
+	},
+	{
+	  "intent": "AMAZON.NoIntent"
+	},
+	{
+	  "intent": "AMAZON.HelpIntent"
+	},
+	{
+	  "intent": "AMAZON.StopIntent"
+	}
+  ]
+}

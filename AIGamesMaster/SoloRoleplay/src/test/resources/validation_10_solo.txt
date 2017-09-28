@@ -1,0 +1,8 @@
+TITEL: validation_10_solo
+
+[BEGINN]
+Validierungstest, Kapiel ohne Weiterleitung.
+
+[ENDE]
+Und Schluss.
+

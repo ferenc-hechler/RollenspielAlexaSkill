@@ -1,0 +1,755 @@
+TITEL: Von Räubern und Herolden
+AUTOR: Martin Nordhausen
+ORT: Nostria
+EMAIL: BaphometsSoul@T-Online.de
+REGELWERK: DSA 4
+ERFAHRUNGSSTUFEN: Dieses Abenteuer wurde mit Helden der DSA 4.0 Stufe 5 und DSA 4.1 Stufe 1 getestet.
+ERSCHIENEN: 14. März 2017
+DAUER: variabel je eingeschlagenen Weg.
+LIZENZ: 
+LIZENZURL: 
+WEBSEITE: 
+
+
+KURZBESCHREIBUNG:
+Auf deiner Reise begegnet dir eine fremde Person und bittet dich um Hilfe.
+Hilfst du Ihr oder nicht?
+
+ANMERKUNG:
+Im Kampf wird euch ein Charakter der euch begleitet als Gegner angezeigt
+dies ist derzeit durch noch der Entwicklung geschuldet, der Charakter
+ist in diesem Fall euer Freund, es sei euch wird etwas anderes im vorherigen Text
+mitgeteilt.
+
+DAS SCHWARZE AUGE, AVENTURIEN und DERE sind eingetragene Marken der Ulisses Medien und Spiel Distribution GmbH oder deren Partner.
+
+
+[BEGINN]
+Es ist später Nachmittag am 13. Phex, über dir hält ein Gewitter einzug. 
+Deine Kleidung, ist nach dem langen Regen durchnässt, der Weg auf dem du wanderst wird langsam zu einem Acker und jeder
+Schritt wird schwerer.
+
+
+Nach einer Stunde passierst du ein Waldstück. Du gehst in dich
+und überlegst ob du nach einem Unterschlupf suchen solltest oder 
+deinen Weg weitergehst in der Hoffnung, dass bald ein Gasthaus kommt.
+JANEINENTSCHEIDUNG: 
+Wollt ihr einen Unterschlupf suchen. 
+JA:  [1]
+NEIN: [2]
+
+[1]
+PROBE:
+Wildnisleben
+FEHLGESCHLAGEN: [2]
+BESTANDEN:      [3]
+
+
+[2]
+Du gehst weiter deines Weges. Nach noch etwa einer weiteren Stunde hört es auf zu regnen, 
+nur das Donner grollen des Gewitters ist in der Ferne noch zu vernehmen.
+AKTION: 
+Zieh dir 5 Lebenspunkte ab. 
+
+
+WEITER: [4]
+
+[3]
+Du Findest eine kleine Höhle. 
+Du begibst dich in diese und machst dir mit Müh und
+Not ein Feuer. Nach einer weiteren Stunde
+hört es auf zu regnen, nur das Donner grollen des Gewitters ist in der Ferne noch zu vernehmen.
+Du brichst dein Lager ab und gehst weiter deines Weges.
+
+WEITER: [4]
+
+
+[4]
+Du kommst endlich kurz vor Einbruch der Nacht an ein Wirtshaus, du Danks den
+Zwölfen. Und gehst in das Wirtshaus.
+Im Wirtshaus suchst du dir einen Platz am Kamin um dich zu wärmen. 
+Du Schaust dich in der Schenke um und siehst wenig Gäste, die meisten
+scheinen Bauern aus der Umgebung zusein.
+Nach einer Weile kommt die Schankmeid auf die zu. 
+Guten Abend werter Gast, was darf ich euch bringen?
+Ich kann Ihnen, eine Kräftige Suppe anbieten wenn Ihr wollt. Wir haben
+auch, ein kleines Brot gedeck mit verschiedenen Käsesorten. Oder
+möchtet Ihr ein Stück vom Braten haben?
+ENTSCHEIDUNG: 
+was möchtest du.
+A: [5] = Suppe 
+B: [6] = Brot
+C: [7] = Braten
+
+
+[5]
+
+Ich nehme die Suppe, gute Frau. Sagst du zu Ihr. 
+Sehr Wohl, möchten Sie noch etwas Trinken?
+Wir können ihnen, Bier, Wasser oder einen heißen Tee anbieten.
+ENTSCHEIDUNG: 
+was möchtest du.
+A: [8] = Bier
+B: [8] = Wasser
+C: [8] = Tee
+
+
+[6]
+
+Ich nehme das Brot gute Frau. Sagst du zu Ihr. 
+Sehr Wohl, möchten Sie noch etwas Trinken?
+Wir können ihnen Bier, Wasser oder einen heißen Tee anbieten.
+ENTSCHEIDUNG: 
+was möchtest du.
+A: [8] = Bier
+B: [8] = Wasser
+C: [8] = Tee
+
+
+[7]
+ 
+Ich nehme den Braten gute Frau. Sagst du zu Ihr. 
+Sehr Wohl, möchten Sie noch etwas Trinken?
+Wir können ihnen Bier, Wasser oder einen heißen Tee anbieten.
+ENTSCHEIDUNG:
+was möchtest du.
+A: [8] = Bier
+B: [8] = Wasser
+C: [8] = Tee
+
+[8]
+Wohl denn, ich werde es euch umgehend bringen. Die Schankmeid begibt sich zum Tresen und dann in einen Raum, den du als Küche ansehen würdest. 
+Du ziehst deine Stiefel aus welche vom Morast schwer geworden sind. Und Massierst deine Kalten Füße. Keiner der anderen Gäste, störte sich daran, 
+einigen von ihnen ging es nicht wirklich besser als dir. Beim genaueren Hinsehen konntest du sehen, dass auch einige, eher wie reisende und nicht wie Bauern aussahen. 
+
+WEITER: [9]
+[9]
+Die Schankmeid bring dir nach ein paar Minuten deine Speise und dein Getränk.
+AKTION: Wenn du die Suppe und den Tee genommen hast erhältst du +5 Lebenspunkte.
+
+WEITER: [10]
+
+
+[10]
+Während du isst tritt eine Person an dich heran, Sie schaut etwas verloren drein in deinen Augen.
+Seit gegrüßt mein Name ist Lynia Kröpenvind, sagt werter Reisender, ihr seht so aus als wenn Ihr Kämpfen könnt. 
+Kommt drauf an. Junge Meid. Sagtest du und batest Sie platz zu nehmen.
+Erzählt mir was ist euer Begehr. 
+Sie setzte sich und begann zu sprechen. Nun ich muss nach Salza und bin hier gestrandet. 
+Ich bin Heroldin für den Grafen von Salza. Ich wurde von einem Jungen Knappen begleitet, welcher sich im Dienste des Grafen verdingen wollte. 
+Leider wurden wir gegen Mittag nicht weit von hier, bevor das Gewitter anfing. Von Räubern attackiert, Sie haben uns von den Pferden gerissen, 
+mich niedergeschlagen und den Jungen Knappen haben Sie entführt.
+Könnt ihr mir helfen, den Knappen zu retten und vorallem, 
+ich habe eine Wichtige Botschaft für den Grafen, welche in der Satteltasche meines Pferdes ist. 
+Helft Ihr mir, die Räuber zu finden?
+
+JANEINENTSCHEIDUNG: 
+Hilfst du Ihr?
+JA:   [11]
+NEIN:  [12]
+
+[11]
+Gewiss werde ich euch helfen. Sagtest du. Ich muss selbst nach Salza.
+Das ist gut. Ich danke euch. Können wir gleich Aufbrechen? 
+Deine Kleidung war langsam wieder Trocken, du nickst und bezahlst die Schankmeid. 
+Danach folgst du Lynia aus dem Wirtshaus. 
+
+
+WEITER: [13]
+
+[12]
+Tut mir leid, holde Dame ich sehe mich derzeit nicht in der Lage es mit Räubern aufzunehmen.
+Sagtest du Ihr und bezahltest deine Zeche und erkundigst dich nach einem Zimmer für die Nacht.
+Die Schankmeid führte dich darauf hin zu den Zimmern. 
+
+WEITER: [53]
+
+[13] 
+Lynia führt dich zu der Stelle des Kampfes. Der Regen hat die Spuren zum Glück nicht auf dem Weg verwischt. Du kannst Sie aufgrund des Vollmondes,  gut erkennen und bei den Huf spuren der Pferde haben sich Hufeisen förmige Pfützen gebildet. 
+Du kannst versuchen auf Fährtensuchen eine Probe zumachen, ob du den Weg welchen sie gegangen sind, finden kannst. 
+Du kannst aber auch versuchen durch Wildnisleben in der Umgebung etwas zu finden was dir einen Anhaltspunkt gibt, der dir helfen kann. 
+Du kannst auch versuchen auf Klugheit zu würfeln um durch deine Klugheit zu kombinieren, woher die Räuber gekommen sein könnten.  
+ENTSCHEIDUNG:
+Was machst du?
+A: [14] = Spuren
+B: [15] = Wildnis
+C: [16] = Klugheit
+
+
+[14]
+PROBE:
+Fährtensuchen 
+FEHLGESCHLAGEN: [20]
+BESTANDEN:      [17]
+
+[15]
+PROBE:
+Wildnisleben
+FEHLGESCHLAGEN: [20]
+BESTANDEN:      [18]
+
+[16]
+PROBE:
+Klugheit
+FEHLGESCHLAGEN: [20]
+BESTANDEN:      [19]
+
+
+[17]
+Du findest eine Spur die viel versprechend ist. 
+Seht Lynia. Ich habe hier etwas, lasst uns dieser Spur folgen. Sagtest du.
+
+WEITER: [21]
+
+[18] 
+Etwas weiter im Dickicht scheint scheint einer der Bäume eine Markierung 
+zu besitzen welche euch den Wegweisen könnte. 
+Lynia, seht diese Markierung? Lasst und ihr folgen. Sagtest du.
+
+WEITER: [21]
+
+[19]
+Lynia von Wo kam der Schlag? Fragtest du Lynia. 
+Von Rechts würde ich meinen, es ging so schnell. Sie schaute verlegen weg als
+Sie dir dies sagte. 
+Nach kurzen suchen und prüfen aller Anhaltspunkte, die du finden konntest
+zeigtest du in eine Richtung. Da lang müssen wir. 
+
+WEITER: [21]
+
+[20]
+Du kannst beim besten Willen, keine Anhaltspunkte finden.
+Lasst es uns dort lang versuchen. Meinst du nur und ihr zogt los. 
+Ihr Irrt umher und kommt nach einer weile wieder am Wirthaus an. 
+Lasst es uns morgen in der früh versuchen Lynia. 
+Lynia nickte und ihr legt euch Schlafen. 
+
+WEITER: [49]
+
+[21]
+
+Nach einer weile seht ihr ein Licht, welches von einem Lagerfeuer stammt. 
+Ihr geht näher heran und seht, dort 2 Räuber welche vor dem Feuer mit einem Topf herum hantierten. Ein weiterer der vermutlich schlief. Ihr seht einen Verschlag welcher notdürftig an einen Fels gebaut wurde. 
+Seht! Flüsterte euch Lynia zu, dort sind die Pferde. Ich denke der Anführer und der Knappe werden in diesem Verschlag oder Hütte oder was dies ist, sein. 
+
+WEITER: [22]
+
+
+[22]
+
+Sollen wir uns anschleichen oder Sie gleich angreifen? Was meint Ihr?
+Fragt Lynia dich. 
+JANEINENTSCHEIDUNG: 
+Wollt ihr euch Anschleichen?
+JA:   [23]
+NEIN:  [24]
+
+[23]
+Wir schleichen uns an. Lynia. Flüsterst du ihr zu. 
+Gut ich nehme den rechten dort, der sich gerade vom Feuer entfernt und Ihr den am Feuer. Flüstert Sie und schlich los. 
+
+WEITER: [25]
+
+[24] 
+
+Nein Wir greifen dieses Geschmeiß sofort an und werden Sie zu Boron schicken. 
+
+Du Trittst aus deiner Deckung hervor und tötest den Schlafenden Räuber, die anderen Beiden schrecken hoch und greifen zu Ihren Waffen. Lynia geht mit Ihrem Schwert auf einen der beiden Sofort los und nutzt die Unachtsamkeit dessen und verletzt ihn schwer. 
+
+Dir gegen über steht der andere Räuber der nicht wirklich so aussieht als würde er ein ernst zunehmender Gegner,
+
+
+KAMPF:
+GEGNER: Räuber
+WAFFE: Knüppel; Initiative 9+1W6
+AT: 10
+PA: 8
+TP: 1W6+1
+DK: H
+LEP: 28
+RS: 0
+AUP: 28
+MR: 3
+GS: 8
+
+GEWONNEN: [26]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+
+[25]
+Du kniest an dem Gebüsch und überlegst wie du nun den Räuber beseitigen willst. 
+ENTSCHEIDUNG:
+Was machst du? Schleichen oder den Räuber mit deiner Fernkampfwaffe angreifen?
+A: [27] = Schleichen
+B: [28] = Fernkampf
+
+[26] 
+Der Räuber sackt unter dir zusammen und blieb Tot liegen, du gingst zu Lynia die bereits
+an der Tür vom Verschlag auf dich wartete. 
+
+WEITER: [37]
+
+[27] 
+
+PROBE:
+Schleichen +2 
+FEHLGESCHLAGEN: [29]
+BESTANDEN:      [30]
+
+[28] 
+
+PROBE:
+Fernkampf mit deiner vorhandenen Waffe
+FEHLGESCHLAGEN: [32]
+BESTANDEN:      [31]
+
+[29] 
+
+Du trittst auf einen Ast und dieser knackt unter deinem Fuß. Der Räuber welcher sich noch am Feuer befand, schrak hoch und zog seine Waffe nachdem er sich zu dir Umdrehte. 
+
+KAMPF:
+GEGNER: Räuber
+WAFFE: Knüppel; Initiative 9+1W6
+AT: 10
+PA: 8
+TP: 1W6+1
+DK: H
+LEP: 28
+RS: 0
+AUP: 28
+MR: 3
+GS: 8
+
+GEWONNEN: [26]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+[30]
+
+Du schleichst dich nah an den Räuber heran bevor er dich bemerken konnte. Du streckst
+ihn mit deiner Waffe nieder und schleichst zu Lynia welche bereits an der Tür von dem Verschlag wartete. 
+
+WEITER: [36] 
+
+[31]
+Du Triffst den Räuber und er geht Lautlos ohne einen Schrei zu Boden. 
+Du schleichst zu Lynia welche bereits an der Tür von dem Verschlag wartete. 
+
+WEITER: [33] 
+
+
+[32]
+
+Dein Schuss ging fehl, und schlägt an dem Gestell für den Topf an Feuer ein. 
+
+JANEINENTSCHEIDUNG:
+Hast du die Sonderfähigkeit Schnellladen?
+JA:   [34]
+NEIN:  [33]
+
+[33] 
+
+Der Räuber welcher sich noch am Feuer befand, schrak hoch und zog seine Waffe nachdem er sich zu dir Umdrehte. 
+
+KAMPF:
+GEGNER: Räuber
+WAFFE: Knüppel; Initiative 9+1W6
+AT: 10
+PA: 8
+TP: 1W6+1
+DK: H
+LEP: 28
+RS: 0
+AUP: 28
+MR: 3
+GS: 8
+
+GEWONNEN: [26]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+
+[34] 
+
+PROBE:
+Fernkampfattacke mit vorhandener Waffe
+FEHLGESCHLAGEN: [35]
+BESTANDEN:      [31]
+
+[35] 
+
+Auch dein 2. Schuss ging Fehl wodurch, der Räuber nun schnell auf dich zu kommt, dass du nur noch deine Nahkampfwaffe ziehen konntest. 
+
+KAMPF:
+GEGNER: Räuber
+WAFFE: Knüppel; Initiative 9+1W6
+AT: 10
+PA: 8
+TP: 1W6+1
+DK: H
+LEP: 28
+RS: 0
+AUP: 28
+MR: 3
+GS: 8
+
+GEWONNEN: [26]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+[36]
+
+Ihr Öffnet die Tür und seht wie der Knappe angekettet an der Wand stand und der Räuberhauptmann vor Ihm und Ihn ausfragte. 
+Lynia Attackierte sofort den Hauptmann, dieser war darauf nicht gefasst. 
+Anmerkung:
+Ihr und Lynia habt den ersten Schlag. Und der Räuber bekommt keinen Initiative Bonus.
+Und für die Erste Attacke von dir und Lynia -2 auf Parade.
+Der Räuber Schlägt immer im Wechseln zu erst auf den Spieler, dann auf Lynia.
+Lynia ist kein Gegner!
+
+KAMPF:
+GEGNER: Räuberhauptmann
+WAFFE: Säbel; Initiative 11
+AT: 13
+PA: 9
+TP: 1W6+3
+LEP: 30
+RS: 1+3
+AUP: 35
+MR: 0
+GS: 8
+KO:11
+
+GEGNER: Lynia
+WAFFE: Schwert; Initiative 10+1W6
+AT: 13
+PA: 8
+TP: 1W6+4
+LEP: 30
+RS: 4
+AUP: 30
+MR: 4
+GS: 8
+
+
+GEWONNEN: [38]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+[37]
+
+Ihr Öffnet die Tür und seht wie der Knappe angekettet an der Wand stand und der Räuberhauptmann, dieser steht zu euch Gewand und den Säbel gezogen.
+
+Anmerkung: Der Räuberhauptmann Schlägt immer im Wechsel zu erst auf den Spieler, dann auf Lynia.
+Lynia ist kein Gegner!
+
+KAMPF:
+GEGNER: Räuberhauptmann
+WAFFE: Säbel; Initiative 11+1W6
+AT: 13
+PA: 9
+TP: 1W6+3
+LEP: 30
+RS: 1+3
+AUP: 35
+MR: 0
+GS: 8
+KO:11
+
+GEGNER: Lynia
+WAFFE: Schwert; Initiative 10+1W6
+AT: 13
+PA: 8
+TP: 1W6+4
+LEP: 30
+RS: 4
+AUP: 30
+MR: 4
+GS: 8
+
+
+GEWONNEN: [38]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+
+[38]
+Lynia treibt Ihr Schwert tief in die Brust, des Räuberhauptmannes. 
+Dieser sackte, Sie mit großen Augen anschauend zu Boden und blieb Tot liegen.
+Lynia versuchte umgehend, den Knappen von den Fesseln zu befreien. 
+Toran. Toran! wie geht es dir? 
+Lynia. Sagte der Knappe mit schwacher Stimme. 
+Mir geht es gut. Nach diesem Satz viel der Knappe in Ohnmacht.
+Wir müssen Ihn ins Wirtshaus bringen. Sagtet ihr zu Lynia. 
+Ja ihr habt recht. Sie stütze ihn und ging zur Tür. 
+Der Knappe schien für dich nicht älter als 12 zu sein.
+
+WEITER: [39]
+
+[39]
+
+JANEINENTSCHEIDUNG:
+Willst du dich in dem Verschlag noch umsehen
+JA:   [40]
+NEIN:  [41]
+
+[40]
+
+Lynia, geht schon mal vor ich schau mich hier noch um. 
+Du schaust dir die Rüstung des Räuberhauptmannes an. 
+
+PROBE: 
+Lederarbeiten.
+FEHLGESCHLAGEN: [42]
+BESTANDEN:      [43]
+
+[41]
+Du folgst Lynia zu den Pferden und ihr reitet in Richtung Wirtshaus. 
+
+WEITER: [47]
+
+[42]
+Die Rüstung ist in deinen Augen nicht mehr wirklich benutzbar, es lohnt sich
+nicht diese vom Körper des Räubers zu ziehen. 
+
+WEITER: [44]
+
+[43]
+Du Schaust dir die Rüstung an und erkennst, das Sie in Äußerst tadellosen
+Zustand ist und der Schnitt von Lynia's Schwert sehr klein, dass er geflickt werden kann.
+Die wirst du bei Boron eh nicht mehr brauchen. Sagtest du zu dem toten Räuber, während
+du die Rüstung ihm abnahmst. 
+
+AKTION: Notiere dir eine Lederrüstung zu deinem Inventar. 
+
+WEITER: [44]
+
+[44]
+
+Du beschließt dich weiter umzusehen. 
+
+PROBE: 
+Sinneschärfe
+FEHLGESCHLAGEN: [45]
+BESTANDEN:      [46]
+
+[45]
+Du findest nichts von Wert, frustriert gehst du zu Lynia und ihr reitet zum Wirtshaus. 
+
+WEITER: [47]
+
+[46]
+Beim genaueren Hinschauen, findest du in der hintersten Ecke dieses Verschlages eine 
+Truhe, du öffnest Sie, darin findest du ein ordentlich geschmiedetes Langschwert und einige Silbertaler.
+
+AKTION: Notiere dir ein Langschwert und 3 Silbertaler zu deinem Inventar.
+
+WEITER: [41]
+
+[47] 
+Ihr Verbringt die Nacht im Wirtshaus, der Knappe erholte sich unterdessen von den Strapazen. 
+Lynia erklärte euch, dass dies Ihr Bruder Toran ist, welcher so wie Sie in den Dienste des Grafen von Salza treten wollte um eines Tages Ritter zu werden. 
+
+WEITER: [48]
+
+[48]
+
+Lynia und Toran, machten sich am nächsten Tag auf nach Salza.
+Lynia nahm Toran auf Ihrem Pferd mit und Sie baten dir an, dass du solange bis ihr in Salza seit
+Toran's Pferd reiten konntest. 
+Nach nur einem halben Tages Ritt kamt ihr in Salza an. 
+Du verabschiedetest von den beiden und gingst deiner Wege. 
+
+WEITER: [ENDE1] 
+
+[49] 
+Am nächsten morgen bracht ihr in der Früh schnell auf.
+Als ihr wieder bei den Spuren des Kampfes seit konntet ihr nun deutlicher diese Erkennen 
+und es viel euch nun nicht mehr schwer diesen zu folgen. 
+
+WEITER: [50]
+
+
+[50]
+
+Ihr kamt an das Lager der Räuber an, Ihr konntet einen verschlag sehen und dort 4 Räuber und einen jungen der für dich so um die 12 sein muss, dir war klar dies muss der Knappe sein von dem Lynia immer wieder redete. 
+So dieser Bengel geht mir Langsam auf die Nerven, Fringlas, hol ein Seil und lass uns dieses Balg gleich hier aufknüpfen und dann weiter. 
+Lynia erschrak und zog umgehend Ihre Waffe und Stürmte aus der Deckung hervor. 
+
+WEITER: [51]
+
+[51]
+
+Lynia rammte den Räuber mit dem Strick Ihr Schwert in den Rücken und dieser sackte mit einem Schrei zusammen. 
+
+Anmerkung: Du kannst den Gegner sowohl mit Fern als auf Nahkampfwaffen attackieren.
+Sollte Lynia im Kampf Sterben wird der Gegner dich in den Nahkampf zwingen. 
+Der Gegner greift wenn du nicht im Nahkampf bist immer Lynia an. Solltest du im Nahkampf sein, Greifen die Gegner immer denjenigen an wer Sie zu Letzt attackiert hat.  
+Du Kämpfst gegen einen Hauptmann und 3 Räuber. 
+Lynia ist kein Gegner!
+
+KAMPF:
+GEGNER: Räuberhauptmann
+WAFFE: Säbel; Initiative 11+1W6
+AT: 13
+PA: 9
+TP: 1W6+3
+LEP: 30
+RS: 1+3
+AUP: 35
+MR: 0
+GS: 8
+KO:11
+
+
+GEGNER: Räuber 
+WAFFE: Knüppel; Initiative 9+1W6
+AT: 10
+PA: 8
+TP: 1W6+1
+DK: H
+LEP: 28
+RS: 0
+AUP: 28
+MR: 3
+GS: 8
+
+GEGNER: Lynia
+WAFFE: Schwert; Initiative 10+1W6
+AT: 13
+PA: 8
+TP: 1W6+4
+LEP: 30
+RS: 4
+AUP: 30
+MR: 4
+GS: 8
+
+
+GEWONNEN: [52]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+[52]
+
+Ihr habt den Kampf überstanden. 
+Lynia geht zu dem Knappen. 
+Toran geht es dir Gut? 
+Ja Schwester mir geht es gut. Sagte dieser. 
+Lynia kommt auf dich zu. Ich danke euch vielmals für die Hilfe,
+solltet ihr auch nach Salza wollen können wir euch gerne per Pferd mitnehmen. 
+Ja nicktest und ihr reitet nach Salza. 
+Du verabschiedetest von den beiden und gingst deiner Wege. 
+
+WEITER: [ENDE2]
+
+[53]
+Am nächsten Tag hast du dich noch etwas in dem doch eher schlechten Bett herumgewälzt 
+und bist erst kurz vorm Mittagsstand der Sonne aufgestanden. 
+Du bedanktest dich beim Wirt für die Übernachtung und bezahltest. 
+
+WEITER: [54]
+
+
+[54]
+Als du zur Tür hinaustratest, siehst du wie die Heroldin wehmütig auf der Treppe vor dem Wirtshaus sitzt. 
+Und ihr seit wirklich nicht gewillt mir zu helfen? 
+
+JANEINENTSCHEIDUNG:
+Willst du Ihr helfen?
+JA:   [55]
+NEIN:  [56]
+
+[55]
+Du bleibst stehen und schaust über die Schulter, nun Gut dann lasst und schauen ob wir diesen Knappen finden. 
+Sie stand von der Treppe auf und führte dich zum Ort des Kampfes.
+
+WEITER: [57]
+
+[56] 
+Du würdigst ihr nicht mal einen Blick und gehst weiter Richtung Salza. 
+Du kommst an der stelle vorbei wo wohl der Kampf statt gefunden hat. 
+Es scherrt dich nicht und du gehst weiter. 
+
+WEITER: [SCHNELLENDE]
+
+[57]
+Ihr konntet an den Spuren sehr Gut erkennen wo Ihr lang müsst. Nach einer Weile,
+kommt ihr an ein Lager was Verlassen aussieht. 
+Ihr seht euch um, als Lynia plötzlich mit Schreien anfing. 
+Als ihr Euch zu Ihr umdreht könnt ihr einen Knaben, der etwa 12 Jahre gewesen sein musste
+an ein Baum aufgeknüpft baumeln sehen. Ohne lange hinblicken zu müssen könnt ihr erkennen, dass er Tot ist. 
+Lynia kniete weinend vor dem gehängten als ihr euch nähert. 
+
+WEITER: [58]
+
+
+[58]
+JANEINENTSCHEIDUNG:
+Willst du Lynia beruhigen? 
+JA:   [59]
+NEIN:  [60]
+
+[59]
+Beruhigt euch Lynia, wir finden diese Räuber und werden Sie zur verantwortung ziehen. 
+WIR? Nein mit nichten, Ihr schert euch zu Boron! Verschwindet! Ich werden meinen
+Bruder bestatten und dann selbst nach diesem Pack suchen, ich brauche euch dafür nicht.
+Du wolltest noch etwas sagen aber Lynia, reagiert nicht mehr auf dich. 
+So gingst du deinen Weg Richtung Salza. Als du dort ankamst, fragst du dich
+Wie es Lynia wohl geht. Du hast nie wieder etwas von Ihr gehört.
+  
+WEITER: [ENDE3]
+
+
+[60]
+Lynia was ist los warum trauert Ihr diesen Knaben hinterher? 
+Nachdem Ihr diesen Satz gesprochen hat steht Lynia auf und dreht sich zu euch um.
+Ihr könnt den Zorn in Ihren Augen sehen. Das ist mein Bruder gewesen! 
+Schrie Sie dir entgegen und rannte mit gezogener Klinge auf dich zu. 
+
+KAMPF:
+GEGNER: Lynia
+WAFFE: Schwert; Initiative 10+1W6
+AT: 13
+PA: 8
+TP: 1W6+4
+LEP: 30
+RS: 4
+AUP: 30
+MR: 4
+GS: 8
+
+GEWONNEN: [61]
+VERLOREN: Du trittst die lange Reise zu Boron an [ENDE3]
+
+[61] 
+Ihr steht vor der Leiche von Lynia, die Rüstung der Heroldin ist komplett zerstört, ihr Schwert ist
+in der Mitte zerbrochen. 
+Ihr Schau euch um und seht nichts von Wert.
+So beschließt ihr eures Weges zu gehen. 
+Am Ende des Tages kommst du an deinem Ziel in Salza an. 
+
+WEITER: [ENDE3]
+
+[SCHNELLENDE]
+du gehst deines Weges und kommst am Ende des Tages an deinem Ziel in Salza an. 
+Was aus der Heroldin und dem Knappen wurde weißt du nicht und es scheint dich auch nicht wirklich zu interessieren. 
+
+WEITER: [ENDE3]
+
+
+[ENDE1]
+AKTION: 
+Du erhältst für das erfolgreiche Abschließen des Abenteuers 75 Erfahrungspunkte.
+WEITER: [ENDE]
+
+
+[ENDE2]
+AKTION: 
+Du erhältst für das Abschließen des Abenteuers 50 Erfahrungspunkte.
+WEITER: [ENDE]
+
+
+[ENDE3]
+AKTION: 
+Du bekommst keine Abenteuerpunkte. 
+WEITER: [ENDE]
+
+
+[ENDE]
+Ich hoffe euch hat dieses Abenteuer genau soviel Spaß beim Spielen gemacht, wie mir beim schreiben. Feedback und Anmerkungen sind immer gerne Willkommen. 
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="soloabenteuerSkill" default="zip" basedir=".">
+
+	<property name="project-name" value="${ant.project.name}" />
+	<property name="folder-to-zip" value="src" />
+
+	<target name="clean">
+		<delete file="${project-name}.zip" />
+	</target>
+
+	<target name="zip">
+		<zip destfile="${project-name}.zip" basedir="${folder-to-zip}" includes="*.js" />
+	</target>
+
+</project>

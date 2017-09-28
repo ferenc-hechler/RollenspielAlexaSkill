@@ -1,0 +1,33 @@
+AnswerIntent {answer}
+AnswerIntent der {answer}
+AnswerIntent die {answer}
+AnswerIntent das {answer}
+AnswerIntent ein {answer}
+AnswerIntent eine {answer}
+
+StartSoloIntent {soloname}
+StartSoloIntent starte {soloname}
+StartSoloIntent starte das Abenteuer {soloname}
+StartSoloIntent starte das Soloabenteuer {soloname}
+
+RepeatIntent wiederholen
+RepeatIntent wiederhole {part}
+
+ImportUploadIntent Lade Upload ID {gameid_letter} {gameid_number}
+
+AMAZON.StartOverIntent neues spiel
+AMAZON.StartOverIntent neu starten
+ 
+AMAZON.StopIntent abbrechen
+AMAZON.StopIntent beenden
+AMAZON.StopIntent Stop
+
+AMAZON.HelpIntent Hilfe
+
+AMAZON.YesIntent Ja
+
+AMAZON.NoIntent Nein
+
+UserConfigActivateIntent Aktiviere Einstellung {flag_name}
+
+UserConfigDeactivateIntent Deaktiviere Einstellung {flag_name}

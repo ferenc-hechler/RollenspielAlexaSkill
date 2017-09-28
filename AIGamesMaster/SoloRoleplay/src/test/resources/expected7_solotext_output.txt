@@ -1,0 +1,213 @@
+Solo-Abenteuer 'Das Reich der Zacks'
+
+AUTOR: Katrin
+KURZBESCHREIBUNG: In diesem Abenteuer schlüpfst Du in die Rolle des jungen Zwerges Bolzack und erlebst Abenteuer.
+
+[BEGINN]
+"Willkommen im Reich der Zacks. Es ist schön, dass Du junger Zwerg mit dem Namen Bolzack, auch zum großen Fest den Weg in Deinen Heimatberg gefunden hast." Mit diesen Worten wirst Du von einem Zwerg in mittlerem Alter begrüßt.  Er steht im Hauptgang, im Eingang zu einer Höhlenwelt, die nur die Zwerge des Stammes Rumsus kennen. Die Höhlen sind weitverzweigt und es gibt viele kleine abgeschlossene Wohnbereiche. Hier am Eingang ist nicht zu erkennen, wie groß die Welt im Berg ist. Es ist allerdings klar, dass hier ein kleines Dorf ist. Von außen sieht man dem Berg nichts an, aber wer den Eingang gefunden hat, sieht sofort, dass hier ein alter und reicher Stamm der Zwerge beheimatet ist. Hier in den Höhlen von Rumsus ist es normalerweise sehr ruhig. Da aber in zwei Tagen die Feierlichkeiten zu Ehren des Zwergenältesten Rumsack stattfinden, gibt es in den Höhlen heute ein geschäftiges Treiben. Rumsack nutzt immer seinen runden Geburtstag dazu, allen jungen Zwergen seines Stammes einige Zwergengeheimnisse zu erklären und  neue Aufträge zu verteilen. Es ist fast eine Stammespflicht dabei zu sein und so findet jeder den Weg in die Höhlen von Rumsus. Der Zwerg mittleren Alters mustert Dich ganz genau. "Bolzack, verrate mir, wo warst Du in den letzten Jahren. Es ist lange her, dass Du hier vorbeischaust. - Nein, sag nichts. Deine Narben zeigen genau, dass Du einige Abenteuer erlebt hast. Ich möchte mich heute Abend nicht langweilen und Du wirst sicher davon beim Feuer erzählen." Der Zwerg mittleren Alters überlegt kurz. "Also Bolzack, was hast Du vor? "
+
+ENTSCHEIDUNG:
+Wirst Du (A) wieder bei deinem Onkel Trofu leben oder ziehst du (B) es diesmal vor mitten im Geschehen zu sein und kehrst bei Deinen Eltern ein? Deine Brüder sind schon alle da."
+A: [VARIANTE1] = ONKEL
+B: [VARIANTE2] = ELTERN
+
+
+[VARIANTE1]
+Bolzack überlegt nicht lange und bittet den Zwerg mittleren Alters, dessen Namen ihm partout nicht einfallen will, den Weg frei zu machen. Bolzack möchte zu seinem Onkel Trofu. Dieser lebt abseits des Geschehens im Berg östlich. Es ist die Nebenhöhle, die am weitesten im Berg liegt. Hier hat man seine Ruhe, egal was los ist und sein Onkel ist ein sonderbarer Einzelgänger. Er kennt viele Geschichten, sammelt die seltsamsten Gegenstände und hat immer Zeit und Platz für Bolzack. Langsam machst Du Dich auf den Weg. Du schlenderst entlang eines breiten Weges. Hier sind mehrere kleine Geschäfte. Allerdings bist Du viel zu müde und Hunger wäre auch da noch. Also gehst Du weiter und hoffst, dass Dein Onkel auf Dich mit einem guten Essen wartet. Upps, was war das. Plötzlich stolperst Du und liegst auf dem Boden. Was ist jetzt los. Bist Du so müde, dass Du nicht mehr laufen kannst?  Du stehst vorsichtig auf und schaust, ob Du auch nichts verloren hast. Was ist das? Wie von magischer Hand gezogen, drehst Du Dich um zu einem kleinen Wohnbereich. Die Tür öffnet sich direkt vor Dir. Kaum bist Du eingetreten, schließt sich die Tür auch schon wieder. "Das darf doch nicht wahr sein!" Vor Dir steht leicht gebückt, weil er eindeutig für einen Zwergenwohnbereich zu groß ist, Dein Freund, der alte Magier Emmerus. Verwundert fragst Du ihn, was er hier macht. Er erklärt Dir, dass es wichtig sei und er sofort Deine Hilfe benötigt. Du bist unsicher, ob Du hier vor den Feierlichkeiten einfach wieder weg kommst. Außerdem hast Du Dich gefreut, auch mal wieder zu Hause zu sein. Anderseits hast Du in den letzten Jahren viele Abenteuer mit dem Magier erlebt.
+
+ENTSCHEIDUNG:
+Erklärst Du (A) Deinem Freund, dass Du erst in zwei Tagen Zeit hast und jetzt zu Deinem Onkel Trofu musst oder setzt Dich (B) zu Deinem Freund und hörst Dir an, was er zu sagen hat?
+A: [VARIANTE1X1] = ONKEL
+B: [VARIANTE1X2] = FREUND
+
+
+[VARIANTE1X1]
+Dein Freund Emmerus hat viel Verständnis für Deinen Wunsch sofort zu Deinem Onkel zu gehen. Allerdings bittet er auch Dich um Verständnis, dass er nicht alleine weiterziehen möchte. Daher bittet er Dich ihn mit zu nehmen. Er würde sehr gerne Deinen Onkel kennenlernen. Also macht Ihr Euch beide weiter auf dem Weg. Ihr seid vorsichtig und geht allen aus dem Weg. Daher dauert es zwar länger, aber endlich seid Ihr vor der Tür vom Zwerg Trofu.
+
+WEITER: [BESUCHXBEIXTROFU]
+
+
+[VARIANTE1X2]
+Dein Freund Emmerus ist unruhig. Er erklärt Dir, dass er sich auch in diesem Bereich der Höhle nicht sicher fühlt. Die Besitzer könnten jederzeit wiederkommen. Auch hat er eine längere Reise hinter sich. Er fragt daher vorsichtig, ob er nicht mit zu Deinem Onkel könnte und dort sich erst mal ausruhen. Dort könne er Dir in Ruhe dann auch erzählen, was los ist und wofür er Deine Hilfe benötigt. Also macht Ihr Euch beide weiter auf dem Weg. Ihr seid vorsichtig und geht allen aus dem Weg. Daher dauert es zwar länger, aber endlich seid Ihr vor der Tür vom Zwerg Trofu.
+
+WEITER: [BESUCHXBEIXTROFU]
+
+
+[BESUCHXBEIXTROFU]
+Ihr kommt an der Tür vom Zwerg Trofu an. Es ist eine auffällige Tür. Es ist eine schwere, schön geschmiedete Eisentür. Die Tür kommt Dir nicht bekannt vor. Es sind verschiedene Zeichen und Öffnungen angebracht. Allerdings bist Du Dir sicher, dass es die richtige Tür ist. Du öffnest die Tür und trittst ein. Direkt hinter Dir betritt auch Dein Freund den Wohnbereich und schließt sofort die Tür hinter Euch. Scheinbar wurdet Ihr erwartet. Es ist ein großer Wohnbereich. Ihr seid im Empfangsbereich, was wohl auch gleichzeitig der Wohn- und Essbereich ist. In der Wohnung Deines Onkels hat sich nicht viel verändert in den letzten Jahren. Es kommt Dir alles bekannt vor. Merkwürdig ist nur, es ist niemand da und auch auf Euer Rufen reagiert niemand. Es steht allerdings ausreichend Essen auf dem Tisch und es ist für 3 Personen gedeckt. Der Kamin ist an und es ist angenehm war. Ihr setzt Euch. Dein Freund hat etwas Probleme mit seiner Größe und setzt sich auf den Boden. Hungrig und durstig wie Ihr beide seid, macht Ihr Euch erst mal schweigsam an das Essen. Es ist lecker und auch gekühltes Zwergenbier steht auf dem Tisch. Es sieht alles danach aus, als ob Ihr beide erwartet  worden seid und direkt vor Eurem Eintreffen der Tisch gedeckt wurde. Doch wo ist Dein Onkel. Ihr schaut Euch um. Es ist ruhig hier. Auf dem Schreibtisch an der Wand seht Ihr eine kleine brennende Kerze. Es sieht so aus, als hätte jemand noch kurz etwas aufgeschrieben. Dort liegt ein Zettel.
+
+RÄTSEL:
+Auf dem Zettel steht: "An einer Wand hängt ein Portrait. Und eigentlich ist es okay - jedoch bewegt das Bild sich mit, macht der Betrachter einen Schritt." Weißt du was es ist, dann sage es laut:
+ANTWORT(Spiegel): Richtig [BBTXRAETSELXGELOEST]
+FEHLVERSUCHE(1): Denk noch mal nach.
+FEHLVERSUCHE(2): Noch ein Versuch.
+FEHLVERSUCHE(3): Das Portrait hat Ähnlichkeiten mit Dir.
+FEHLVERSUCHE(4): Du kannst das Portrait fragen, wer die schönste im ganzen Land ist.
+AUFGEBEN: [BBTXRAETSELXAUFGEGEBEN]
+
+
+
+[BBTXRAETSELXAUFGEGEBEN]
+Schade eigentlich, es wäre der Spiegel gewesen.
+
+WEITER: [ENDE]
+
+
+[BBTXRAETSELXGELOEST]
+Sofort als Du das Lösungswort ausgesprochen hast, löst der Zettel sich in Rauch auf. Du bist verwirrt. In einer Zwergenhöhle hast Du wirklich nicht mit Magie gerechnet. Dein Freund lacht und schaut sich nun genau den Wohnbereich an. Von dem Wohn- und Essbereich aus gibt es 3 Türen. Du erklärst Deinem Freund, dass die erste Tür zur Küche führt, die zweite in den Schlafbereich und die dritte Tür in die Bibliothek. Vom Schlafbereich kommt man noch tiefer in die Höhle. Hier gibt es noch einen weiteren Bereich für Gäste und eine Art Badezimmer. Hier schaut Ihr Euch zuerst um, da Ihr hier einen Spiegel vermutet. Leider findet Ihr keinen. Mit großem Interesse untersucht Ihr den Gästebereich. Hier wurden alle Vorbereitungen für die Übernachtung von zwei Gästen getroffen. Auffällig ist, dass die zweite Schlafgelegenheit eindeutig nicht für einen Zwerg bestimmt ist, sondern für ein deutlich größeres Wesen. Ihr überlegt nun, was zu tun ist.
+
+ENTSCHEIDUNG:
+Was tut Ihr? Legt Ihr Euch (A) wieder hin und schlaft Euch erst mal aus oder räumt Ihr (B) auf und schaut Euch die Küche genau an oder Ihr geht auf in die Bibliothek auf und schaut Euch dort um?
+A: [BBTXSCHLAFEN] = SCHLAFEN
+B: [BBTXKUECHE] = KÜCHE
+C: [BBTXBIBLIOTHEK] = BIBLIOTHEK
+
+
+[BBTXSCHLAFEN]
+Kaum habt Ihr Euch hingelegt, schlaft Ihr beide sofort ein. Mitten in der Nacht werden Ihr unsanft geweckt.
+
+PROBE:
+Mut
+BESTANDEN: Ihr seid sofort wach und könnt den ersten Angriff noch parieren. [BBTXKAMPF]
+FEHLGESCHLAGEN: Ihr werdet im Schlaf überrascht und dürft den ersten Angriff nicht parieren. [BBTXKAMPF]
+
+
+[BBTXKAMPF]
+Vor Euch stehen 3 Orks, die Euch beide angreifen. Der Magier Emmerus unterstützt Euch im Kampf.
+
+KAMPF:
+GEGNER: 3 Orks
+WAFFE: schlechte kleine Schwerter
+AT: 10
+PA: 8
+TP: 1W6+1
+LEP: 25
+RS: 1
+
+FREUND: Emmerus
+WAFFE: Magierstab
+AT: 12
+PA: 8
+TP: 1W6+1
+LEP: 30
+RS: 1
+AP: 30
+
+GEWONNEN: [BBTXKAMPFXGEWONNEN]
+VERLOREN: Du trittst die lange Reise zu Boron an. [ENDE]
+
+
+[BBTXKAMPFXGEWONNEN]
+Uff, geschafft. Die drei Orks sind erledigt. Ihr kümmert Euch um Eure Wunden. Jedoch bist Du endgültig verwirrt. Was machen Orks so tief in den Zwergenhöhlen. Hier ist man normalerweise immer sicher. Wie sind die Orks reingekommen? Wo ist Dein Onkel hin? Was ist hier los? Weder Du noch der Magier haben eine Ahnung was hier los ist. Du fragst den Magier nach seinem Anliegen. Warum hat er Dich hier besucht. Dein Freund Emmerus erzählt Dir von einem Zwerg aus einem anderen Stamm, weit im Norden. Diesem Zwerg schuldet Emmerus noch einen Gefallen. Nun wollte der Zwerg seine Dienste. Er hat wohl ein tolles Schwert geschmiedet und nun wird ein Schutzzauber darauf benötigt. Emmerus wollte alleine nicht so weit reisen und in das nördliche Zwergenland reisen. Daher hoffte er auf Deine Hilfe. Dieser Auftrag ist einer von den Aufträgen, die ihr in den letzten Jahren oft gemeinsam erfüllt habt. Er ist aber keine Erklärung für die jetzigen Probleme. Und nun, müsst Ihr Euch in dem Wohnbereich Eures Onkels genau umsehen. Zuerst geht Ihr in die Küche. Ihr macht Euch ein Frühstück und beratet gemeinsam, was jetzt zu tun ist. Nach dem es Euch langsam mit gefülltem Bauch besser geht, schaut Ihr Euch in der Küche genau um. Jeder Topf, jede Schlüssel und jeder Schrank wird genau angeschaut. Die Zeit vergeht, so dass langsam wieder Appetits kommt. Jedoch findet Ihr nichts besonderes, was diese Küche von anderen Küchen unterscheidet. Also nehmt Ihr einen Mittagsimbiss. Da Ihr Euch immer noch von dem Kampf erholen müsst, einigt Ihr Euch darauf, dass einer schlafen geht und der andere Wache hält und dabei weitersucht. Ihr werft eine Münze. Du hast gewonnen.
+
+ENTSCHEIDUNG:
+Wenn Du (A) weitersuchen möchtest, dann sage: "Ich bin fit". Wenn Du Dich (B) erst mal ausruhen möchtest, dann sage: "Ich bin müde".
+A: [BBTXDURCHSUCHEN] = ICH BIN FIT
+B: [BBTXMUEDE] = ICH BIN MÜDE
+
+
+[BBTXDURCHSUCHEN]
+Du und Dein Freund Emmerus verlassen gemeinsam die Küche und gehen noch mal zum Schlafbereich. Emmerus lägt sich hin und Ihr einigt Euch darauf, dass Du ihn in 6 Stunden weckst. Du beginnst die Suche im Schlafbereich Deines Onkels. Sein Schlafplatz ist ein typischer Zwergenschlafplatz. Eine alte Decke über Stroh und alles ist schon länger nicht gewechselt worden. Du erkennst den Geruch Deines Onkels. Das Buch auf dem Nachtisch ist eine Familiensage. Scheint auch nichts besonders zu sein. Es sieht auch noch nicht sehr gelesen aus. Nach längerem Suchen findest Du ein gebrauchtes Taschentuch und auch eine Socke.
+
+JANEINENTSCHEIDUNG:
+Schaust Du Dir die Socke genau an?
+JA: [BBTXSOCKE]
+NEIN: [BBTXWEITERSUCHEN]
+
+
+[BBTXSOCKE]
+Die Socke irritiert Dich. Dein Onkel schläft nie mit Socken. Oder ist er alt und krank geworden und hat plötzlich nachts kalte Füße. Dies ist wohl unwahrscheinlich. Du schaust Dir die Socke genau an. In der Socke steckt nichts besonders. Da Du Dir sicher bist, dass es irgendetwas mit der Socke auf sich hat, nimmst Du die Socke an Dich.
+
+WEITER: [BBTXWEITERSUCHEN]
+
+
+[BBTXWEITERSUCHEN]
+Du schaust Dich im Schlafbereich weiter um. Du untersuchst die Spuren und die Leichen der Orks. Die Orks haben schlechte kleine Schwerter bei sich. Ansonsten findest Du nichts Spannendes. Dir ist nicht klar, wie die Orks in den Schlafbereich reingekommen sind. Du untersuchst auch die wenigen Kleidungsstücke, die von Deinem Onkel im Schlafbereich aufbewahrt werden. Auch hier findest Du nichts. Es gibt keine Schatzkiste, es gibt keine besonders auffälligen Kleidungstücke. Es ist noch Zeit, also geht´s ab in das Badezimmer. Die Tür bleibt auf und das gleichmäßige Schnarchen Deines Freundes beruhigt Dich. Das Badezimmer ist ein gewöhnlicher kleiner Waschbereich. Zwerge waschen sich nicht gerne, daher ist dieser Bereich nicht oft genutzt. Es lässt sich aber auch nach längerem und genauen Suchen kein Spiegel finden. Naja, Dein Onkel ist auch nicht eitel. Also ist es wohl auch nichts besonderes, dass hier kein Spiegel ist. Du wärst kein Zwerg, wenn Du Dir nicht genau die Wände anschauen würdest. Die Höhle ist weit hinten im Berg und es gibt keine direkten Nachbarn. Du suchst eine Lampe, damit Du Dir hier die Wände genauer anschauen kannst. Am Schlafplatz von Deinem Onkel stand eine Lampe. Diese holst Du Dir und schaust Du Dir erneut die Wände an. Du wirst müde und die Zeit ist auch so weit. Du weckst Deinen Freund zur Wachablösung. Nach einem weiteren kleinen Imbiss beschließt Dein Freund die Zeit der Wache zu nutzen, die wenigen Bücher in der Höhle Deines Onkels zu nehmen und genau sich anzuschauen. Auf dem Schreibtisch im Wohnbereich lagen zwei Bücher und auch in einem kleinen Regal findet Emmerus noch fünf weitere Werke. Du schläfst sofort ein und schläfst gut bis Emmerus Dich wieder weckt. Natürlich müsst Ihr mal wieder etwas essen. Scheinbar hat Dein Onkel gut eingekauft. Die Vorräte sind wirklich toll. Ihr seid satt. Du schlägst Deinem Freund Emmerus vor, dass er Dir alles erzählt, was er so gelesen hat und Du möchtest dabei kurz den Abwasch machen. Es ist Dir dann doch unangenehm, dass so langsam das gesamte Geschirr so rumsteht und gebraucht ist. Ihr tragt alles zusammen und Du möchtest Wasser einlassen. Ups. Was ist das. Kaum fasst Du den Wasserhahn an, hast Du ihn in der Hand. Jetzt wolltest Du dich nützlich machen und schon machst Du alles kaputt. Emmerus kommt und nimmt Dir den abgebrochenen Wasserhahn aus der Hand. Scheinbar ist dies kein gewöhnlicher Wasserhahn. Im Wasserhahn steckt ein komischer Schlüssel.
+
+REGEL:
+BESUCHT(BBTXSOCKE): Du nimmst den Schlüssel an Dich und steckst ihn zur Socke. [BBTXEMMERUSXSOCKE]
+SONST: Du nimmst den Schlüssel an Dich. [BBTXWEITER]
+
+
+[BBTXEMMERUSXSOCKE]
+Du erzählst Emmerus von der Socke. Er schaut sich die Socke an und kann Dir auch keine Erklärung geben. Du hörst Deinem Freund zu und erledigst schnell und mit wenig Sorfalt den Abwasch.
+
+WEITER: [BBTXWEITER]
+
+
+[BBTXWEITER]
+Emmerus erläutert Dir kurz die Bücher. Es ist eine Familiensaga ohne besondere Auffälligkeiten. Drei Bücher scheinen eine Trilogie zu sein, hier scheinen ein paar Hobbits auf der Suche nach einem Ring zu sein. Bemerkenswert ist aus Sicht von Emmerus, dass sich Dein Onkel für Feste von den Zwergen interessiert hat. Hier werden auch die anstehenden Feierlichkeiten in den Höhlen von Rumsus zu Ehren des Zwergenältesten Rumsus beschrieben. Ob die Feierlichkeiten etwas mit dem Verschwinden Deines Onkels zu tun hat. Heute ist das Fest und Ihr überlegt, ob Ihr hingehen solltet oder doch lieber den Wohnbereich weiter untersuchen und hoffen dort eine Lösung zu finden. Dein Freund Emmerus erklärt Dir, dass er den Wohnbereich Deines Onkels nicht verlassen möchte. Allerdings sei es wohl keine schlechte Idee, dass Du zum Fest gehst. Immerhin hätten die Zwerge am Eingang schon Deine Einreise festgestellt und es wäre sicher auffällig, wenn Du heute Abend fehlst. Du bist aber auch neugierig,
+
+REGEL:
+BESUCHT(BBTXSOCKE): was es mit dem Schlüssel und der Socke auf sich hat. [BBTXWEITER2]
+SONST: was es mit dem Schlüssel auf sich hat. [BBTXWEITER2]
+
+
+[BBTXWEITER2]
+
+ENTSCHEIDUNG:
+Was tust Du? Wenn Du (A) zum Fest gehen möchtest, sage: "Ich gehe zum Fest". Wenn Du (B) Deinen Freund nicht alleine lassen möchtest, dann sage: "Ich suche mit Dir weiter".
+A: [FEST] = ICH GEHE ZUM FEST
+B: [BBTXSUCHE3] = ICH SUCHE MIT DIR WEITER
+
+
+[BBTXMUEDE]
+Hier fehlt noch was...
+
+WEITER: [ENDE]
+
+
+[BBTXKUECHE]
+Hier fehlt noch was...
+
+WEITER: [ENDE]
+
+
+[BBTXBIBLIOTHEK]
+Hier fehlt noch was...
+
+WEITER: [ENDE]
+
+
+[BBTXSUCHE3]
+Hier fehlt noch was...
+
+WEITER: [ENDE]
+
+
+[FEST]
+Du leihst Dir von Deinem Onkel den schönen Festanzug und gehst langsam zum Fest in die Mitte der Höhlen von Rumsus. Umso näher Du dem Festplatz kommst, um so lauter hörst Du die Gesänge der Zwerge. Sie singen Loblieber auf Rumsus. Auf dem Festplatz triffst Du ganz schnell Deine Familie. Deine Brüder umarmen Dich. Du erkennst Deinen kleinen Bruder kaum. Er scheint so langsam erwachsen zu werden und schaut Dich mit großen bewunderten Augen an. Kaum sitzt Du bei Deiner Familie und hast das erste Zwergenbier vor Dir, sitzt er neben Dir. Er bettelt. "Bitte nehm mich mit, wenn Du wieder auf Reise gehst." Du sagst, dass Du es Dir überlegst und jetzt erst mal mit allen feiern möchtest. Du fragst ihn aber, ob es was Neues gibt. Das wird allerdings verneint. Der Zwergenalltag in den Höhlen von Rumsus scheint sich in den letzten fünf Jahren nicht verändert zu haben. Vorsichtig fragst Du Deinen Bruder nach Deinem Onkel Trofu. Diese Frage verwundert Deinen kleinen Bruder nicht. Er sagt nur, dass er auch nicht weiß, warum Eure Mutter sich mit Ihrem Bruder Trofu verkracht hat. Aber in den letzten 3 Jahren wurde nicht mehr über Trofu geredet und er hat auch nicht mehr vorbeibeschaut. Dein kleiner Bruder geht einfach davon aus, dass aufgrund des Kraches Trofu heute auch nicht mitgekommen ist. Er bittet Dich nur, Eure Mutter nicht zu verärgern und daher besser nicht über Trofu zu sprechen. Die Unterhaltung wird unterbrochen. Rumsus tritt auf den Platz. Alle gehen zur Seite und machen Platz. Rumsus, ein alter Zwerg, tritt auf den Platz. Er schaut sich um. Allerdings geht er nicht zu dem Ehrenplatz, der für ihn vorgesehen ist. Er geht direkt auf Sie zu. "Bolzack, Du Abenteuer, es ist mir eine große Freude, dass Du hier bist. Es wurde Zeit!" Er umarmt Dich und Du hast den Eindruck, dass er Dir etwas in die Tasche steckt. Dann ruft er hörbar für alle: "Bolzack, ist ein mutiger Zwerg unserer Höhle. Er hat unserem Volk viel Ehre eingebracht und viele Freunde in der ganzen Welt gefunden." Er bittet Dich sich zu ihm an den Tisch zu setzen. Alle singen gemeinsam das bekannte Festlied der Zwerge der Höhlen von Rumsus. Das Fest hat begonnen. Nach einem ausführlichen Festessen erhebt sich Rumsus erneut. Jetzt ist es die Gelegenheit, dass Rumsus seine Ankündigung macht. Zuerst erklärt Rumsus den Stolz der Zwerge und deren Talente. Es ist ganz wichtig, dass Zwerge sich immer an Ihren Fähigkeiten in Höhlen erinnern. Sie können kämpfen, sie sind stark und mutig und haben die besten Waffen. Manche sind mit Artefakten verziert und dadurch noch mächtiger. Weiter führt Rumsus aus: "Die Höhlen hier sind schon lange vor unserer Zeit das Zuhause von Zwergen war. Die Zwerge hier, haben vor Generationen nicht nur das Sichtbare geschaffen, sondern haben hier ein Zuhause geschaffen, zum Schutz und zum Wohlfühlen. Ein Fremder wird hier zwar das Sichtbare sehen, aber das Nicht-Sichtbare bleibt unser Geheimnis und zum Schutz für uns da. Aus diesem Grund wird es die Zwerge auch noch Generationen nach meinen Ableben geben." Er beendet seine Rede mit einer Ankündigung. Rumsus holt eine Kampfaxt hervor. Auf Ihr ist ein besonderes Artefakt. Er übergibt die Axt Bolzack mit den Worten "Diese Waffe wird mit Dir kämpfen, aber sie zeigt Dir auch den Weg, den Du sonst nicht siehst. Du wirst Sie brauchen." Du bist sprachlos. Mit einem solchen Empfang hast Du nicht gerechnet. Du nimmst die Waffe an Dich.
+
+ENTSCHEIDUNG:
+Was machst Du nun. Du freust Dich so sehr und möchtest (A) mit allen feiern oder Du möchtest (B) die Waffe genau anschauen und schleichst Dich schnell von dem Festplatz weg. Was machst Du? Wenn Du feiern möchtest, dann sage laut: "Eine Runde Zwergenbier für alle!" Wenn Du gehen möchtest, dann sage laut. "Ich bin müde."
+A: [FESTXFEIERN] = EINE RUNDE ZWERGENBIER FÜR ALLE
+B: [FESTXMUEDE] = ICH BIN MÜDE
+
+
+[FESTXFEIERN]
+Du wirst von vielen angesprochen. Du trinkst und erzählst immer wieder von Deinen Abenteuer. So langsam ist die Nacht vorbei. Dein kleiner Bruder taucht auf und hat wohl auch einen Rucksack gepackt. Er fragt Dich: "Wann gehen wir und wohin?" Du bist nicht in der Lage Deinem Bruder zu widersprechen. Daher sagst Du ihm nur, dass es zur Höhle von Eurem Onkel Trofu geht. Dein kleiner Bruder scheint deutlich fitter zu sein, als Du. Er zeigt Dir den Weg und singend macht Ihr Euch auf den Weg.
+
+WEITER: [FESTXGEMEINSAM]
+
+
+[FESTXMUEDE]
+Du schaust Dich kurz um und sucht den einfachsten Weg aus dem Rummel. Am Rande des Rummels siehst Du Deinen kleinen Bruder. Kaum siehst Du Deinen Bruder, startet fast neben ihm, ein kleines Feuerwerk. Alle schauen sich das Feuerwerk an. Du machst Dich unbemerkt auf den Weg zur Höhle Deines Onkels Trofu. Fast unbemerkt. Natürlich taucht bald Dein kleiner Bruder neben Dir auf. Da Dir nichts anderes einfällt, erlaubst Du ihm dich zu begleiten.
+
+WEITER: [FESTXGEMEINSAM]
+
+
+[FESTXGEMEINSAM]
+Gemeinsam taucht Ihr wieder in der Höhle von Deinem Onkel Trofu auf. Ihr seid müde. Dein Freund Emmerus ist nicht begeistert, von Deiner Begleitung. Allerdings fühlt er sich fit. Er hat in Eurer Abwesenheit meditiert. Er übernimmt die Wache und Ihr zwei legt Euch hin. Auch in dieser Nacht geschieht nichts. Weder Dein Onkel taucht auf, noch tauchten wieder Orks auf. Hier fehlt noch was...
+
+WEITER: [ENDE]
+
+
+[VARIANTE2]
+Hier fehlt noch was...
+
+WEITER: [ENDE]
+
+
+[ENDE]
+Tja, das war´s dann auch schon mit dem Abenteuer. Wenn es Dir gefallen hat, dann erzähle anderen davon.
+

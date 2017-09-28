@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Schiffe-versenken gegen Alexa</title>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+
+var letter_names={ 'A':'Anton', 'B':'Berta', 'C':'Cäsar', 'D':'Dora', 'E':'Emil', 'F':'Friedrich', 'G':'Gustav', 'H':'Heinrich', 'I':'Ida', 'J':'Julius', 'K':'Kaufmann', 'L':'Ludwig', 'M':'Martha', 'N':'Nordpol', 'O':'Otto', 'P':'Paula', 'Q':'Quelle', 'R':'Richard', 'S':'Samuel', 'T':'Theodor', 'U':'Ulrich', 'V':'Viktor', 'W':'Wilhelm', 'X':'Xanthippe', 'Y':'Ypsilon', 'Z':'Zacharias' };
+
+var stopreload=false;
+var cnt=0;
+
+
+function reset()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/bs',
+		data: {
+			cmd: 'clearSession'
+		},
+		success: function (response) {
+		}
+	});
+}
+
+
+function letter2name(gameId) {
+	var result = gameId; 
+	if (result && result.length > 0) {
+		var letter = gameId.substring(0,1).toUpperCase();
+		var letterName = letter_names[letter];
+		if (letterName) {
+			result = letterName + " " + gameId.substring(1);
+		}
+	}
+	return result;
+}
+
+function loaddata()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/bs',
+		data: {
+			cmd: 'getGameId'
+		},
+		success: function (response) {
+		    document.getElementById( "gameId" ).innerHTML="\"Meine Spiel ID ist " + response.gameId + "\"  oder \"Meine Spiel ID ist "+letter2name(response.gameId)+"\"";
+		    document.getElementById( "gameId2" ).innerHTML="\"Alexa starte Schiffe-versenken mit Spiel ID " + response.gameId + "\"";
+		    cnt = cnt + 1
+		    document.getElementById( "cnt" ).value=cnt;
+		    if (response.code === "S_ACTIVATED") {
+		    	window.location='play.html';
+		    }
+		},
+		error: function (jqXHR, exception) {
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+	    }		
+	});
+	if (!stopreload) {
+		setTimeout(loaddata, 1000);
+	}
+}
+
+function startload()
+{
+	if (stopreload) {
+		 stopreload=false;
+		 setTimeout(loaddata, 1000);
+	}
+}
+
+function stopload()
+{
+	 stopreload=true;
+}
+
+setTimeout(loaddata, 1000);
+
+
+
+</script>
+
+</head>
+<body>
+		
+<h1>Schiffe-versenken gegen Alexa Startseite</h1>
+
+<p>Du bist noch nicht verbunden mit Deiner Alexa. Bitte befolge die folgenden Anweisungen um eine Verbindung herzustellen:</p>
+
+<p>Sage 
+<code><pre>
+"Alexa starte Schiffe-versenken"
+</pre></code>
+und befolge die Anweisungen.
+</p>
+  
+<p>
+Sage dann
+<code><pre id="gameId">
+"Meine Spiel ID ist ?"
+</pre></code>
+</p>
+
+<p>
+Oder starte Schiffe-versenken unter Angabe der Spiel-ID
+<code><pre id="gameId2">
+"Alexa starte Schiffe-versenken mit Spiel ID ?"
+</pre></code>
+</p>
+
+<p>
+<table><tr>
+<td><input type="button" onclick="startload();" name="start" value="start"></td>
+<td><input type="button" onclick="stopload();" name="stop" value="stop"></td>
+<td><input type="button" onclick="reset();" name="reset" value="reset"></td>
+<td><input type="text" name="cnt" id="cnt"></td>
+</tr></table>
+</p>
+
+<p>Kontakt: ferenc.hechler(AT)gmail.com</p>
+
+</body>
+</html>

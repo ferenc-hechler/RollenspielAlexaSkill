@@ -1,0 +1,300 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+
+var col_name=['gray', '#4040FF', 'yellow', 'red', 'gray', 'green', '#C0C0C0', '#0000A0', '#c0c000', '#C00000', 'gray', 'green'];
+var letter_names={ 'A':'Anton', 'B':'Berta', 'C':'Cäsar', 'D':'Dora', 'E':'Emil', 'F':'Friedrich', 'G':'Gustav', 'H':'Heinrich', 'I':'Ida', 'J':'Julius', 'K':'Kaufmann', 'L':'Ludwig', 'M':'Martha', 'N':'Nordpol', 'O':'Otto', 'P':'Paula', 'Q':'Quelle', 'R':'Richard', 'S':'Samuel', 'T':'Theodor', 'U':'Ulrich', 'V':'Viktor', 'W':'Wilhelm', 'X':'Xanthippe', 'Y':'Ypsilon', 'Z':'Zacharias' };
+var stopreload=false;
+var cnt=0;
+var playerName;
+var version = -1;
+
+function reset()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/bs',
+		data: {
+			cmd: 'clearSession'
+		},
+		success: function (response) {
+			window.location="index.html";
+		}
+	});
+}
+
+function getGameData()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/bs',
+		data: {
+			cmd: 'getGameData'
+		},
+		success: function (response) {
+		    cnt = cnt + 1
+		    document.getElementById( "cnt" ).value=cnt;
+		    if (response.version) {
+			    version = response.version;
+		    }
+		    if (response.player1Name) {
+		    	var phase = ""+response.currentPlayer+response.gamePhase;
+		    	playerName = response.player1Name; 
+			    document.getElementById( "player_name" ).innerHTML='Hallo '+playerName;
+			    var text = playerName;
+			    if (phase === "1Q") {
+			    	text = text + " (am fragen)";
+			    }
+			    else if (phase === "2A") {
+			    	text = text + " (am antworten)";
+			    }
+			    document.getElementById( "player1_name" ).innerHTML=text;
+		    }
+		    if (response.player2Name) {
+		    	var phase = ""+response.currentPlayer+response.gamePhase;
+			    var text = response.player2Name;
+			    if (phase === "2Q") {
+			    	text = text + " (am fragen)";
+			    }
+			    else if (phase === "1A") {
+			    	text = text + " (am antworten)";
+			    }
+			    document.getElementById( "player2_name" ).innerHTML=text;
+		    }
+		    if (response.gameId) {
+			    document.getElementById( "game_id" ).innerHTML='Du bist verbunden mit Spiel-ID '+response.gameId;
+		    }
+		    if (response.fieldView && response.fieldView.p1Field) {
+				setFieldColors("p1_", response.fieldView.p1Field);
+		    }
+		    if (response.fieldView && response.fieldView.p2Field) {
+				setFieldColors("p2_", response.fieldView.p2Field);
+		    }
+		    if (response.fieldView && response.fieldView.numShips) {
+				setNumShips(response.fieldView.numShips);
+		    }
+		    if (!response.active) {
+		    	stopreload = true;
+		    	setTimeout(reset, 15000);
+			}
+		    
+		},
+		error: function (jqXHR, exception) {
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+	    }		
+	});
+}
+
+function loaddata()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/bs',
+		data: {
+			cmd: 'hasChanges',
+			param1: version
+		},
+		success: function (response) {
+		    cnt = cnt + 1
+		    document.getElementById( "cnt" ).value=cnt;
+		    if (response.code === "S_CHANGES_EXIST") {
+		    	setTimeout(getGameData, 1);
+			}
+		    else if (response.code === "E_UNKNOWN_GAMEID") {
+		    	stopreload = true;
+		    	setTimeout(reset, 15000);
+			}
+		},
+		error: function (jqXHR, exception) {
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+	    }		
+	});
+	if (!stopreload) {
+		setTimeout(loaddata, 1000);
+	}
+}
+
+
+
+function setFieldColors(prefix, field) {
+	var len = field.length 
+	for (var r = 0; r < 10; r++) {
+		for (var c = 0; c < 10; c++) {
+			var color = 'white';
+			if ((r < len) && (c < len)) {
+				color = col_name[field[r][c]];
+			}
+			var box=document.getElementById( (prefix+r)+c );
+			box.bgColor = color;
+		}
+	}
+}
+
+function setNumShips(numShips) {
+	var text = "Anzahl Schiffe: ";
+	var seperator = "";
+	for (var i = numShips.length-1; i >= 0 ; i--) {
+		if (numShips[i] !== 0) {
+			text = text + seperator + numShips[i] + "x " + (i+1) + "er"
+			seperator = ", ";
+		}
+	}
+	document.getElementById( "num_ships" ).innerHTML=text;
+}
+
+
+function startload()
+{
+	if (stopreload) {
+		 stopreload=false;
+		 setTimeout(loaddata, 1000);
+	}
+}
+
+function stopload()
+{
+	 stopreload=true;
+}
+
+setTimeout(loaddata, 1000);
+
+
+</script>
+
+</head>
+<body>
+		
+<h1>Schiffe-versenken gegen Alexa</h1>
+
+<p>
+<table>
+<tr><td id="player_name">&nbsp;</td></tr>
+<tr><td id="game_id">&nbsp;</td></tr>
+<tr><td id="num_ships">&nbsp;</td></tr>
+</table>
+</p>
+
+<p>
+Um einen Zug zu machen sage erst die Reihe, dann die Spalte z.B:
+<pre>
+"C4" 
+</pre>
+</p>
+
+<p>
+Wenn du nach einem Feld gefragt wirst, dann antworte mit einem der drei möglichen Werte:
+<pre>
+"Wasser", "Treffer", "Versenkt" 
+</pre>
+</p>
+
+
+<p>
+<table><tr><td>
+
+<table>
+<tr> <td id="player1_name" align="center" colspan="11">Player1</td> </tr>
+<tr> <td align="center">&nbsp;</td> <td align="center">1</td> <td align="center">2</td> <td align="center">3</td> <td align="center">4</td> <td align="center">5</td> <td align="center">6</td> <td align="center">7</td> <td align="center">8</td> <td align="center">9</td> <td align="center">10</td> </tr>
+<tr> <td align="center">A</td> <td width="20px" height="20px" id="p1_00"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_01"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_02"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_03"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_04"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_05"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_06"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_07"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_08"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_09"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">B</td> <td width="20px" height="20px" id="p1_10"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_11"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_12"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_13"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_14"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_15"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_16"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_17"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_18"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_19"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">C</td> <td width="20px" height="20px" id="p1_20"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_21"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_22"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_23"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_24"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_25"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_26"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_27"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_28"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_29"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">D</td> <td width="20px" height="20px" id="p1_30"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_31"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_32"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_33"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_34"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_35"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_36"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_37"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_38"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_39"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">E</td> <td width="20px" height="20px" id="p1_40"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_41"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_42"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_43"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_44"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_45"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_46"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_47"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_48"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_49"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">F</td> <td width="20px" height="20px" id="p1_50"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_51"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_52"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_53"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_54"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_55"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_56"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_57"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_58"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_59"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">G</td> <td width="20px" height="20px" id="p1_60"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_61"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_62"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_63"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_64"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_65"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_66"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_67"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_68"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_69"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">H</td> <td width="20px" height="20px" id="p1_70"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_71"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_72"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_73"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_74"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_75"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_76"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_77"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_78"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_79"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">I</td> <td width="20px" height="20px" id="p1_80"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_81"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_82"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_83"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_84"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_85"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_86"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_87"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_88"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_89"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">J</td> <td width="20px" height="20px" id="p1_90"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_91"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_92"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_93"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_94"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_95"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_96"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_97"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_98"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p1_99"  bgcolor="gray">&nbsp;</td> </tr>
+</table>
+
+</td>
+<td>&nbsp;</td>
+<td>
+
+<table>
+<tr> <td id="player2_name" align="center" colspan="11">Player2</td> </tr>
+<tr> <td align="center">&nbsp;</td> <td align="center">&nbsp;</td> <td align="center">1</td> <td align="center">2</td> <td align="center">3</td> <td align="center">4</td> <td align="center">5</td> <td align="center">6</td> <td align="center">7</td> <td align="center">8</td> <td align="center">9</td> <td align="center">10</td> </tr>
+<tr> <td align="center">(Anton)</td>     <td align="center">A</td> <td width="20px" height="20px" id="p2_00"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_01"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_02"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_03"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_04"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_05"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_06"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_07"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_08"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_09"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Berta)</td>     <td align="center">B</td> <td width="20px" height="20px" id="p2_10"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_11"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_12"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_13"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_14"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_15"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_16"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_17"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_18"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_19"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Cäsar)</td>     <td align="center">C</td> <td width="20px" height="20px" id="p2_20"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_21"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_22"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_23"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_24"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_25"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_26"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_27"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_28"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_29"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Dora)</td>      <td align="center">D</td> <td width="20px" height="20px" id="p2_30"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_31"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_32"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_33"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_34"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_35"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_36"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_37"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_38"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_39"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Emil)</td>      <td align="center">E</td> <td width="20px" height="20px" id="p2_40"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_41"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_42"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_43"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_44"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_45"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_46"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_47"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_48"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_49"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Friedrich)</td> <td align="center">F</td> <td width="20px" height="20px" id="p2_50"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_51"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_52"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_53"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_54"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_55"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_56"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_57"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_58"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_59"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Gustav)</td>    <td align="center">G</td> <td width="20px" height="20px" id="p2_60"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_61"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_62"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_63"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_64"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_65"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_66"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_67"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_68"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_69"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Heinrich)</td>  <td align="center">H</td> <td width="20px" height="20px" id="p2_70"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_71"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_72"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_73"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_74"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_75"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_76"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_77"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_78"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_79"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Ida)</td>       <td align="center">I</td> <td width="20px" height="20px" id="p2_80"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_81"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_82"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_83"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_84"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_85"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_86"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_87"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_88"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_89"  bgcolor="gray">&nbsp;</td> </tr>
+<tr> <td align="center">(Julius)</td>    <td align="center">J</td> <td width="20px" height="20px" id="p2_90"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_91"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_92"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_93"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_94"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_95"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_96"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_97"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_98"  bgcolor="gray">&nbsp;</td> <td width="20px" height="20px" id="p2_99"  bgcolor="gray">&nbsp;</td> </tr>
+</table>
+
+</td></tr></table>
+</p>
+
+<p>
+Um die Spielfeldgröße (2-10) zu ändern sage:
+<pre>
+"Ändere Spiefeldgröße ..." 
+</pre>
+</p>
+
+<p>
+Um ein neues Spiel zu beginnen sage:
+<pre>
+"Neues Spiel" 
+</pre>
+</p>
+
+<p>
+Um Deinen Namen zu setzen sage:
+<pre>
+"Mein Name ist ..." 
+</pre>
+</p>
+
+<p>
+<table><tr>
+<td><input type="button" onclick="startload();" name="start" value="start"></td>
+<td><input type="button" onclick="stopload();" name="stop" value="stop"></td>
+<td><input type="button" onclick="reset();" name="reset" value="reset"></td>
+<td><input type="text" name="cnt" id="cnt"></td>
+</tr></table>
+</p>
+
+
+</body>
+</html>

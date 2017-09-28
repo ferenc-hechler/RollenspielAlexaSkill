@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+
+var redirectURL;
+var stopreload=false;
+var cnt=0;
+var version = -1;
+
+
+function reset()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/c4',
+		data: {
+			cmd: 'clearSession'
+		},
+		success: function (response) {
+			window.location="index.html";
+		}
+	});
+}
+
+function checkPlayername()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/c4',
+		data: {
+			cmd: 'getGameData',
+		},
+		success: function (response) {
+			version = response.version;
+		    if (response.player1Name !== "Player-1") {
+		    	stopreload = true;
+				window.location="play.html";
+			}
+		},
+		error: function (jqXHR, exception) {
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+	    }		
+	});
+}
+
+
+function loaddata()
+{
+	$.ajax({
+		type: 'post',
+		url: '../rest/c4',
+		data: {
+			cmd: 'hasChanges',
+			param1: version 
+		},
+		success: function (response) {
+		    cnt = cnt + 1
+		    document.getElementById( "cnt" ).value=cnt;
+		    if (response.code === "S_CHANGES_EXIST") {
+		    	setTimeout(checkPlayername, 1);
+			}
+		    else if (response.code === "E_UNKNOWN_GAMEID") {
+		    	stopreload = true;
+				window.location="index.html";
+			}
+		},
+		error: function (jqXHR, exception) {
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+	    }		
+	});
+	if (!stopreload) {
+		setTimeout(loaddata, 1000);
+	}
+}
+
+function startload()
+{
+	if (stopreload) {
+		 stopreload=false;
+		 setTimeout(loaddata, 1000);
+	}
+}
+
+function stopload()
+{
+	 stopreload=true;
+}
+
+setTimeout(loaddata, 1000);
+
+
+</script>
+
+</head>
+<body>
+		
+<h1>Vier Gewinnt gegen Alexa</h1>
+
+<p>Du bist nun verbunden mit Deiner Alexa.  :-)</p>
+
+<p>Verrate mit jetzt deinen Namen, sage:
+<code><pre>
+"Mein Name ist ..."
+</pre></code>
+</p>
+  
+<p>
+<table><tr>
+<td><input type="button" onclick="startload();" name="start" value="start"></td>
+<td><input type="button" onclick="stopload();" name="stop" value="stop"></td>
+<td><input type="button" onclick="reset();" name="reset" value="reset"></td>
+<td><input type="text" name="cnt" id="cnt"></td>
+</tr></table>
+</p>
+
+</body>
+</html>

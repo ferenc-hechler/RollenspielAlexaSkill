@@ -1,0 +1,37 @@
+TITEL: Audio Test 
+AUTOR: feri
+AUDIOBASEURL: https://calcbox.de/audio
+
+KURZBESCHREIBUNG:
+Tested das Einbinden einer MP3 Datei.
+
+ANMERKUNG:
+Copyright der Audio Dateien: (c) Michael Hilprecht (Hillus), https://dlalt.orkenspalter.de/?s=Hillus
+
+
+[BEGINN]
+Es kommt zum Kampf.
+WEITER: [1]
+
+
+[1]
+Es ist dunkel, vor Dir siehst Du ein schwach beleuchtetes Haus mit einem großen Gartentor.
+Du öffnest das Tor.
+AUDIO: Tuerknarren.mp3
+Du betritts den Garten
+AUDIO: Schritte.mp3
+Plötzlich schliesst sich hinter Dir das Gartentor von alleine
+AUDIO: Tuer-zuschlagen.mp3
+
+JANEINENTSCHEIDUNG:
+Möchtest Du weiter gehen?
+JA: Mutig stapfst Du weiter. [2]
+NEIN: Schnell rennst Du zum Tor zurück. [1]
+ 
+[2]
+Und wie es weiter geht wird ein anderes mal erzählt.
+WEITER: [ENDE]
+
+[ENDE]
+Und Schluss.
+

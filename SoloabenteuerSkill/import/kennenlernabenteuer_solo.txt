@@ -1,0 +1,180 @@
+TITEL: Kennenlernabenteuer
+ERFAHRUNGSSTUFEN: 1-3
+REGELWERK: DSA 4.1
+DAUER: 5 Minuten
+ORT: 
+AUTOR: Ferenc Hechler
+ERSCHIENEN: 22. Januar 2017
+LETZTEAKTUALISIERUNG:  
+LIZENZ: Creative Commons BY
+LIZENZURL: https://creativecommons.org/licenses/by/3.0/de/
+EMAIL: ferenc.hechler@gmail.com
+WEBSEITE: https://calcbox.de/solo/solo/anleitung.html
+AUDIOBASEURL: https://calcbox.de/audio
+
+KURZBESCHREIBUNG:
+Dies ist ein sehr kurzes Beispiel Soloabenteuer nach den Schwarze Auge Regeln.
+Ziel ist es, die Sprachsteuerung mit Alexa kennen zu lernen.
+Um das Soloabenteuer zu spielen benötigst Du einen Helden mit einem Charakterbogen,
+auf dem Deine Werte notiert sind. 
+
+
+ANMERKUNG:
+DAS SCHWARZE AUGE, AVENTURIEN und DERE sind eingetragene Marken der Ulisses Medien und Spiel Distribution GmbH oder deren Partner.
+Copyright der Audio Dateien: (c) Michael Hilprecht (Hillus), https://dlalt.orkenspalter.de/?s=Hillus
+
+
+[BEGINN]
+Es ist spät Abends und du hast dir gerade einen gemütlichen Platz im 
+kleinen Gasthaus "Zum Kobold" ausgesucht.
+Du hast Hunger.
+
+JANEINENTSCHEIDUNG: 
+Möchtest du etwas essen?
+JA:   Du rufst den Wirt an Deinen Tisch. [1]
+NEIN: [SCHNELLENDE]
+
+
+[1]
+Was möchtest du bestellen?
+
+ENTSCHEIDUNG: 
+Es gibt (A) Suppe für 5 Heller, (B) Braten für 1 Silbertaler oder (C) nur ein Bier für 6 Kreuzer. 
+A: [2] = Suppe 
+B: [3] = Braten 
+C: [4] = Bier 
+
+
+[2]
+Der Wirt bringt Dir eine leckere heiße Gemüsesuppe.
+
+AKTION:
+Ziehe dir 5 Heller ab.
+
+WEITER: [5]
+
+
+[3]
+Der Wirt bringt Dir eine großen Teller mit Schweinebraten.
+
+AKTION:
+Ziehe dir 1 Silbertaler ab.
+
+WEITER: [5]
+
+
+[4]
+Der Wirt bringt Dir ein Bier mit schaumiger Krone.
+
+AKTION:
+Ziehe dir 6 Kreuzer ab.
+
+WEITER: [5]
+
+
+[5]
+Am Nachbartisch sitzen drei Leute, trinken Bier und unterhalten sich sehr aufgeregt.
+Du kannst nicht genau hören, worum es geht. 
+
+JANEINENTSCHEIDUNG:
+Möchtest du dich an den Nachbartisch setzen?
+NEIN: [SCHNELLENDE]
+JA: [6]
+
+
+[6]
+Du gehst zum Nachbartisch.
+
+REGEL:
+BESUCHT(4): [11]
+WEITER:
+
+Der älteste spricht dich an: "Das hier ist der Biertisch, verschwinde".
+Du gehst wieder an Deinen Tisch.
+WEITER: [1] 
+
+
+[7]
+Im weiteren Gespräch erfährst Du, dass oben auf dem Speicher des Gasthauses 
+eine Riesenspinne wohnt.
+
+PROBE:
+Mut
+FEHLGESCHLAGEN: [8]
+BESTANDEN:      [9]
+
+
+[8]
+Du trinkst nochmal einen tiefen Schluck Bier und überlegst es Dir noch einmal.
+
+PROBE:
+Mut - 5
+FEHLGESCHLAGEN: [8]
+BESTANDEN:      [9]
+
+
+[9]
+Mutig begibst du dich zum Speicher.
+Du kletterst die Leiter hoch und öffnest die Luke.
+AUDIO: Tuerknarren.mp3
+Du betrittst einen großen Raum. 
+AUDIO: Schritte.mp3
+Plötzlich schliesst sich hinter Dir die Luke.
+AUDIO: Tuer-zuschlagen.mp3
+Im Dunkeln funkeln Dich zwei rot glühende Augen an.
+
+Du wirst von einer Riesenspinne angegriffen.
+
+KAMPF:
+GEGNER: Riesenspinne
+WAFFE: Biss
+TP: 1W6 + 2 
+AT: 7 
+PA: 6 
+LEP: 10 
+RS: 1 
+
+VERLOREN: [SCHNELLENDE]
+GEWONNEN: [10]
+ 
+ 
+[10]
+Du kehrst an den Biertisch zurück und erzählst von Deiner Heldentat.
+Die Anwesend sind hoch erfreut und beglückwünschen Dich:
+
+AKTION:
+Du bekommst von jedem 2 Silbertaler.
+Ausserdem erhältst Du für das erfolgreiche Abschließen des Abenteuers 15 Erfahrungspunkte.
+WEITER: [ENDE] 
+
+
+[11]
+Du wirst freundlich begrüßt und sie stoßen mit Deinem Bier an.
+Einer der Männer, ein Matrose, mustert Dich und sagt: 
+Ich will deinen Verstand auf die Probe Stellen.
+Mal sehen, ob du folgendes Rätsel lösen kannst, Du hast drei Versuche: 
+
+RÄTSEL:
+Wenn man es braucht,
+wirft man es weg!
+wenn man es nicht braucht,
+holt man es wieder zurück!
+ANTWORT(Anker): Richtig, der Matrose schaut dich anerkennend an. [7]
+ANTWORT(Angel): Nicht ganz, aber die Lösung fängt mit den gleichen beiden Buchstaben an.
+FEHLVERSUCHE(1): Ein Tipp: "Man braucht es im Meer". 
+FEHLVERSUCHE(2): Noch ein Tipp: "Es gehört zu jedem Schiff". 
+FEHLVERSUCHE(3): Leider hat Dein Verstand die Biertischmitglieder nicht überzeugt. [SCHNELLENDE]
+AUFGEBEN: [SCHNELLENDE]
+
+
+[SCHNELLENDE]
+Damit ist das Abenteuer auch schon zu Ende.
+Viel Erfolg beim nächsten mal.
+WEITER: [ENDE]
+
+
+[ENDE]
+Ich hoffe, dieses Abenteuer hat Spaß gemacht und ich würde mich über Lob, Kritik
+und Verbesserungsvorschläge freuen. Meine EMail Adresse ist ferenc.hechler@gmail.com. 
+
+

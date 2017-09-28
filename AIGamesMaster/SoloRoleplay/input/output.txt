@@ -1,0 +1,618 @@
+Solo-Abenteuer 'Goblinraub'
+
+ERFAHRUNGSSTUFEN: 1-3
+REGELWERK: DSA 4.1
+DAUER: 1 Stunde
+ORT: Andergast
+AUTOR: Josef Bohnhoff
+ERSCHIENEN: 7. Oktober 2013
+LETZTEAKTUALISIERUNG: 27. August 2014
+LIZENZ: Creative Commons BY NC ND
+LIZENZURL: https://creativecommons.org/licenses/by-nc-nd/3.0/de/
+EMAIL: josef.bohnhoff@gmx.net
+WEBSEITE: https://www.orkenspalter.de/filebase/index.php/File/154-Goblinraub/
+KURZBESCHREIBUNG: In diesem bescheidenen Abenteuer erhält der Held den Auftrag das Gut eines Händlers zurück zu holen, das sich eine räuberische Goblinbande angeeignet hat. Hierbei gilt es den Schlupfwinkel der Goblins in der waldreichen Landschaft Andergasts aufzuspüren und die Güter des Händlers zu bergen.
+ANMERKUNG: Bei diesem Abenteuer handelt es sich um eine Überarbeitung meines ersten Abenteuers, welches unter dem Namen „Die Bitte des Bogumils” erschienen ist. Das Abenteuer spielt in der Region Andergast. Es dreht sich alles um einen Händler dessen Gut von einer Bande Goblins gestohlen worden ist. Der Autor hat sich in diesem Abenteuer für das Du entschieden, damit es dem Spieler einfacher ist, in das Spielgeschehen ein zutauchen, es sollte daher nicht als Unhöflichkeit aufgefasst werden.
+
+[BEGINN]
+Erschöpft von deiner Reise, begibst du dich in das „Gasthaus zum alten Eber“ welches sich in einer kleinen Siedlung, südlich von Eichhafen befindet. In der rustikalen Taverne befinden sich nur wenige Tische, und die stickige Luft ist geschwängert von Bratenduft. Es dringt nur wenig Licht durch die Vier kleinen Fenster der Gaststube, welches durch den Qualm der Kochstelle noch verringert wird. Dennoch macht die Taverne einen recht freundlichen Eindruck. Kaum hast du dich umgesehen, da kommt auch schon der Wirt auf dich zu, und führt dich zu einem leeren Tisch, an welchem du Platz nimmst. Nun bietet der Wirt dir verschiedene Dinge an: Einen Schweine Braten mit Kartoffeln und Soße für sieben Heller. Brot und Käse für einen Heller. Einen Krug Bier für vier Kreuzer. Einen Becher Wein für neun Kreuzer. Kurz nachdem der Wirt deine Bestellung aufgenommen hat, stolpert ein stark mitgenommener Mann, mittleren Alters, in den Schankraum. Nach dem er sich kurz umgesehen hat, setzt er sich auf den einzig freien Platz im Gasthaus: neben euch. Die Kleidung hängt dem Mann in zerrissenen Fetzen vom Körper, und einige Unschöne Blessuren zieren sein Gesicht. Du fragst dich gerade was wohl mit dem Fremden geschehen ist, als der Wirt dir deine Mahlzeit bringt.
+
+JANEINENTSCHEIDUNG:
+Möchtest du den Fremden fragen was los ist?
+JA: [1]
+NEIN: [3]
+
+
+[1]
+„Was ist mit euch?“ sprichst du den Fremden an. Dieser antwortet: „Was soll Ich denn jetzt machen? Alles weg.“ Danach schweigt er, und es scheint nicht so, als wolle er noch etwas hinzufügen.
+
+JANEINENTSCHEIDUNG:
+Möchtest du versuchen mehr aus ihm heraus zu bekommen?
+JA: [2]
+NEIN: [3]
+
+
+[2]
+Der Fremde scheint nicht gewillt, mit dir zu sprechen
+
+PROBE:
+Menschenkenntnis
+BESTANDEN: [4]
+FEHLGESCHLAGEN: [5]
+
+
+[3]
+Nach einiger Zeit des Schweigens, ergreift der Fremde das Wort: Ich habe einen riesigen Hunger, habe aber nicht einen einzigen Kreuzer in der Tasche. Besäßet ihr die Güte, mir ein wenig Geld zu leihen? Nur damit ich mir etwas Brot und Käse kaufen kann.
+
+JANEINENTSCHEIDUNG:
+Möchtest du ihm einen Heller leihen?
+JA: [6]
+NEIN: [7]
+
+
+[4]
+Erneut fragst du ihn, was ihm denn zugestoßen sei, und er fängt mit zittriger Stimme an zu sprechen: „Mein Name ist Bogumil Eichinger und ich bin Händler von Beruf. Ich versorge die umliegenden Dörfer mit den Waren, die sie nicht selber herstellen können. Doch nun hat sich etwas Furchtbares ereignet. Als ich auf dem Weg von Eichhafen hierher unterwegs war, wurde ich von einer Bande Goblins überfallen. Dank sei Praios, dass Ich mit dem Leben davon gekommen bin. Doch sie nahmen alles was ich hatte: Mein Maultier und mein Handelsgut. Wenn ich das nicht irgendwie zurück erlange, bin ich vollkommen aufgeschmissen. Bitte Helft mir“ fleht er dich an.
+
+JANEINENTSCHEIDUNG:
+Möchtest du Bogumil deine Hilfe anbieten?
+JA: [8]
+NEIN: [7]
+
+
+[5]
+Es scheint so, als ob du dem Fremden vorerst keine weiteren Informationen entlocken wirst.
+
+ENTSCHEIDUNG:
+Möchtest du nun die Taverne genauer in Augenschein nehmen oder sie verlassen?
+A: [10] = in Augenschein nehmen | ansehen | untersuchen | umschauen
+B: [21] = verlassen | gehen
+
+
+[6]
+Nachdem du seiner Bitte nachgekommen bist, scheint die Zunge des Fremden gelöst und er beginnt zu sprechen: „Mein Name ist Bogumil Eichinger und ich bin Händler von Beruf. Ich versorge die umliegenden Dörfer mit den Waren, die sie nicht selber herstellen können. Doch nun hat sich etwas Furchtbares ereignet. Als ich auf dem Weg von Eichhafen hierher unterwegs war, wurde ich von einer Bande Goblins überfallen. Dank sei Praios, das Ich mit dem Leben davon gekommen bin. Doch sie nahmen alles was ich hatte: Mein Maultier und mein Handelsgut. Wenn ich das nicht irgendwie zurück erlange, bin ich vollkommen aufgeschmissen. Bitte Helft mir“ fleht er dich an.
+
+JANEINENTSCHEIDUNG:
+Möchtest du Bogumil deine Hilfe anbieten?
+JA: [8]
+NEIN: [7]
+
+
+[7]
+Verzweifelt schaut er dich an, und verlässt schließlich das Gasthaus.
+
+ENTSCHEIDUNG:
+Möchtest du ihm hinterher eilen, oder doch lieber sitzen bleiben?
+A: [11] = hinterher eilen | folgen | verlassen
+B: [13] = sitzen bleiben
+
+
+[8]
+„Es würde mir eine Ehre sein, euch zu helfen. Am besten brechen wir gleich morgen früh auf, und machen uns auf die Suche nach den Goblins. “ bietet Ihr eure Hilfe an. „Ich bin euch für euer Angebot sehr Dankbar, doch Ich denke nicht, das Ich mich trauen werde, mich abermals den Goblins gegenüber zu stellen. Es sieht so aus, als ob ihr alleine gehen müsstet. Natürlich werde Ich euch sofern Ihr mir meine Sachen zurück bringt, ordentlich belohnen.“ nachdem du dich als einverstanden erklärt hast, führt der Wirt euch in den Schlafsaal, in welchem ihr zum Preis von Vier Hellern auf Strohmatratzen übernachtet.
+
+AKTION:
+Du darfst je 1W6 LeP und AsP regenerieren.
+
+WEITER:
+Als du am nächsten Morgen aufstehst, fühlst du dich so frisch wie schon lang nicht mehr. Du gehst die Treppe hinunter in den Schankraum, wo Bogumil bereits auf dich wartet. Ihr frühstückt Gemeinsam, und als alle Teller leer gegessen sind, ergreift Bogumil das Wort: „Wenn Ihr eure Meinung nicht geändert habt, und Ihr bereit seid, würde Ich euch jetzt die Richtung zeigen in die Ihr gehen müsst.“ Da du nichts dagegen einzuwenden hast, verlasst Ihr die Taverne und Bogumil weist dir die Richtung. „Viel Glück, Ich werde hier auf euch warten“ sagt er noch zum Abschied bevor du losläufst. Der Weg dem du folgst, führt aus dem Dorf hinaus, und direkt hinein in den Wald. Das Wetter ist schön, und das Licht das durch die Baumkronen fällt, verleiht dem Wald eine mystische Atmosphäre. Der Weg geht so langsam in einen Trampelpfad über, und in der Ferne hörst du das Klopfen eines Spechtes. Die Luft riecht angenehm nach Tannennadeln, und du kannst dir nur schwer vorstellen, das in diesem Wald solche Gräueltaten verübt werden. Nachdem du dem Weg etwa Sieben Meilen gefolgt bist, entdeckst du einige Kampfspuren, dies muss die Stelle sein, welche Bogumil beschrieben hat.
+
+ENTSCHEIDUNG:
+Möchtest du die Spuren genauer untersuchen oder das umliegende Gebiet genauer in Augenschein nehmen? Natürlich steht dir auch frei wieder umzukehren
+A: [14] = Spur genauer untersuchen | Spur untersuchen | Spur ansehen
+B: [15] = Gebiet in Augenschein nehmen | Gebiet ansehen
+C: [9] = umkehren
+
+
+[9]
+Schnellen Schrittes machst du dich auf den Rückweg.
+
+JANEINENTSCHEIDUNG:
+Magst du nicht doch die Spuren untersuchen?
+JA: [14]
+NEIN: [16]
+
+
+[10]
+Du beschließt dich in der Taverne etwas genauer umzusehen. Als du aufstehst, stößt du versehentlich den Bierkrug einer Thorwalerin am Nachbartisch um. Wütend verlangt sie von dir, ihr einen neuen zu bezahlen.
+
+ENTSCHEIDUNG:
+Möchtest du ihr für Vier Kreuzer einen neuen Krug bestellen, oder lässt du es darauf ankommen.
+A: [17] = neuen Krug bestellen | vier Kreuzer bezahlen
+B: [18] = daraug ankommen lassen | nicht bezahlen
+
+
+[11]
+Eilig folgst du ihm nach draußen.
+
+REGEL:
+BESUCHT(4): [12]
+BESUCHT(6): [12]
+SONST: [19]
+
+
+[12]
+„Wartet!” rufst du Bogumil zu. Er dreht sich um, und schaut dich fragend an.
+
+ENTSCHEIDUNG:
+Möchtest du doch auf sein Bitte eingehen, oder in die Taverne zurückkehren um dort zu schlafen, oder deines Weges ziehen?
+A: [8] = auf Bitte eingehen
+B: [20] = zurück in die Taverne zum schlafen | zurück | zum schlafen
+C: [16] = meines Weges ziehen | weiterziehen
+
+
+[13]
+Es ist schon spät, und die Taverne beginnt sich langsam zu lehren. Der Wirt verkündet, dass er bald schließen wird.
+
+ENTSCHEIDUNG:
+Du hast die Wahl, ob du für Vier Heller im Gasthaus übernachtest, oder ob du lieber deines Weges ziehen willst.
+A: [20] = übernachten
+B: [16] = meines Weges ziehen | weiterziehen
+
+
+[14]
+
+REGEL:
+BESUCHT(29): [22]
+PROBE:
+Fährtensuchen -1
+BESTANDEN: [22]
+FEHLGESCHLAGEN: [25]
+
+
+[15]
+
+PROBE:
+Sinnenschärfe -1
+BESTANDEN: [24]
+FEHLGESCHLAGEN: [23]
+
+
+[16]
+Schade, dass du dem Abenteuer so gut es ging, aus dem Weg gelaufen bist.
+
+AKTION:
+Du erhältst 5 AP.
+
+WEITER: [ENDE]
+
+
+[17]
+Du bestellst ihr für den Preis von Vier Kreuzern ein neues Bier, und setzt dich wieder auf deinen Platz.
+
+WEITER: [3]
+
+
+[18]
+Als die Aufgebrachte Piratin einsehen muss, dass du nicht gewillt bist, ihrer Bitte nach zu kommen, verpasst sie dir eine schallende Ohrfeige.
+
+AKTION:
+Du verlierst 1 LeP.
+
+ENTSCHEIDUNG:
+Möchtest du dich jetzt lieber klein machen, und auf deinen Platz zurück kehren, oder lässt du dir dass nicht bieten, und beginnst eine Rauferei.
+A: [3] = zurück auf meinen Platz kehren
+B: [26] = Rauferei beginnen
+
+
+[19]
+„Wartet!” rufst du dem Fremden nach. Er dreht sich um, und schaut dich fragend an.
+
+ENTSCHEIDUNG:
+Möchtest du doch auf sein Bitte eingehen, oder in die Taverne zurückkehren um dort zu schlafen, oder deines Weges ziehen?
+A: [6] = auf Bitte eingehen
+B: [20] = zurück in die Taverne zum schlafen | zurück | zum schlafen
+C: [16] = meines Weges ziehen | weiterziehen
+
+
+[20]
+Du beschließt die Nacht in der Taverne zu verbringen, und zahlst dem Wirt 2 Heller für die Unterkunft.
+
+AKTION:
+Du darfst je 1W6 LeP und AsP regenerieren.
+
+WEITER:
+Als du am nächsten Morgen aufstehst, fühlst du dich so frisch wie schon lang nicht mehr. Du gehst die Treppe hinunter in den Schankraum, wo der Wirt sich aufgeregt mit einem dir Unbekannten Mann unterhält. Als der Wirt dich erblickt kommt er auf dich zu: „ Ah guten Morgen werter Gast, etwas schreckliches ist Geschehen! Könnt ihr euch noch an euren Tisch Genossen von Gestern Abend erinnern? Er wurde auf dem Weg nach Eichhafen Tod aufgefunden!” Nachdem der Wirt die diese Neuigkeit mitgeteilt hat, richtet er dein Frühstück her.
+
+ENTSCHEIDUNG:
+Möchtest du nach dem Essen nach dem Toten suchen, oder deines Weges ziehen?
+A: [29] = nach dem Toten suchen
+B: [16] = meines Weges ziehen | weiterziehen
+
+
+[21]
+Du trittst aus der Taverne, es ist bereits Pech Raben Schwarz.
+
+ENTSCHEIDUNG:
+Möchtest du lieber wieder hinein gehen, und dich zurück an deinen Tisch setzen, oder deines Weges ziehen?
+A: [3] = wieder hinein | wieder in die Taverne | zurück an meinen Tisch setzen
+B: [16] = meines Weges ziehen | weiterziehen
+
+
+[22]
+Du kannst deutlich die Fußspuren mehrerer Goblins erkennen, auch Hufabdrücke und die gewöhnlicher Stiefel sind dabei. Dank der Hufabdrücke des gestohlenen Maultiers, ist es einfach den Spuren der Goblins zu folgen, obwohl sie mitten durch den Wald führen. Plötzlich hörst du ganz in der Nähe einen Ast knacken.
+
+PROBE:
+Sinnenschärfe
+BESTANDEN: Du Bist scharfsinnig wie eine Katze [24]
+FEHLGESCHLAGEN: Du bist blind wie ein Maulwurf [28]
+
+
+[23]
+So sehr du dich auch anstrengst, kannst du nichts außergewöhnliches entdecken.
+
+ENTSCHEIDUNG:
+Möchtest du dich nun den Spuren zu wenden, oder doch lieber Umkehren und deine eigenen Wege gehen?
+A: [14] = Spur zuwenden | Spur untersuchen | Spur ansehen
+B: [16] = eigene Wege gehen | umkehren
+
+
+[24]
+Als du dich genauer umsiehst, kannst du einen Goblin entdecken der sich im Gestrüpp versteckt hält. Als dieser merkt, dass er entdeckt wurde, macht er sich schleunigst aus dem Staub.
+
+ENTSCHEIDUNG:
+Möchtest du ihm folgen, ansonsten ist es dir natürlich auch freigestellt lieber umzukehren, und deines Weges zu gehen.
+A: [54] = Goblin verfolgen | folgen
+B: [16] = eigenen Weg gehen | umkehren
+
+
+[25]
+Dir gelingt es leider nicht, etwas von den Spuren ab zuleiten. Als du bereits überlegst, ob du in die Taverne zurückkehren sollst, stürzen drei Gestalten aus dem Schutz des Waldes. Es handelt sich Augenscheinlich um Goblins. Sie sind mit Speeren und Keulen bewaffnet und in Felle und lumpen gekleidet. Es ist klar was sie wollen, sie fordern dein Hab und Gut und scheinen sehr wohl gewillt dem nach zu helfen, falls du es nicht freiwillig herausrückst. Ein wilder Kampf entsteht.
+
+KAMPF:
+GEGNER: 2 Goblins
+WAFFE: Speer/Keule INI 4+1W6
+AT: 7
+PA: 6
+TP: 1W6+1
+DK: H
+LEP: 16
+RS: 1
+AUP: 15
+WS: 3
+GS: 5
+MR: 0
+
+GEWONNEN: [53]
+VERLOREN: [27]
+
+
+[26]
+Ihr geht auf einander los, eine Wilde Schlägerei entsteht. Bevor andere Gäste eingreifen, und euch auseinander reißen, musstet ihr beide heftig einstecken.
+
+AKTION:
+Du verlierst 4 LeP.
+
+WEITER:
+Nach diesem kleinen Kampf, setzt du dich erschöpft auf deinen Platz
+
+WEITER: [3]
+
+
+[27]
+Kurz bevor du bewusstlos zu Boden sinkst, kannst du noch sehen wie dir einer der seltenen Patrouillen der andergastischen Wache zur Hilfe eilt. Als du aufwachst, liegst du auf einer Strohmatratze in der Taverne. Dein Schädel brummt, und deine Glieder schmerzen. Der Soldat muss dich gerettet, und hierher gebracht haben! Um das Abenteuer abzuschließen bist du leider zu geschwächt.
+
+AKTION:
+Du erhältst 30 AP für deine Mühen.
+
+WEITER: [ENDE]
+
+
+[28]
+Als du dich umsiehst, kannst du nichts entdecken, wirst dafür aber einen halben Augenblickspäter von einer schwer gereizten Wildschwein Mutter angegriffen.
+
+KAMPF:
+GEGNER: Wildschwein
+WAFFE: Stoß/Biss INI 7+1W6
+AT: 8
+PA: 4
+TP: 1W6
+DK: H
+LEP: 28
+RS: 1
+AUP: 20
+WS: 6
+GS: 5
+MR: 0
+
+VERLOREN: [31]
+GEWONNEN:
+ENTSCHEIDUNG:
+Möchtest du weiterhin den Spuren folgen, oder umkehren um deine eigenen Wege zu gehen?
+A: [30] = Spuren folgen
+B: [16] = eigene Wege gehen
+
+
+[29]
+Der Weg dem du folgst, führt aus dem Dorf hinaus, und direkt hinein in den Wald. Das Wetter ist schön, und das Licht das durch die Baumkronen fällt, verleiht dem Wald eine mystische Atmosphäre. Der Weg geht so langsam in einen Trampelpfad über, und in der Ferne hörst du das Klopfen eines Spechtes. Die Luft riecht angenehm nach Tannennadeln, und du kannst dir nur schwer vorstellen, das in diesem Wald solche Gräueltaten verübt werden. Nachdem du dem Weg etwa Sieben Meilen gefolgt bist, entdeckst du einen Toten, den du eindeutig als deinen ehemaligen Tisch Genossen identifizieren kannst.
+
+ENTSCHEIDUNG:
+Möchtest du die Spuren genauer untersuchen, oder das umliegende Gebiet genauer in Augenschein nehmen. Natürlich steht dir auch frei wieder umzukehren.
+A: [14] = Spuren genauer untersuchen
+B: [15] = das umliegende Gebiet in Augenschein nehmen
+C: [9] = umkehren
+
+
+[30]
+Du gehst immer weiter in den Wald hinein und es wird immer schwieriger, den Spuren zu folgen. Doch schließlich kommst du auf eine Lichtung, au der ein Fels steht. Als du genauer hinsiehst, kannst du einen Höhleneingang, halb von dem Felsen verdeckt entdecken.
+
+ENTSCHEIDUNG:
+Möchtest du versuchen, dich in die Höhle hinein zu schleichen? Natürlich kannst du auch umkehren und deines eigenen Weges gehen.
+A: [32] = in die Höhle hinein schleichen
+B: [16] = eigenen Weges gehen
+
+
+[30]
+Es ist schade, dass dein Held ausgerechnet in diesem Abenteuer sterben musste. Ich hoffe, es hat bis hierhin trotzdem Spaß gemacht. Außerdem wünsche Ich dir in einem neuen Abenteuer, mit einem anderen Charakter mehr Glück.
+
+WEITER: [ENDE]
+
+
+[32]
+
+REGEL:
+BESUCHT(29): [33]
+SONST: [36]
+
+
+[33]
+Die Höhle ist relativ klein, etwa fünf Mal fünf Schritt. In der Mitte des Raumes befindet sich ein Lagerfeuer, um das herum vier Schlaflager aufgebaut sind. Ein Goblin ist gerade dabei etwas zu braten, was verdächtig nach Maultierkeule aussieht. In einer Ecke der Höhle kannst du außerdem eine Kiste aus Holz ausfindig machen.
+
+ENTSCHEIDUNG:
+Möchtest du den Goblin Angreifen, versuchen dich Zu der Kiste zu schleichen, oder hältst du es für besser, umzukehren und deine eigenen Wege zu gehen?
+A: [35] = Goblin angreifen
+B: [34] = zur Kiste schleichen
+C: [16] = umkehren
+
+
+[34]
+
+PROBE:
+schleichen
+BESTANDEN: [38]
+FEHLGESCHLAGEN: [39]
+
+
+[35]
+Du beschließt dich dazu in den Angriff überzugehen. Ein Kampf auf Leben und Tod entfacht.
+
+KAMPF:
+GEGNER: Goblin
+WAFFE: Ast: INI 4+1W6
+AT: 7
+PA: 6
+TP: 1W6-1
+DK: H
+LEP: 15
+RS: 1
+AUP: 15
+WS: 3
+GS: 5
+MR: 0
+
+GEWONNEN: [45]
+VERLOREN: [31]
+
+
+[36]
+Die Höhle ist relativ klein, etwa fünf Mal fünf Schritt. In der Mitte des Raumes befindet sich ein Lagerfeuer, um das herum vier Schlaflager aufgebaut sind. Ein Goblin ist gerade dabei etwas zu braten, was verdächtig nach Maultierkeule aussieht. In einer Ecke der Höhle kannst du außerdem Bogumils Waren ausmachen.
+
+ENTSCHEIDUNG:
+Möchtest du den Goblin Angreifen, versuchen dich zu den Waren zu schleichen, oder hältst du es für besser, umzukehren und deine eigenen Wege zu gehen?
+A: [35] = Goblin angreifen
+B: [37] = zu den Waren schleichen
+C: [16] = eigene Wege gehen
+
+
+[37]
+
+PROBE:
+Schleichen
+BESTANDEN: [47]
+FEHLGESCHLAGEN: [48]
+
+
+[38]
+Wie durch ein Wunder gelingt es dir, unbemerkt zu der Kiste zu gelangen. Sie ist unverschlossen und es befinden sich zwei Fläschchen Heiltrank (gibt 3W6 LeP zurück), vier Dosen Kautabak und einige farbige Stoffe. Außerdem entdeckst du noch einen kleinen Beutel, welcher mit sieben Dukaten gefüllt ist.
+
+ENTSCHEIDUNG:
+Möchtest du jetzt die Höhle verlassen, oder dich doch lieber mit dem Goblin anlegen?
+A: [40] = Höhle verlassen
+B: [41] = mit dem Goblin anlegen
+
+
+[39]
+Obwohl du dir alle Mühe gibst, möglichst kein Geräusch zu machen, gelingt es dir scheinbar nicht gut genug. Als der Goblin dich erblickt, geht er mit einem wütenden Kreischen auf dich los.
+
+KAMPF:
+GEGNER: Goblin
+WAFFE: Ast: INI 4+1W6
+AT: 7
+PA: 6
+TP: 1W6-1
+DK: H
+LEP: 15
+RS: 1
+AUP: 15
+WS: 3
+GS: 5
+MR: 0
+
+GEWONNEN: [42]
+VERLOREN: Du trittst die lange Reise zu Boron an [31]
+
+
+[40]
+Du packst alles aus der Truhe ein, was du mitnehmen möchtest, und schleichst dich leise wieder aus der Höhle hinaus. Du freust dich über deine gelungene Dieberei und machst dich auf den Weg zurück in die Taverne, von wo aus du dann zu weiteren Abenteuern auf brechen kannst.
+
+AKTION:
+Du erhältst 50 AP als Belohnung.
+
+WEITER: [ENDE]
+
+
+[41]
+Du beschließt dich dazu, dich doch noch mit dem Goblin anzulegen. Deinen ersten Angriff darf dieser nicht parieren, da du dich von Hinten an ihn heran schleichst. Natürlich darfst du als erster Angreifen.
+
+KAMPF:
+GEGNER: Goblin
+WAFFE: Ast: INI 4+1W6
+AT: 7
+PA: 6
+TP: 1W6-1
+DK: H
+LEP: 15
+RS: 1
+AUP: 15
+WS: 3
+GS: 5
+MR: 0
+
+GEWONNEN: [43]
+VERLOREN: Du trittst die lange Reise zu Boron an [31]
+
+
+[42]
+Du führst einen letzten Hieb aus, woraufhin der Rotpelz leblos zu Boden sinkt. Du wendest dich nun der Kiste zu.
+
+WEITER: [44]
+
+
+[43]
+Du führst einen letzten Hieb aus, woraufhin der Rotpelz leblos zu Boden sinkt. Nun kannst du die Höhle verlassen.
+
+WEITER: [40]
+
+
+[44]
+Die Kiste ist unverschlossen und es befinden sich zwei Fläschchen Heiltrank (gibt 3W6 LeP zurück), vier Dosen Kautabak und einige farbige Stoffe. Außerdem entdeckst du noch einen kleinen Beutel, welcher mit sieben Dukaten gefüllt ist.
+
+WEITER: [40]
+
+
+[45]
+
+REGEL:
+BESUCHT(33): [42]
+SONST: [46]
+
+
+[46]
+Du führst einen letzten Hieb aus, woraufhin der Rotpelz leblos zu Boden sinkt. Du wendest dich nun den Sachen Bogumils zu.
+
+WEITER: [49]
+
+
+[47]
+Wie durch ein Wunder gelingt es dir, unbemerkt zu Bogumils Sachen zu gelangen.
+
+ENTSCHEIDUNG:
+Möchtest du sie an dich nehmen und sie Bogumil bringen, oder hältst du es doch für Klüger davor den Goblin zu erschlagen?
+A: [50] = Bogumils Sachen nehmen | Sachen zu Bogumil bringen
+B: [51] = Goblin erschlagen
+
+
+[48]
+Obwohl du dir alle Mühe gibst, möglichst kein Geräusch zu machen, gelingt es dir scheinbar nicht gut genug. Als der Goblin dich erblickt, geht er mit einem wütenden Kreischen auf dich los.
+
+KAMPF:
+GEGNER: Goblin
+WAFFE: Ast: INI 4+1W6
+AT: 7
+PA: 6
+TP: 1W6-1
+DK: H
+LEP: 15
+RS: 1
+AUP: 15
+WS: 3
+GS: 5
+MR: 0
+
+GEWONNEN: [52]
+VERLOREN: Du trittst die lange Reise zu Boron an [31]
+
+
+[49]
+Du wendest dich den Waren von Bogumil zu. Sie besteht aus mehreren Prall gefüllten Beuteln. Du bist Froh, dass du sie endlich dem armen Bogumil zurück bringen kannst.
+
+WEITER: [50]
+
+
+[50]
+Du Schulterst die Beutel, und machst dich auf den Weg zurück in die Taverne. Der Rückweg verläuft ohne Zwischenfälle, obwohl sich das Wetter ein bischen verschlechtert hat. Im leichten Nieselregen erreichst du das Gasthaus, an dessen Tür Bogumil bereits auf dich wartet. Als du ihm seine Waren zurück gibst ist er Überglücklich. Er zahlt dir vier Dukaten als Belohnung, und auch den Verlust seines Maultiers verkraftet er.
+
+AKTION:
+Du erhältst 60 AP als Belohnung.
+
+WEITER: [ENDE]
+
+
+[51]
+Du beschließt dich dazu, dich doch noch mit dem Goblin anzulegen. Deinen ersten Angriff darf dieser nicht parieren, da du dich von Hinten an ihn heran schleichst. Natürlich darfst du als erster Angreifen.
+
+KAMPF:
+GEGNER: Goblin
+WAFFE: Ast: INI 4+1W6
+AT: 7
+PA: 6
+TP: 1W6-1
+DK: H
+LEP: 15
+RS: 1
+AUP: 15
+WS: 3
+GS: 5
+MR: 0
+
+GEWONNEN: [52]
+VERLOREN: Du trittst die lange Reise zu Boron an [31]
+
+
+[52]
+Du führst einen letzten Hieb aus, woraufhin der Rotpelz leblos zu Boden sinkt. Du wendets dich nun Bogumils Waren zu.
+
+WEITER: [49]
+
+
+[53]
+Erschöpft vom Kampf, lässt du dich auf eine Wurzel fallen, nur kurz verschnaufen denkst du dir. Doch was ist das? Du hörst Äste knacken, und als du dich umsiehst entdeckst du einen weiteren Goblin im Gestrüpp, der Panisch das Weite sucht.
+
+ENTSCHEIDUNG:
+Möchtest du dich schnellstens aufrappeln und ihm folgen? Natürlich steht es dir auch Frei einfach deines Weges zu ziehen.
+A: [54] = Goblin verfolgen | Goblin folgen
+B: [16] = meines Weges ziehen
+
+
+[54]
+Du kommst immer tiefer in den Wald hinein und es wird immer schwieriger, dem Goblin zu Folgen, beinahe verlierst du ihn aus den Augen. Doch schließlich kommst du auf eine Lichtung, auf der ein Fels steht. Der Goblin scheint spurlos verschwunden zu sein, doch da entdeckst du ihn. Links von dir, keine drei Schritt entfernt, hängt er kopfüber von einem Baum. Über ihm in den Ästen sitzt eine große Riesenspinne, welche damit beschäftigt ist ihn einzuspinnen. Erschrocken gehst du einige schritte rückwärts, mit einem solch großen Exemplar solltest du dich lieber nicht Anlegen!
+
+ENTSCHEIDUNG:
+Möchtest du dich auf der Lichtung umsehen, oder so schnell wie möglich Land zwischen dich und diese Spinne bringen!?
+A: [55] = auf der Lichtung umsehen | Lichtung ansehen
+B: [56] = Land zwischen mich und Spinne bringen | von Spinne entfernen | gehen
+
+
+[55]
+Als du dich auf der Lichtung umsiehst, kannst du einen Höhleneingang, halb von dem Felsen verdeckt entdecken.
+
+ENTSCHEIDUNG:
+Möchtest du versuchen, dich in die Höhle hinein zu schleichen. Natürlich kannst du auch umkehren und deine eigenen Wege gehen.
+A: [32] = in Höhle schleichen
+B: [16] = eigene Wege gehen
+
+
+[56]
+Gesunder Menschenverstand soll belohnt werden.
+
+AKTION:
+Deshalb erhältst du an dieser stelle 20 AP.
+
+WEITER:
+Doch leider ist das Abenteuer für dich an dieser Stelle auch zu Ende.
+
+WEITER: [ENDE]
+
+
+[ENDE]
+Ich hoffe, dieses Abenteuer hat Spaß gemacht und ich würde mich über Lob, Kritik und Verbesserungsvorschläge an josef.bohnhoff@gmx.net sehr freuen. Dieses Abenteuer wurde Im Jahre 2013 geschrieben. Bisherige Abenteuer aus meiner Feder: Die Flucht aus dem Hexenhaus (2013) und der Vorgänger dieses Abenteuers: Die Bitte des Bogumils (2012)
+
+

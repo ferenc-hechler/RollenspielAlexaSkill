@@ -1,0 +1,34 @@
+<speak>  Die Tür geht auf <audio src="https://calcbox.de/audio/alexaTuerknarren.mp3" /> fertig.</speak> 
+
+set PATH=C:\DEV\bin\ffmpeg\bin;%PATH%
+ffmpeg -i ZOOM0004_MONO.mp3 -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 alexaZOOM0004_MONO.mp3
+
+
+ffmpeg -i audio/Tuerknarren.mp3 -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 alexaTuerknarren.mp3
+
+X-SAMPE Tabelle: http://www.lfsag.unito.it/ipa/index_en.html
+german -> X-SAMPA: http://familientagebuch.de/rainer/2007/38.html#4
+<speak>Der Hauptmann von <phoneme alphabet="x-sampa" ph=""pu:nIn">Punin</phoneme>.</speak>
+
+
+set PATH=C:\DEV\bin\ffmpeg\bin;%PATH%
+ffmpeg -ss 3.50 -t 2.50 -i test.mp3 -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 a_test_350_600.mp3
+
+ffmpeg -i "concat:test.mp3|test.mp3" -ac 2 -codec:a libmp3lame -b:a 48k -ar 16000 a_test_x2.mp3
+
+# query volume
+ffmpeg -i test.mp3 -af "volumedetect" -f null NUL
+  size=N/A time=00:00:09.48 bitrate=N/A speed= 745x
+  video:0kB audio:817kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+  [Parsed_volumedetect_0 @ 0000000000686aa0] n_samples: 418176
+  [Parsed_volumedetect_0 @ 0000000000686aa0] mean_volume: -19.8 dB
+  [Parsed_volumedetect_0 @ 0000000000686aa0] max_volume: -0.3 dB
+  [Parsed_volumedetect_0 @ 0000000000686aa0] histogram_0db: 19
+  [Parsed_volumedetect_0 @ 0000000000686aa0] histogram_1db: 36
+  [Parsed_volumedetect_0 @ 0000000000686aa0] histogram_2db: 88
+  [Parsed_volumedetect_0 @ 0000000000686aa0] histogram_3db: 148
+  [Parsed_volumedetect_0 @ 0000000000686aa0] histogram_4db: 363
+ 
+ # change volume
+ffmpeg -i test.mp3 -af "volume=5dB" test_5db.mp3
+ 

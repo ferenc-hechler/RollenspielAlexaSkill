@@ -22,15 +22,22 @@
  * App ID for the skill
  */
 // SOLOABENTEUER
-var APP_ID = "*"; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
+var APP_ID = process.env.APP_ID; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
 
 // // SOLO
-var endpoint = 'http://localhost:8080/AIGamesRestService/rest/solo';
-var endpointDev = 'http://localhost:8080/AIGamesRestService/rest/solo';
+var endpoint = process.env.ENDPOINT;          // 'http://localhost:8080/RoleplayRestService/rest/solo';
+var endpointDev = process.env.ENDPOINT_DEV;   // 'http://localhost:8080/DEVRoleplayRestService/rest/solo';
 
 var URL = require('url');
-var authUsername = 'rest';
-var authPassword = 'geheim';
+var authUsername = process.env.AUTH_USERNAME;   // 'rest';
+var authPassword = process.env.AUTH_PASSWORD;   // 'geheim';
+
+// LOG environment variables
+console.log("APP_ID="+APP_ID);
+console.log("ENDPOINT="+endpoint);
+console.log("ENDPOINT_DEV="+endpointDev);
+console.log("AUTH_USERNAME="+authUsername);
+console.log("AUTH_PASSWORD="+(authPassword.replace(/./g, '*')));
 
 
 /**

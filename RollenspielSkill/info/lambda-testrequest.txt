@@ -1,0 +1,32 @@
+// REQUEST: "Alexa sage Rollenspiel Sonne"
+// applicationId muss korrekt gesetzt werden (passend zur Umgebungsvariable process.ENV.APP_ID)
+
+{
+  "session": {
+    "sessionId": "SessionId.7478953b-c79b-4350-95c7-6fd87d3cd510",
+    "application": {
+      "applicationId": "amzn1.ask.skill......................"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "testuser"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "testrequest",
+    "locale": "de-DE",
+    "timestamp": "2017-09-28T22:51:42Z",
+    "intent": {
+      "name": "AnswerIntent",
+      "slots": {
+        "answer": {
+          "name": "answer",
+          "value": "Sonne"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

@@ -21,6 +21,7 @@ package de.hechler.aigames.rest;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -87,6 +88,12 @@ public class SoloAdventureRestService extends HttpServlet {
 //			logger.info("encoding : " + response.getCharacterEncoding());
 		    PrintWriter writer = response.getWriter();
 			
+		    if (!checkAuth(request)) {
+				responseString = unauthResponse(response);
+				writer.println(responseString);
+				return;
+			}
+		    
 			gameId = normalizeGameId(request.getParameter("gameId"));
 			cmd = request.getParameter("cmd");
 			param1 = request.getParameter("param1");
@@ -266,6 +273,34 @@ public class SoloAdventureRestService extends HttpServlet {
 
 	
 
+	/* ==== */
+	/* AUTH */
+	/* ==== */
+	
+	private boolean checkAuth(HttpServletRequest request) throws IOException {
+		String auth = request.getHeader("Authorization");
+		if ((auth == null) || !auth.startsWith("Basic ")) {
+			return false;
+		}
+		String userpass;
+		try {
+			userpass = new String(java.util.Base64.getDecoder().decode(auth.substring(6)), StandardCharsets.ISO_8859_1);   // ISO-8859-1 is the standard for basic auth.
+		}
+		catch (Exception e) {
+			System.out.println("basic auth decode failed: "+e);
+			return false;
+		}
+		boolean result = userpass.equals("rest:geheim");
+		return result;
+	}
+
+	private String unauthResponse(HttpServletResponse response) {
+		response.setStatus(401);
+		response.setHeader("WWW-Authenticate", "Basic realm=\"solo-rest-service\"");
+		return "";
+	}
+
+	
 	/* ================== */
 	/* startup / shutdown */
 	/* ================== */

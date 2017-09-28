@@ -1,7 +1,7 @@
 ###
 # DEBUG LOGGING STABLE
 #
-https://localhost:8080/AIGamesRestService/rest/solo?cmd=enableDebugLogging&param1=true
+http://localhost:8080/AIGamesRestService/rest/solo?cmd=enableDebugLogging&param1=true
 
 
 ### 

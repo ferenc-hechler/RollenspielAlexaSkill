@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import de.hechler.aigames.SimpleDBConnection;
 import de.hechler.aigames.SimpleDBConnectionFactory;
-import de.hechler.aigames.ai.DAOFactory;
+import de.hechler.aigames.persist.DAOFactory;
 
 //@WebServlet(urlPatterns = "/soloadv", loadOnStartup = 1)
 public class HealthCheckServlet extends HttpServlet {

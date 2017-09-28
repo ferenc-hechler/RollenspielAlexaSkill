@@ -17,31 +17,39 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.ai;
+package de.hechler.aigames.response;
 
-import de.hechler.aigames.SimpleDBConnection;
-import de.hechler.aigames.SimpleDBConnectionFactory;
-import de.hechler.aigames.SoloRoleplayDAO;
-import de.hechler.aigames.UserPersistDAO;
+public class TextResult extends GenericResult {
 
-public class DAOFactory {
-
-	public final static String DB_NAME = "solo";
+	public String text;
 	
-	public static SimpleDBConnection initDB() {
-		return SimpleDBConnectionFactory.initDBConn(DB_NAME);
-	}
-
-	public static UserPersistDAO createUserPersistDAO() {
-		return new UserPersistDAO(DB_NAME);
-	}
-
-	public static SoloRoleplayDAO createSoloRoleplayDAO() {
-		return new SoloRoleplayDAO(DB_NAME);
+	
+	public TextResult(ResultCodeEnum resultCode) {
+		this(resultCode, null);
 	}
 	
-	public static void shutdown() {
-		SimpleDBConnectionFactory.shutdown(DB_NAME);
+	public TextResult(ResultCodeEnum resultCode, String text) {
+		super(resultCode);
+		this.text = text;
 	}
+
+	@Override
+	public String toString() {
+		return "TEXT["+code+",\""+shorten(text, 40)+"\"]";
+	}
+
+	private String shorten(String txt, int len) {
+		if ((txt == null) || (txt.length() <= len)) {
+			return txt;
+		}
+		if (len <= 5) {
+			return txt.substring(0, len);
+		}
+		int textLen = len - 3;
+		int beginLen = (int) (textLen * 0.67); 
+		int endLen = textLen - beginLen;
+		return txt.substring(0, beginLen) + "..." + txt.substring(txt.length()-endLen);
+	}
+
 
 }

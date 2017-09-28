@@ -17,9 +17,8 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.ai;
+package de.hechler.aigames.persist;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,14 +27,13 @@ import java.util.Random;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.InstanceCreator;
 
 import de.hechler.aigames.UserPersistDAO;
 import de.hechler.aigames.UserPersistDAO.UserInfo;
-import de.hechler.aigames.ai.soloroleplay.PersistentDataSoloGame;
+import de.hechler.aigames.soloroleplay.SoloGame;
 import de.hechler.utils.RandUtils;
 
-public class GameRepository<G extends IGame> {
+public class GameRepository {
 
 	public static Random testRandom;
 	
@@ -43,7 +41,7 @@ public class GameRepository<G extends IGame> {
 	private static final int AUTOSAVE_INTERVAL_MS = 10*1000;
 	private static final int TIMEOUT_4H = 4*60*60*1000;
 
-	public static class GameState<G extends IGame> {
+	public static class GameState {
 		private String gameId;
 		private long creationTimestamp;
 		private long lastUpdate;
@@ -51,10 +49,10 @@ public class GameRepository<G extends IGame> {
 		private int persistedVersion;
 		private String userId;
 		private String role;
-		private G game;
+		private SoloGame game;
 		private long timeoutMillis;
 		private boolean active;
-		public GameState(String gameId, G game, long timeoutMillis) {
+		public GameState(String gameId, SoloGame game, long timeoutMillis) {
 			this.gameId = gameId;
 			this.game = game;
 			this.timeoutMillis = timeoutMillis;
@@ -67,7 +65,7 @@ public class GameRepository<G extends IGame> {
 		public String getGameId() {
 			return gameId;
 		}
-		public G getGame() {
+		public SoloGame getGame() {
 			return game;
 		}
 		public long getCreationTimestamp() {
@@ -155,18 +153,14 @@ public class GameRepository<G extends IGame> {
 		
 	}
 
-	private Class<G> gameClazz;
-
-
-	private Map<String, GameState<G>> gameId2gameMap = new HashMap<String, GameState<G>>();
+	private Map<String, GameState> gameId2gameMap = new HashMap<String, GameState>();
 	private Map<String, String> userId2gameIdMap = new HashMap<String, String>();
 	
 	private UserPersistDAO userPersistDAO;
 	private Gson gson;
 	
 	
-	public GameRepository(Class<G> gameClazz) {
-		this.gameClazz = gameClazz;
+	public GameRepository() {
 	}
 
 	private UserPersistDAO getUserPersistDAO() {
@@ -178,30 +172,27 @@ public class GameRepository<G extends IGame> {
 	
 	private Gson getGson() {
 		if (gson == null) {
-			RuntimeTypeAdapterFactory<IPersistentGameData> runtimeTypeAdapterFactory = RuntimeTypeAdapterFactory
-				    .of(IPersistentGameData.class, "type")
-				    .registerSubtype(PersistentDataSoloGame.class, "solo");
-			gson = new GsonBuilder().registerTypeAdapterFactory(runtimeTypeAdapterFactory).create();
+			gson = new GsonBuilder().create();
 		}
 		return gson;
 	}
 
-	public synchronized GameState<G> getGameStateByGameIdNoFallback(String gameId) {
+	public synchronized GameState getGameStateByGameIdNoFallback(String gameId) {
 		checkTimeout();
 		return gameId2gameMap.get(gameId);
 	}
 
-	public synchronized GameState<G> getGameStateByGameId(String gameId) {
-		GameState<G> result = getGameStateByGameIdNoFallback(gameId);
+	public synchronized GameState getGameStateByGameId(String gameId) {
+		GameState result = getGameStateByGameIdNoFallback(gameId);
 		if (result == null) {
 			result = getGamestateByPersistedGameId(gameId);
 		}
 		return result;
 	}
 
-	private GameState<G> getGamestateByPersistedGameId(String gameId) {
+	private GameState getGamestateByPersistedGameId(String gameId) {
 		// HIERWEITER
-//		GameState<G> result;
+//		GameState result;
 //		String userId = "feri";
 //		result = getGameStateByUserId(userId);
 //		if (result == null) {
@@ -215,7 +206,7 @@ public class GameRepository<G extends IGame> {
 		return null;
 	}
 
-	public synchronized void forceSave(GameState<G> gameState) {
+	public synchronized void forceSave(GameState gameState) {
 		persistGame(gameState);
 	}
 
@@ -223,7 +214,7 @@ public class GameRepository<G extends IGame> {
 		if ((userId == null) || userId.isEmpty()) {
 			return;
 		}
-		GameState<G> gameState = getGameStateByGameIdNoFallback(gameId);
+		GameState gameState = getGameStateByGameIdNoFallback(gameId);
 		if (gameState == null) {
 			return;
 		}
@@ -239,7 +230,7 @@ public class GameRepository<G extends IGame> {
 		return gameId;
 	}
 	
-	public synchronized GameState<G> getGameStateByUserId(String userId) {
+	public synchronized GameState getGameStateByUserId(String userId) {
 		if ((userId == null) || userId.isEmpty()) {
 			return null;
 		}
@@ -247,7 +238,7 @@ public class GameRepository<G extends IGame> {
 		if (gameId == null) {
 			return null;
 		}
-		GameState<G> gameState = getGameStateByGameId(gameId);
+		GameState gameState = getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return null;
 		}
@@ -260,8 +251,8 @@ public class GameRepository<G extends IGame> {
 		return gameState;
 	}
 
-	public GameState<G> getPersistedGameState(String userId, final Class<? extends IPersistentGameData> pgdClass) {
-		GameState<G> result = null;
+	public GameState getPersistedGameState(String userId) {
+		GameState result = null;
 		UserInfo userInfo = getUserPersistDAO().getUserInfo(userId);
 		if (userInfo != null) {
 			String jsonPersistentDataGameState = userInfo.getData();
@@ -273,45 +264,45 @@ public class GameRepository<G extends IGame> {
 		return result;
 	}
 
-	public GameState<G> getPersistedGameStateOLD(String userId, final Class<? extends IPersistentGameData> pgdClass) {
-		GameState<G> result = null;
-		String jsonPersistentDataGameState = getUserPersistDAO().getData(userId);
-		if (jsonPersistentDataGameState != null) {
-			Gson gson = new GsonBuilder().registerTypeAdapter(IPersistentGameData.class, new InstanceCreator<IPersistentGameData>() {
-				@Override
-				public IPersistentGameData createInstance(Type arg0) {
-					try {
-						return pgdClass.newInstance();
-					} catch (InstantiationException | IllegalAccessException e) {
-						throw new RuntimeException(e);
-					}
-				}
-			}).create();
-			PersistentDataGameState persistentDataGameState = gson.fromJson(jsonPersistentDataGameState, PersistentDataGameState.class);
-			result = createNewGame();
-			result.restoreFromPersistentData(persistentDataGameState);
-		}
-		return result;
-	}
+//	public GameState getPersistedGameStateOLD(String userId, final Class<? extends IPersistentGameData> pgdClass) {
+//		GameState result = null;
+//		String jsonPersistentDataGameState = getUserPersistDAO().getData(userId);
+//		if (jsonPersistentDataGameState != null) {
+//			Gson gson = new GsonBuilder().registerTypeAdapter(IPersistentGameData.class, new InstanceCreator<IPersistentGameData>() {
+//				@Override
+//				public IPersistentGameData createInstance(Type arg0) {
+//					try {
+//						return pgdClass.newInstance();
+//					} catch (InstantiationException | IllegalAccessException e) {
+//						throw new RuntimeException(e);
+//					}
+//				}
+//			}).create();
+//			PersistentDataGameState persistentDataGameState = gson.fromJson(jsonPersistentDataGameState, PersistentDataGameState.class);
+//			result = createNewGame();
+//			result.restoreFromPersistentData(persistentDataGameState);
+//		}
+//		return result;
+//	}
 
-	public synchronized GameState<G> createNewGame() {
+	public synchronized GameState createNewGame() {
 		return createNewGame(TIMEOUT_4H);
 	}
-	public synchronized GameState<G> createNewGame(long timeoutMillis) {
+	public synchronized GameState createNewGame(long timeoutMillis) {
 		String gameId = generateGameId();
-		G game;
+		SoloGame game;
 		try {
-			game = gameClazz.newInstance();
+			game = new SoloGame();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-		GameState<G> gameState = new GameState<G>(gameId, game, timeoutMillis);
+		GameState gameState = new GameState(gameId, game, timeoutMillis);
 		gameId2gameMap.put(gameId, gameState);
 		return gameState;
 	}
 
 	public synchronized void removeGame(String gameId) {
-		GameState<G> gameState = gameId2gameMap.get(gameId);
+		GameState gameState = gameId2gameMap.get(gameId);
 		if (gameState != null) {
 			if (gameState.getUserId() != null) {
 				userId2gameIdMap.remove(gameState.getUserId());
@@ -332,8 +323,8 @@ public class GameRepository<G extends IGame> {
 	}
 	
 	public synchronized void close() {
-		List<GameState<G>> gameStates = new ArrayList<GameState<G>>(gameId2gameMap.values());
-		for (GameState<G> gameState:gameStates) {
+		List<GameState> gameStates = new ArrayList<GameState>(gameId2gameMap.values());
+		for (GameState gameState:gameStates) {
 			persistGame(gameState);
 			removeGame(gameState.gameId);
 		}
@@ -351,8 +342,8 @@ public class GameRepository<G extends IGame> {
 
 	private synchronized void timeoutGameStates() {
 		long now = System.currentTimeMillis();
-		List<GameState<G>> gameStates = new ArrayList<GameState<G>>(gameId2gameMap.values());
-		for (GameState<G> gameState:gameStates) {
+		List<GameState> gameStates = new ArrayList<GameState>(gameId2gameMap.values());
+		for (GameState gameState:gameStates) {
 			if (gameState.isExpired(now)) {
 				persistGame(gameState);
 				removeGame(gameState.gameId);
@@ -363,7 +354,7 @@ public class GameRepository<G extends IGame> {
 		}
 	}
 
-	private void persistGame(GameState<G> gameState) {
+	private void persistGame(GameState gameState) {
 		if (gameState.getUserId() != null) {
 			if (gameState.persistedVersion != gameState.version) {
 				PersistentDataGameState persistentData = gameState.getPersistentData();
@@ -376,7 +367,7 @@ public class GameRepository<G extends IGame> {
 		}
 	}
 
-	public void changeGameId(GameState<G> gameState, String newGameId) {
+	public void changeGameId(GameState gameState, String newGameId) {
 		String oldGameId = gameState.getGameId();
 		gameState.gameId = newGameId;
 		gameId2gameMap.remove(oldGameId);

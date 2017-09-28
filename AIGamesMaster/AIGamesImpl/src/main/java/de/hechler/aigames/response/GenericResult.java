@@ -17,19 +17,25 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.api;
+package de.hechler.aigames.response;
 
-public class GetGameParameterResult extends GenericResult {
+public class GenericResult {
 
-	public String value;
+	public final static GenericResult genericOkResult = new GenericResult(ResultCodeEnum.S_OK);
+	public final static GenericResult genericUnknownGameId = new GenericResult(ResultCodeEnum.E_UNKNOWN_GAMEID);
+	public final static GenericResult genericInvalidParameterResult = new GenericResult(ResultCodeEnum.E_INVALID_PARAMETER);
+	public final static GenericResult genericUnknownCommandResult = new GenericResult(ResultCodeEnum.E_UNKNOWN_COMMAND);
+	public final static GenericResult genericUnknownErrorResult = new GenericResult(ResultCodeEnum.E_UNKNOWN_ERROR);
 	
-	public GetGameParameterResult(ResultCodeEnum resultCode) {
-		this(resultCode, null);
+	public ResultCodeEnum code;
+
+	public GenericResult(ResultCodeEnum code) {
+		this.code = code;
 	}
 	
-	public GetGameParameterResult(ResultCodeEnum resultCode, String value) {
-		super(resultCode);
-		this.value = value;
+	@Override
+	public String toString() {
+		return "R["+code+"]";
 	}
 
 }

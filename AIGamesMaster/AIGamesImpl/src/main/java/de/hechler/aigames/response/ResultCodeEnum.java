@@ -17,14 +17,28 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.ai;
+package de.hechler.aigames.response;
 
-public interface IGame {
+public enum ResultCodeEnum {
 
-	IPersistentGameData getPersistentGameData();
+	S_OK(0),
 	
-	void restoreFromPersistentData(IPersistentGameData persistentData);
+	S_PLAYER_WINS(20),
 	
-	void close();
+	E_UNKNOWN_GAMEID(100),
+	
+	E_UNKNOWN_COMMAND(900),
+	E_INVALID_PARAMETER(901),
+	
+	E_UNKNOWN_ERROR(1000);
+
+	int code;
+	
+	ResultCodeEnum(int code) {
+		this.code = code;
+	}
+	public int getCode() {
+		return code;
+	}
 	
 }

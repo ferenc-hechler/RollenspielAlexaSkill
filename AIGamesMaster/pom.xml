@@ -7,7 +7,6 @@
 
   <modules>
 	<module>SoloRoleplay</module>
-	<module>AIGamesAPI</module>
 	<module>AIGamesDB</module>
 	<module>AIGamesImpl</module>
 	<module>AIGamesRestService</module>

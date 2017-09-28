@@ -17,37 +17,45 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.api.move;
+package de.hechler.aigames.persist;
 
-import de.hechler.aigames.api.Move;
+import java.util.List;
 
-public class SoloRoleplayMove extends Move {
+import de.hechler.soloroleplay.PersistentDataSoloRoleplayGame;
 
-	public String description;
+public class PersistentDataSoloGame {
+
+	private String phase; 
+	private String soloName;
+	private List<String> activeFlags;
+	private PersistentDataSoloRoleplayGame gameData;
 	
-	public SoloRoleplayMove(String description) {
-		this.description = description;
+	public String getPhase() {
+		return phase;
+	}
+	public void setPhase(String phase) {
+		this.phase = phase;
+	}
+	public String getSoloName() {
+		return soloName;
+	}
+	public void setSoloName(String soloName) {
+		this.soloName = soloName;
+	}
+	public PersistentDataSoloRoleplayGame getGameData() {
+		return gameData;
+	}
+	public void setGameData(PersistentDataSoloRoleplayGame gameData) {
+		this.gameData = gameData;
+	}
+	public List<String> getActiveFlags() {
+		return activeFlags;
+	}
+	public void setActiveFlags(List<String> activeFlags) {
+		this.activeFlags = activeFlags;
 	}
 	
-	@Override
-	public String toString() {
-		return "DESC["+shorten(description, 40)+"]";
-	}
-
-	private String shorten(String text, int len) {
-		if ((text == null) || (text.length() <= len)) {
-			return text;
-		}
-		if (len <= 5) {
-			return text.substring(0, len);
-		}
-		int textLen = len - 3;
-		int beginLen = (int) (textLen * 0.67); 
-		int endLen = textLen - beginLen;
-		return text.substring(0, beginLen) + "..." + text.substring(text.length()-endLen);
-	}
-
 	
-	
+
+
 }
-

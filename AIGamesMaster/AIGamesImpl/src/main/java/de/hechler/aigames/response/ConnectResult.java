@@ -17,46 +17,18 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.ai.soloroleplay;
+package de.hechler.aigames.response;
 
 import java.util.List;
 
-import de.hechler.aigames.ai.IPersistentGameData;
-import de.hechler.soloroleplay.PersistentDataSoloRoleplayGame;
+public class ConnectResult extends GenericResult {
 
-public class PersistentDataSoloGame implements IPersistentGameData {
-
-	private String phase; 
-	private String soloName;
-	private List<String> activeFlags;
-	private PersistentDataSoloRoleplayGame gameData;
+	public String gameId;
+	public List<String> activeFlags;
 	
-	public String getPhase() {
-		return phase;
-	}
-	public void setPhase(String phase) {
-		this.phase = phase;
-	}
-	public String getSoloName() {
-		return soloName;
-	}
-	public void setSoloName(String soloName) {
-		this.soloName = soloName;
-	}
-	public PersistentDataSoloRoleplayGame getGameData() {
-		return gameData;
-	}
-	public void setGameData(PersistentDataSoloRoleplayGame gameData) {
-		this.gameData = gameData;
-	}
-	public List<String> getActiveFlags() {
-		return activeFlags;
-	}
-	public void setActiveFlags(List<String> activeFlags) {
+	public ConnectResult(ResultCodeEnum resultCode, String gameId, List<String> activeFlags) {
+		super(resultCode);
+		this.gameId = gameId;
 		this.activeFlags = activeFlags;
 	}
-	
-	
-
-
 }

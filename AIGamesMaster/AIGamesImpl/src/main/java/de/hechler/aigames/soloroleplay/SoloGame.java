@@ -17,28 +17,27 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.ai.soloroleplay;
+package de.hechler.aigames.soloroleplay;
 
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import de.hechler.aigames.SoloRoleplayDAO;
-import de.hechler.aigames.ai.DAOFactory;
-import de.hechler.aigames.ai.IGame;
-import de.hechler.aigames.ai.IPersistentGameData;
-import de.hechler.aigames.ai.soloroleplay.SoloGameUserConfig.UserConfigFlag;
-import de.hechler.aigames.api.DoMoveResult;
-import de.hechler.aigames.api.GenericResult;
-import de.hechler.aigames.api.GetGameParameterResult;
-import de.hechler.aigames.api.ResultCodeEnum;
-import de.hechler.aigames.api.move.SoloRoleplayMove;
+import de.hechler.aigames.persist.DAOFactory;
+import de.hechler.aigames.persist.PersistentDataSoloGame;
+import de.hechler.aigames.persist.SoloGameUserConfig;
+import de.hechler.aigames.persist.SoloGameUserConfig.UserConfigFlag;
+import de.hechler.aigames.response.GenericResult;
+import de.hechler.aigames.response.GetGameParameterResult;
+import de.hechler.aigames.response.ResultCodeEnum;
+import de.hechler.aigames.response.TextResult;
 import de.hechler.soloroleplay.SoloRoleplayGame;
 import de.hechler.soloroleplay.data.Response;
 import de.hechler.soloroleplay.data.SoloRoleplayData;
 import de.hechler.soloroleplay.util.TextUtil;
 
-public class SoloGame implements IGame {
+public class SoloGame {
 
 	private final static Logger logger = Logger.getLogger(SoloGame.class.getName());
 
@@ -74,7 +73,7 @@ public class SoloGame implements IGame {
 	
 	public GenericResult getDescription(String owner) {
 		String result = getDescriptionTextForPhase(owner);
-		return new DoMoveResult<SoloRoleplayMove>(ResultCodeEnum.S_OK, new SoloRoleplayMove(result));
+		return new TextResult(ResultCodeEnum.S_OK, result);
 	}
 
 	public GenericResult repeat(String owner, RepeatRange range) {
@@ -101,7 +100,7 @@ public class SoloGame implements IGame {
 		default:
 			throw new RuntimeException("UNKNOWN RepeatRange '"+range+"'");
 		}
-		return new DoMoveResult<SoloRoleplayMove>(ResultCodeEnum.S_OK, new SoloRoleplayMove(result));
+		return new TextResult(ResultCodeEnum.S_OK, result);
 	}
 
 
@@ -178,7 +177,7 @@ public class SoloGame implements IGame {
 				phase = Phase.FINISHED;
 				type = ResultCodeEnum.S_PLAYER_WINS; 
 			}
-			return new DoMoveResult<SoloRoleplayMove>(type, new SoloRoleplayMove(response.getText().toString()));
+			return new TextResult(type, response.getText().toString());
 		case FINISHED:
 			restart();
 			result = getDescriptionTextForPhase(owner);
@@ -186,7 +185,7 @@ public class SoloGame implements IGame {
 		default:
 			throw new RuntimeException("UNKNOWN PHASE "+phase);
 		}
-		return new DoMoveResult<SoloRoleplayMove>(ResultCodeEnum.S_OK, new SoloRoleplayMove(result));
+		return new TextResult(ResultCodeEnum.S_OK, result);
 	}
 
 	
@@ -308,13 +307,6 @@ public class SoloGame implements IGame {
 		return result.toString();
 	}
 
-
-
-	@Override
-	public void close() {
-		restart();
-		soloDao = null;
-	}
 
 
 	public GenericResult restart() {
@@ -500,8 +492,12 @@ public class SoloGame implements IGame {
 	}
 
 
+	
+	public void close() {
+		restart();
+		soloDao = null;
+	}
 
-	@Override
 	public PersistentDataSoloGame getPersistentGameData() {
 		PersistentDataSoloGame result = new PersistentDataSoloGame();
 		result.setPhase(phase.name());
@@ -515,8 +511,7 @@ public class SoloGame implements IGame {
 		return result; 
 	}
 	
-	@Override
-	public void restoreFromPersistentData(IPersistentGameData persistentDataObj) {
+	public void restoreFromPersistentData(PersistentDataSoloGame persistentDataObj) {
 		try {
 			PersistentDataSoloGame persistentData = (PersistentDataSoloGame) persistentDataObj;
 			this.phase = Phase.valueOf(persistentData.getPhase());

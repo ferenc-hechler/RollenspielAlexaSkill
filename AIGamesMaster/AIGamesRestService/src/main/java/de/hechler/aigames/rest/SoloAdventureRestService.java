@@ -33,10 +33,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
-import de.hechler.aigames.ai.soloroleplay.SoloGame.RepeatRange;
-import de.hechler.aigames.ai.soloroleplay.SoloRoleplayImpl;
-import de.hechler.aigames.api.GenericResult;
-import de.hechler.aigames.api.SoloConnectResult;
+import de.hechler.aigames.response.ConnectResult;
+import de.hechler.aigames.response.GenericResult;
+import de.hechler.aigames.soloroleplay.SoloRoleplayImpl;
+import de.hechler.aigames.soloroleplay.SoloGame.RepeatRange;
 import de.hechler.soloroleplay.util.TextUtil;
 
 //@WebServlet(urlPatterns = "/soloadv", loadOnStartup = 1)
@@ -211,12 +211,12 @@ public class SoloAdventureRestService extends HttpServlet {
 
  
 	private String connect(String userId) {
-		SoloConnectResult soloConnectResult= soloRoleplayImpl.connect(userId);
+		ConnectResult soloConnectResult= soloRoleplayImpl.connect(userId);
 		return gson.toJson(soloConnectResult);
 	}
 
 	private String forceConnect(String userId) {
-		SoloConnectResult soloConnectResult= soloRoleplayImpl.forceConnect(userId);
+		ConnectResult soloConnectResult= soloRoleplayImpl.forceConnect(userId);
 		return gson.toJson(soloConnectResult);
 	}
 

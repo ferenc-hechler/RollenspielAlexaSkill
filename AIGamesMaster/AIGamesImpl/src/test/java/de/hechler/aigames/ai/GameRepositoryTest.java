@@ -25,20 +25,20 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import de.hechler.aigames.ai.GameRepository.GameState;
-import de.hechler.aigames.ai.soloroleplay.SoloGame;
+import de.hechler.aigames.persist.GameRepository;
+import de.hechler.aigames.persist.GameRepository.GameState;
 
 public class GameRepositoryTest {
 
 	@Test
 	public void testGameRepository() {
-		GameRepository<SoloGame> repo = new GameRepository<SoloGame>(SoloGame.class);
-		GameState<SoloGame> gameState1 = repo.createNewGame();
-		GameState<SoloGame> gameState2 = repo.createNewGame();
+		GameRepository repo = new GameRepository();
+		GameState gameState1 = repo.createNewGame();
+		GameState gameState2 = repo.createNewGame();
 		String game1Id = gameState1.getGameId();
 		String game2Id = gameState2.getGameId();
 		assertNotEquals(game1Id, game2Id);
-		GameState<SoloGame> actual = repo.getGameStateByGameId(game2Id);
+		GameState actual = repo.getGameStateByGameId(game2Id);
 		assertEquals(gameState2, actual);
 		actual = repo.getGameStateByGameId(game1Id);
 		assertEquals(gameState1, actual);
@@ -58,13 +58,13 @@ public class GameRepositoryTest {
 
 	@Test
 	public void testRepoTimeout() {
-		GameRepository<SoloGame> repo = new GameRepository<SoloGame>(SoloGame.class);
-		GameState<SoloGame> gameState1 = repo.createNewGame(-1000);
-		GameState<SoloGame> gameState2 = repo.createNewGame();
+		GameRepository repo = new GameRepository();
+		GameState gameState1 = repo.createNewGame(-1000);
+		GameState gameState2 = repo.createNewGame();
 		String game1Id = gameState1.getGameId();
 		String game2Id = gameState2.getGameId();
 		assertNotEquals(game1Id, game2Id);
-		GameState<SoloGame> actual = repo.getGameStateByGameId(game2Id);
+		GameState actual = repo.getGameStateByGameId(game2Id);
 		assertEquals(gameState2, actual);
 		actual = repo.getGameStateByGameId(game1Id);
 		assertNull(actual);
@@ -75,13 +75,13 @@ public class GameRepositoryTest {
 
 	@Test
 	public void testRepoClose() {
-		GameRepository<SoloGame> repo = new GameRepository<SoloGame>(SoloGame.class);
-		GameState<SoloGame> gameState1 = repo.createNewGame();
-		GameState<SoloGame> gameState2 = repo.createNewGame();
+		GameRepository repo = new GameRepository();
+		GameState gameState1 = repo.createNewGame();
+		GameState gameState2 = repo.createNewGame();
 		String game1Id = gameState1.getGameId();
 		String game2Id = gameState2.getGameId();
 		repo.close();
-		GameState<SoloGame> actual = repo.getGameStateByGameId(game1Id);
+		GameState actual = repo.getGameStateByGameId(game1Id);
 		assertNull(actual);
 		actual = repo.getGameStateByGameId(game2Id);
 		assertNull(actual);

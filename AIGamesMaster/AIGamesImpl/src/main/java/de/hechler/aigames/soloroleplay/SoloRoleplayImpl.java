@@ -17,21 +17,22 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.ai.soloroleplay;
+package de.hechler.aigames.soloroleplay;
 
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import de.hechler.aigames.SoloRoleplayDAO;
-import de.hechler.aigames.ai.DAOFactory;
-import de.hechler.aigames.ai.GameRepository;
-import de.hechler.aigames.ai.GameRepository.GameState;
-import de.hechler.aigames.ai.soloroleplay.SoloGame.RepeatRange;
-import de.hechler.aigames.api.GenericResult;
-import de.hechler.aigames.api.GetGameParameterResult;
-import de.hechler.aigames.api.ResultCodeEnum;
-import de.hechler.aigames.api.SoloConnectResult;
+import de.hechler.aigames.persist.DAOFactory;
+import de.hechler.aigames.persist.GameRepository;
+import de.hechler.aigames.persist.GameRepository.GameState;
+import de.hechler.aigames.response.ConnectResult;
+import de.hechler.aigames.response.GenericResult;
+import de.hechler.aigames.response.GetGameParameterResult;
+import de.hechler.aigames.response.ResultCodeEnum;
+import de.hechler.aigames.soloroleplay.SoloGame.RepeatRange;
+import de.hechler.aigames.util.AudioProcessor;
 import de.hechler.soloroleplay.SoloRoleplayGame;
 import de.hechler.soloroleplay.data.SoloRoleplayData;
 import de.hechler.soloroleplay.data.ValidationException;
@@ -44,13 +45,13 @@ public class SoloRoleplayImpl {
 
 	private final static Logger logger = Logger.getLogger(SoloRoleplayImpl.class.getName());
 
-	private static GameRepository<SoloGame> gameRepository = new GameRepository<SoloGame>(SoloGame.class);
+	private static GameRepository gameRepository = new GameRepository();
 
-	public SoloConnectResult connect(String userId) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByUserId(userId);
+	public ConnectResult connect(String userId) {
+		GameState gameState = gameRepository.getGameStateByUserId(userId);
 		boolean gsPersisted = (gameState == null) ? true : gameState.isPersisted();
 		if (gameState == null) {
-			gameState = gameRepository.getPersistedGameState(userId, PersistentDataSoloGame.class);
+			gameState = gameRepository.getPersistedGameState(userId);
 			if (gameState != null) {
 				gameState.activate();
 				gameRepository.connectUser(gameState.getGameId(), userId);
@@ -68,15 +69,15 @@ public class SoloRoleplayImpl {
 		if (gsPersisted) {
 			gameState.ignoreTransientChanges();
 		}
-		return new SoloConnectResult(ResultCodeEnum.S_OK, gameState.getGameId(), gameState.getGame().getActivateFlags());
+		return new ConnectResult(ResultCodeEnum.S_OK, gameState.getGameId(), gameState.getGame().getActivateFlags());
 	}
 
-	public SoloConnectResult forceConnect(String userId) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByUserId(userId);
+	public ConnectResult forceConnect(String userId) {
+		GameState gameState = gameRepository.getGameStateByUserId(userId);
 		if (gameState != null) {
 			gameRepository.removeGame(gameState.getGameId());
 		}
-		gameState = gameRepository.getPersistedGameState(userId, PersistentDataSoloGame.class);
+		gameState = gameRepository.getPersistedGameState(userId);
 		if (gameState != null) {
 			gameState.activate();
 			gameRepository.connectUser(gameState.getGameId(), userId);
@@ -91,11 +92,11 @@ public class SoloRoleplayImpl {
 		}
 		gameState.update();
 		gameState.ignoreTransientChanges();
-		return new SoloConnectResult(ResultCodeEnum.S_OK, gameState.getGameId(), gameState.getGame().getActivateFlags());
+		return new ConnectResult(ResultCodeEnum.S_OK, gameState.getGameId(), gameState.getGame().getActivateFlags());
 	}
 
 	public GenericResult getDescription(String gameId) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByGameId(gameId);
+		GameState gameState = gameRepository.getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return GenericResult.genericUnknownGameId;
 		}
@@ -105,7 +106,7 @@ public class SoloRoleplayImpl {
 	}
 	
 	public GenericResult repeat(String gameId, RepeatRange range) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByGameId(gameId);
+		GameState gameState = gameRepository.getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return GenericResult.genericUnknownGameId;
 		}
@@ -115,7 +116,7 @@ public class SoloRoleplayImpl {
 	}
 	
 	public GenericResult answer(String gameId, String text) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByGameId(gameId);
+		GameState gameState = gameRepository.getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return GenericResult.genericUnknownGameId;
 		}
@@ -125,7 +126,7 @@ public class SoloRoleplayImpl {
 	}
 
 	public GenericResult activateFlag(String gameId, String flagName) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByGameId(gameId);
+		GameState gameState = gameRepository.getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return GenericResult.genericUnknownGameId;
 		}
@@ -136,7 +137,7 @@ public class SoloRoleplayImpl {
 	}
 
 	public GenericResult deactivateFlag(String gameId, String flagName) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByGameId(gameId);
+		GameState gameState = gameRepository.getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return GenericResult.genericUnknownGameId;
 		}
@@ -147,7 +148,7 @@ public class SoloRoleplayImpl {
 	}
 
 	public GenericResult directJump(String gameId, String chapter, String step) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByGameId(gameId);
+		GameState gameState = gameRepository.getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return GenericResult.genericUnknownGameId;
 		}
@@ -157,7 +158,7 @@ public class SoloRoleplayImpl {
 	}
 
 	public GenericResult restart(String gameId) {
-		GameState<SoloGame> gameState = gameRepository.getGameStateByGameId(gameId);
+		GameState gameState = gameRepository.getGameStateByGameId(gameId);
 		if (gameState == null) {
 			return GenericResult.genericUnknownGameId;
 		}

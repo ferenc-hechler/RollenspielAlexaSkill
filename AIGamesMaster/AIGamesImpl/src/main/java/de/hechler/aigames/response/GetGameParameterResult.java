@@ -17,40 +17,19 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.api;
+package de.hechler.aigames.response;
 
-public enum ResultCodeEnum {
+public class GetGameParameterResult extends GenericResult {
 
-	S_OK(0),
-	S_ACTIVATED(1),
-	S_CONTINUE(2),
+	public String value;
 	
-	S_NO_CHANGES(10),
-	S_CHANGES_EXIST(11),
-	
-	S_PLAYER_WINS(20),
-	S_DRAW(21),
-	S_AI_PLAYER_WINS(22),
-	S_AI_DRAW(23),
-	
-	E_UNKNOWN_GAMEID(100),
-	
-	E_INVALID_RANGE(200),
-	E_GAME_FINISHED(201),
-	E_INVALID_MOVE(202),
-
-	E_UNKNOWN_COMMAND(900),
-	E_INVALID_PARAMETER(901),
-	
-	E_UNKNOWN_ERROR(1000);
-
-	int code;
-	
-	ResultCodeEnum(int code) {
-		this.code = code;
-	}
-	public int getCode() {
-		return code;
+	public GetGameParameterResult(ResultCodeEnum resultCode) {
+		this(resultCode, null);
 	}
 	
+	public GetGameParameterResult(ResultCodeEnum resultCode, String value) {
+		super(resultCode);
+		this.value = value;
+	}
+
 }

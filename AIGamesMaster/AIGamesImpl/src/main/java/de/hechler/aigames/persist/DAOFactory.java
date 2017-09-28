@@ -17,28 +17,31 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.utils;
+package de.hechler.aigames.persist;
 
-import static org.junit.Assert.assertEquals;
+import de.hechler.aigames.SimpleDBConnection;
+import de.hechler.aigames.SimpleDBConnectionFactory;
+import de.hechler.aigames.SoloRoleplayDAO;
+import de.hechler.aigames.UserPersistDAO;
 
-import org.junit.Test;
+public class DAOFactory {
 
-public class PRNGTest {
+	public final static String DB_NAME = "solo";
+	
+	public static SimpleDBConnection initDB() {
+		return SimpleDBConnectionFactory.initDBConn(DB_NAME);
+	}
 
-	@Test
-	public void testPRNG() {
-		int actual;
-		PRNG prng = new PRNG(1);
-		actual = prng.nextInt();
-		assertEquals(-1155869325, actual);
-		actual = prng.nextInt();
-		assertEquals(431529176, actual);
-		actual = prng.nextInt(100);
-		assertEquals(95, actual);
-		actual = prng.nextInt();
-		assertEquals(1749940626, actual);
-		actual = prng.nextInt(4);
-		assertEquals(0, actual);
+	public static UserPersistDAO createUserPersistDAO() {
+		return new UserPersistDAO(DB_NAME);
+	}
+
+	public static SoloRoleplayDAO createSoloRoleplayDAO() {
+		return new SoloRoleplayDAO(DB_NAME);
+	}
+	
+	public static void shutdown() {
+		SimpleDBConnectionFactory.shutdown(DB_NAME);
 	}
 
 }

@@ -17,7 +17,7 @@
  * Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
  * Programm erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
-package de.hechler.aigames.ai;
+package de.hechler.aigames.persist;
 
 public class PersistentDataGameState {
 
@@ -26,7 +26,7 @@ public class PersistentDataGameState {
 	private long creationTimestamp;
 	private long lastUpdate;
 	private int version;
-	private IPersistentGameData persistentGameData;
+	private PersistentDataSoloGame persistentGameData;
 	
 	public long getCreationTimestamp() {
 		return creationTimestamp;
@@ -58,10 +58,10 @@ public class PersistentDataGameState {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public IPersistentGameData getPersistentGameData() {
+	public PersistentDataSoloGame getPersistentGameData() {
 		return persistentGameData;
 	}
-	public void setPersistentGameData(IPersistentGameData persistentGameData) {
+	public void setPersistentGameData(PersistentDataSoloGame persistentGameData) {
 		this.persistentGameData = persistentGameData;
 	}
 	

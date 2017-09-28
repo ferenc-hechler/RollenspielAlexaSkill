@@ -26,7 +26,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import de.hechler.aigames.SimpleDBConnection;
-import de.hechler.aigames.ai.DAOFactory;
+import de.hechler.aigames.persist.DAOFactory;
 import de.hechler.aigames.rest.SoloAdventureRestService;;
 
 public class StartupShutdownListener implements ServletContextListener {

@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
 
-    <display-name>Connect Four Rest Service</display-name>
-
-    <servlet>
-        <servlet-name>ConnectFourRestService</servlet-name>
-        <servlet-class>de.hechler.aigames.rest.ConnectFourRestService</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ConnectFourRestService</servlet-name>
-        <url-pattern>/rest/c4/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>BattleshipsRestService</servlet-name>
-        <servlet-class>de.hechler.aigames.rest.BattleshipsRestService</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>BattleshipsRestService</servlet-name>
-        <url-pattern>/rest/bs/*</url-pattern>
-    </servlet-mapping>
+    <display-name>Rollenspiel Soloabenteuer Rest Service</display-name>
 
     <servlet>
         <servlet-name>SoloAdventureService</servlet-name>

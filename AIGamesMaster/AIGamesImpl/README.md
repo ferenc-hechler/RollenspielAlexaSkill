@@ -1,5 +1,5 @@
 # AIGamesImpl
-Implementation for the REST Service. This Impl is used by the Alexa Skills "ConnectFour", "Four Wins" and "Solo Roleplay"
+Implementierung des REST Service fuer den Alexa Skill "Rollenspiel Soloabenteuer"
 
 # License GPLv3
 see text file LICENSE

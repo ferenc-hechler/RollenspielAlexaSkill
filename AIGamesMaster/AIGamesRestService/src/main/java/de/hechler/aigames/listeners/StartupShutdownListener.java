@@ -27,8 +27,6 @@ import javax.servlet.ServletContextListener;
 
 import de.hechler.aigames.SimpleDBConnection;
 import de.hechler.aigames.ai.DAOFactory;
-import de.hechler.aigames.rest.BattleshipsRestService;
-import de.hechler.aigames.rest.ConnectFourRestService;
 import de.hechler.aigames.rest.SoloAdventureRestService;;
 
 public class StartupShutdownListener implements ServletContextListener {
@@ -37,8 +35,6 @@ public class StartupShutdownListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent sce) {
 		initLogging();
 		checkRuntime();
-		ConnectFourRestService.connectFourImpl.startup();
-		BattleshipsRestService.battleshipsImpl.startup();
 		SoloAdventureRestService.soloRoleplayImpl.startup();
 	}
 	
@@ -49,8 +45,6 @@ public class StartupShutdownListener implements ServletContextListener {
 
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
-		ConnectFourRestService.connectFourImpl.shutdown();
-		BattleshipsRestService.battleshipsImpl.shutdown();
 		SoloAdventureRestService.soloRoleplayImpl.shutdown();
 	}
 	

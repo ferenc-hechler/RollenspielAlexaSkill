@@ -1,5 +1,5 @@
 # AIGamesAPI
-Interface for Connect-Four Game.
+Interface fuer den REST Service.
 
 # License GPLv3
 see text file LICENSE

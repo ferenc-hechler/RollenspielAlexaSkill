@@ -23,8 +23,6 @@
  */
 // SOLOABENTEUER
 var APP_ID = "*"; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
-// // TEST
-// var APP_ID = "amzn1.ask.skill.cee6af6a-f112-44e8-8f84-b11ce0c9c6ff"; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
 
 // // SOLO
 var endpoint = 'http://localhost:8080/AIGamesRestService/rest/solo';

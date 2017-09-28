@@ -1,5 +1,5 @@
 # AIGamesMaster
-Multi Module project fuer die Rest-Services die fuer den Alexa-Skill "Rollenspiel Soloabenteuer" verwendet werden.
+Multi Module project fuer den Rest-Service und die JSP-Seiten fuer den Alexa-Skill "Rollenspiel Soloabenteuer" verwendet werden.
 
 # License GPLv3
 see text file LICENSE

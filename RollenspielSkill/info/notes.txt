@@ -1,2 +1,5 @@
+Ideensammlung:
+--------------
+
 Catch-All-Intent:
 https://developer.amazon.com/de/blogs/post/tx3ihsfqsuf3rqp/why-a-custom-slot-is-the-literal-solution

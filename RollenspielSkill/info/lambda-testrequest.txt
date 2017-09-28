@@ -1,5 +1,6 @@
-// REQUEST: "Alexa sage Rollenspiel Sonne"
-// applicationId muss korrekt gesetzt werden (passend zur Umgebungsvariable process.ENV.APP_ID)
+REQUEST: "Alexa sage Rollenspiel Sonne"
+applicationId muss korrekt gesetzt werden (passend zur Umgebungsvariable process.ENV.APP_ID)
+---------------------------------------------
 
 {
   "session": {

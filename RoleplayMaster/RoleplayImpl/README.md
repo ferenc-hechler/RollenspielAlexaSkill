@@ -1,4 +1,4 @@
-# AIGamesImpl
+# RoleplayImpl
 Implementierung des REST Service fuer den Alexa Skill "Rollenspiel Soloabenteuer"
 
 # License GPLv3

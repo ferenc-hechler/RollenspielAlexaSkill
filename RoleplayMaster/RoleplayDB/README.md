@@ -1,5 +1,5 @@
-# AIGamesDB
-Database layer accessible for WebApps to persist their data.
+# RoleplayDB
+Database Layer fuer den Rollenspiel REST-Service.
 
 # License GPLv3
 see text file LICENSE

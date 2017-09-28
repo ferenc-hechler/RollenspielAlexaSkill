@@ -1,6 +1,0 @@
-Wilkommen zum Abenteuer 'Audio Test Standards' von feri
-
-AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3) AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3[vol=180]) AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3[1.000-3.000]) AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3[1.000-3.000,vol=79]) AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3|Hüpft auf einem Bein.) nochmal Sage OK, wenn du folgendes erledigt hast: Pause.
- > ok
-
-AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3[0.700-1.000]|auf) AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3[0.700-1.000,vol=130]|auf) AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3[1.000-]|einem Bein.) AUDIO(https://calcbox.de/audio/BSP/chapter2_action.mp3[-0.700]|Hüpft) Und Schluss.

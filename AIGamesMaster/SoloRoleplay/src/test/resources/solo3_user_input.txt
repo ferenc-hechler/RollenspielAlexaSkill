@@ -1,6 +1,0 @@
-ja
-nein
-ja
-nein
-nein
-Gewonnen

@@ -1,7 +1,0 @@
-Wilkommen zum Abenteuer 'Audio Test' von feri
-
-Es kommt zum Kampf. Es ist dunkel, vor Dir siehst Du ein schwach beleuchtetes Haus mit einem großen Gartentor. Du öffnest das Tor. AUDIO(https://calcbox.de/audio/Tuerknarren.mp3) Du betritts den Garten AUDIO(https://calcbox.de/audio/Schritte.mp3) Plötzlich schliesst sich hinter Dir das Gartentor von alleine AUDIO(https://calcbox.de/audio/Tuer-zuschlagen.mp3) Möchtest Du weiter gehen?
- > ja
-
-Mutig stapfst Du weiter.
-Und wie es weiter geht wird ein anderes mal erzählt. Und Schluss.

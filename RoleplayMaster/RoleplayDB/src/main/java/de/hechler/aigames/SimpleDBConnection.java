@@ -141,8 +141,8 @@ public class SimpleDBConnection {
 	}
 
 	
-//	public static void main(String[] args) {
-//		System.out.println(SimpleCrypto.encrypt(SEED, "geheim"));
-//	}
+	public static void main(String[] args) {
+		System.out.println(SimpleCrypto.encrypt(SEED, "FHJo7K1fo5EVeTKW"));
+	}
 	
 }

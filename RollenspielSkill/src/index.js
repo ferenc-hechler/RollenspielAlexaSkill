@@ -221,12 +221,12 @@ function execSendAnswerIntent(answer, intent, session, response) {
 	sendCommand(session, getSessionGameId(session), "answer", answer, "", function callbackFunc(result) {
         console.log(intent.name+": gid: "+ getSessionGameId(session) + ", res: "+result.code);
         if (result.code === "S_OK") {
-            console.log("description: " + result.move.description);
-        	speech.ask(result.move.description, response);
+            console.log("text: " + result.text);
+        	speech.ask(result.text, response);
         }
         else if (result.code === "S_PLAYER_WINS") {
-            console.log("description: " + result.move.description);
-        	speech.tell(result.move.description, response);
+            console.log("text: " + result.text);
+        	speech.tell(result.text, response);
         }
         else {
         	speech.respond(intent.name, result.code, response);
@@ -299,8 +299,8 @@ function execRepeatIntent(intent, session, response, defaultPart) {
 		sendCommand(session, getSessionGameId(session), "repeat", part, "", function callbackFunc(result) {
 	        console.log(intent.name+": gid: "+ getSessionGameId(session) + ", res: "+result.code);
 	        if (result.code === "S_OK") {
-	            console.log("repeat: " + result.move.description);
-	        	speech.ask(result.move.description, response);
+	            console.log("repeat: " + result.text);
+	        	speech.ask(result.text, response);
 	        }
 	        else {
 	        	speech.respond(intent.name, result.code, response);

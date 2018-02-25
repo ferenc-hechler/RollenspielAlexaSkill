@@ -30,3 +30,5 @@ GRANT ALL ON roleplaydb.* TO roleplaydbusr@'%';
 -- 	VALUES (1,'Beispiel','PUBLISHED','feri',
 -- 	'TITEL:Beispiel\r\n[BEGINN]\r\nLos gehts.\r\nWEITER:[1]\r\n[1]\r\nHier fehlt noch Text.\r\nJANEINENTSCHEIDUNG:\r\nMöchtest du aufhören?\r\nJA:[ENDE]\r\nNEIN:[1]\r\n[ENDE]\r\nGeschafft!\r\n\r\n',
 -- '2017-09-23 12:59:58','2017-09-23 13:00:40');
+
+-- UPDATE SOLOROLEPLAY dest, (SELECT * FROM SOLOROLEPLAY where id=54) src SET dest.SOLOTEXT = src.SOLOTEXT where dest.ID=50;

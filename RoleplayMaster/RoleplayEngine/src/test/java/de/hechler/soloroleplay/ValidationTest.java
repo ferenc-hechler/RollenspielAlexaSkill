@@ -81,6 +81,7 @@ public class ValidationTest {
 
 	@Test
 	public void validateOK() {
+		validateSolo("der_sagenhafte_schatz_des_drachen_mordor_solo.txt", "OK");
 		validateSolo("von_raeubern_und_herolden_solo.txt", "OK");
 		validateSolo("der_hauptmann_von_punin.txt", "OK");
 		validateSolo("ruecksprung_beispiel.txt", "OK");

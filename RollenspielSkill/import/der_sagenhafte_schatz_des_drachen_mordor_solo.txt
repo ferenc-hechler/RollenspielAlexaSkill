@@ -1,0 +1,621 @@
+TITEL: Der sagenhafte Schatz des Drachen Mordor
+AUTOR: Günther Winkler
+REGELWERK: Stift und Papier
+DAUER: 1 Stunde
+ORT: Höhlenlabyrinth
+ERSCHIENEN: 25. Februar 2018
+LIZENZ: (c) Copyright Günther Winkler 
+EMAIL: guenther.winkler@hotmail.com
+
+PHONEM(erwachst): ERvaxst
+PHONEM(Pilze): pIlts@
+PHONEM(Schatzzzz): Satssss 
+
+KURZBESCHREIBUNG:
+Bei diesem Spiel handelt es sich um ein Labyrinth-Abenteuer welches nur mit Stift und Papier gelöst werden kann.
+ 
+[BEGINN]
+Angelockt vom sagenhaften Schatz des Drachen Mordor erreichst du den Eingang in das Höhlensystem. 
+Viele Abenteurer haben sich bereits der Herausforderung gestellt, aber  ihr Versuch war vergebens.
+Achte daher auf alle Hinweise welche dir bei der Orientierung helfen, nur so hast du eine Chance das Rätsel um den Schatz zu lösen.
+Nichts ist wie es scheint!
+WEITER: [1]
+ 
+[1]
+JANEINENTSCHEIDUNG:
+Möchtest du nun in das Innere der Höhlen vordringen?
+ 
+JA:   [2]
+NEIN: [SCHNELLENDE]
+ 
+[2]
+Du siehst eine Höhle wo seitlich eine Steintafel an der Wand hängt mit dem Hinweis "Ausgang".
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [29]
+HINTEN: [33]
+AUSGANG: [SCHNELLENDE]
+ 
+[3]
+Du siehst in einem Holzpfosten 10 rostige Nägel.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [14]    
+HINTEN: [28]  
+SEITLICH: [31]  
+ 
+[4]
+Du siehst am Boden 4 leere Flaschen stehen.
+Zudem bemerkst du noch eine kleine Öffnung die von oben schräg in die Höhle führt.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [10]    
+HINTEN: [19]     
+SEITLICH: [26]   
+ 
+[5]
+Du siehst 17 Kieselsteine auf einem Haufen liegen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [22]    
+HINTEN: [11]     
+SEITLICH: [33]   
+ 
+[6]
+In dieser Höhle siehst du 16 alte Münzen in einer Mauernische liegen.
+Du zählst noch einmal da du dir nicht sicher bist ob du alle gezählt hast.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [24]    
+HINTEN: [15]     
+SEITLICH: [28]   
+ 
+[7]
+In dieser Höhle siehst du 3 ausgebrannte Fackeln an den Wänden hängen.
+Ein Ausgang ist verschüttet!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+HINTEN: [30]     
+SEITLICH: [18]  
+ 
+[8]
+Du siehst 19 Kieselsteine seitlich am Boden liegen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [37]    
+HINTEN: [36]     
+SEITLICH: [34]   
+ 
+[9]
+Du siehst 2 Pilze aus einem Wandspalt  wachsen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [18]    
+HINTEN: [16]     
+SEITLICH: [13]   
+ 
+[10]
+Du siehst 18 Stück rostige Nägel auf einem Haufen liegen.
+Ein Ausgang ist verschüttet!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+HINTEN: [4]    
+SEITLICH: [17]   
+ 
+[11]
+In dieser Höhle siehst du 5 ausgebrannte Fackeln an den Wänden hängen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [5]    
+HINTEN: [22]  
+SEITLICH: [25]   
+ 
+[12]
+Du siehst 11 Pilze an einem Felsvorsprung  wachsen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [17]    
+HINTEN: [29]     
+SEITLICH: [24]   
+ 
+[13]
+Du betrittst die Höhle und bemerkst, dass ein Ausgang schräg nach unten verläuft.
+Ob du diesen Weg wohl unbeschadet überstehen würdest?
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [50]    
+RUTSCHEN: [61]     
+SEITLICH: [9]   
+ 
+[14]
+Du siehst 20 alte Münzen über den Boden verteilt liegen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [32]    
+HINTEN: [3]      
+SEITLICH: [39]   
+ 
+ 
+[15]
+Du siehst 6 alte Trinkbecher auf einem alten Tisch stehen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [6]    
+HINTEN: [34]     
+SEITLICH: [37]   
+ 
+[16]
+Du betrittst die Höhle und siehst einen Kobold der dir den  Weg versperrt.
+Er trägt an der rechten Hand einen auffälligen Ring mit einem kunstvoll eingearbeiteten Rubin.
+Der Kobold erklärt: " Du hast sicher bereits meine Höhlen erkundet. Ich gebe dir den Weg frei wenn du mir nachfolgende Frage richtig beantwortest!"
+WEITER: [160]
+ 
+[17]
+Du betrittst die Höhle und bemerkst sofort die blau glänzenden Bergkristalle an den Wänden welche diesem Raum eine besondere Stimmung verleihen.
+Im zarten blauen Licht der Höhle entdeckst du ein Schwert und drei Kisten!
+Hier hat sich wohl jemand von unnötigem Ballast befreit.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [27]    
+HINTEN: [12]     
+SEITLICH: [10]   
+ 
+[18]
+Du betrittst die Höhle und bemerkst, dass ein Ausgang schräg nach unten verläuft.
+Ob du diesen Weg wohl unbeschadet überstehen würdest?
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+RUTSCHEN: [60]    
+HINTEN: [9]     
+SEITLICH: [7]   
+ 
+[19]
+Du betrittst die Höhle und bemerkst sofort die blau glänzenden Bergkristalle an den Wänden welche diesem Raum eine besondere Stimmung verleihen.
+Im zarten blauen Licht der Höhle entdeckst du ein Skelett, ein Schwert und eine Kiste!
+Hier hat sich wohl jemand zu spät von unnötigem Ballast befreit.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [4]    
+HINTEN: [20]     
+SEITLICH: [38]   
+ 
+[20]
+Du betrittst die Höhle und siehst einen Kobold der dir den  Weg  versperrt.
+Er trägt in der linken Hand ein grünes  Zepter welches bei genauer Betrachtung einem  Pilz gleicht.
+Der Kobold erklärt: " Du hast sicher bereits meine Höhlen erkundet. Ich gebe dir den Weg frei wenn du mir nachfolgende Frage richtig beantwortest!"
+WEITER: [200]
+ 
+ 
+[21]
+REGEL:
+BESUCHT(401):  [400]
+SONST:  [401]
+ 
+[22]
+Du betrittst die Höhle und bemerkst sofort die blau glänzenden Bergkristalle an den Wänden welche diesem Raum eine besondere Stimmung verleihen.
+Im zarten blauen Licht der Höhle entdeckst du einen Helm und ein Schwert!
+Für den Kampf nicht mehr zu gebrauchen!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [11]    
+HINTEN: [5]     
+SEITLICH: [21]   
+ 
+[23]
+Du betrittst die Höhle und siehst einen Kobold der dir den  Weg  versperrt.
+Seinen Hals schmückt eine auffällige Halskette gefertigt aus blauen Bergkristallen.
+Der Kobold erklärt: "Du hast sicher bereits meine Höhlen erkundet. Ich gebe dir den Weg frei wenn du mir nachfolgende Frage richtig beantwortest!"
+WEITER: [230]
+ 
+[24]
+Beim Betreten der Höhle werden deine Augen von grün schimmernden Pilzen geblendet.
+Es dauert einen Moment bis du die Gegenstände am Boden erkennen kannst.
+Du siehst ein Skelett, einen Helm und drei Beutel!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [34]    
+HINTEN: [6]     
+SEITLICH: [12]   
+ 
+ 
+[25]
+Beim Betreten der Höhle werden deine Augen von grün schimmernden Pilzen geblendet.
+Es dauert einen Moment bis du die Gegenstände am Boden erkennen kannst.
+Du siehst einen Helm und ein Schwert!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [40]    
+HINTEN: [21]     
+SEITLICH: [11]   
+ 
+[26]
+Du siehst 7 Pilze aus einem Wandspalt wachsen.
+Ein Ausgang ist verschüttet!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [23]    
+SEITLICH: [4]     
+ 
+ 
+[27]
+Du betrittst die Höhle und siehst beeindruckt nach oben. Vereinzelte rot leuchtende Rubine erinnern an einen Sternenhimmel.
+Du verweilst einen Moment ehe du in der Höhle auf zwei Skelette, zwei Schilde und drei Beutel aufmerksam wirst.
+Neben den Skeletten findest du einen verwirrenden Plan vom Höhlensystem welcher wohl der Grund für das Scheitern der Abenteurer gewesen sein dürfte.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [35]    
+HINTEN: [17]     
+SEITLICH: [40]   
+ 
+[28]
+Du betrittst die Höhle und siehst beeindruckt nach oben. Vereinzelte rot leuchtende Rubine erinnern an einen Sternenhimmel.
+Du verweilst einen Moment ehe du in der Höhle ein Skelett und ein Schild siehst.
+Neben dem Skelett findest du einen verwirrenden Plan vom Höhlensystem welcher wohl der Grund  für das Scheitern des Abenteurers gewesen sein dürfte.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [3]    
+HINTEN: [32]     
+SEITLICH: [6]   
+ 
+[29]
+In dieser Höhle siehst du 13 Kieselsteine am Boden liegen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [12]    
+HINTEN: [2]     
+SEITLICH: [20]   
+ 
+[30]
+Beim Betreten der Höhle findest du den sagenhaften Schatz des Drachen Mordor.
+Ein Beben begleitet von einem tiefen Grollen wird spürbar als sich der Drache plötzlich aus den Schätzen erhebt.
+Er richtet sich zur vollen Größe auf,  ehe seine dunkle Stimme ertönt: "Dies ist mein Schatzzzz!  Er wird durch einen starken  Zauber geschützt. Nur wer die drei Fragen richtig beantwortet  wird den Zauber brechen können.
+JANEINENTSCHEIDUNG:
+ 
+Bist du bereit die Rätsel zu lösen?"
+JA:   [300]
+NEIN: [56]
+ 
+[31]
+In dieser Höhle ist  ein Ausgang verschüttet.
+Unter dem  Geröll des versperrten Weges entdeckst du ein weiteres Skelett.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [16]  
+SEITLICH: [3]     
+ 
+[32]
+In dieser Höhle siehst du 15 rostige Nägel auf einem Haufen liegen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [28]    
+HINTEN: [14]     
+SEITLICH: [16]   
+ 
+[33]
+Beim Betreten der Höhle werden deine Augen von grün schimmernden Pilzen geblendet.
+Es dauert einen Moment bis du die Gegenstände am Boden erkennen kannst.
+Du siehst zwei Skelette, zwei Schwerter und einen Beutel!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [2]
+HINTEN: [35]     
+SEITLICH: [5]   
+ 
+[34]
+In dieser Höhle siehst du 8 Fledermäuse an der Decke hängen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [15]    
+HINTEN: [24]     
+SEITLICH: [8]  
+ 
+[35]
+Du siehst 14 Pilze am Boden wachsen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [33]    
+HINTEN: [27]     
+SEITLICH: [23]   
+ 
+[36]
+Du siehst 9 größere Steine am Boden liegen.
+Zudem bemerkst du noch eine kleine Öffnung die von oben schräg in die Höhle führt.
+Ein Ausgang ist verschüttet!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [8]    
+HINTEN: [23]     
+ 
+[37]
+Du betrittst die Höhle und siehst beeindruckt nach oben. Vereinzelte rot leuchtende Rubine erinnern an einen Sternenhimmel.
+Du verweilst einen Moment ehe du in der Höhle ein Skelett, zwei Helme und ein Schild siehst.
+Ein Ausgang ist verschüttet!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+HINTEN: [8]   
+SEITLICH: [15]   
+ 
+ 
+[38]
+In dieser Höhle siehst du 22 Kieselsteine über den Boden verteilt liegen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [39]    
+HINTEN: [40]     
+SEITLICH: [19]   
+ 
+[39]
+In dieser Höhle siehst du eine Fledermaus an der Decke hängen.
+Die Fledermaus starrt dich mit offenen Augen an.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [21]    
+HINTEN: [38]  
+SEITLICH: [14]   
+ 
+[40]
+Du siehst 21 alte Münzen über den Boden verteilt liegen.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [38]    
+HINTEN: [25]     
+SEITLICH: [27]   
+ 
+[50]
+Beim Betreten der Höhle findest du den sagenhaften Schatz des Drachen Mordor.
+Ein Beben begleitet von einem tiefen Grollen wird spürbar als sich der Drache plötzlich aus den Schätzen erhebt.
+Er richtet sich zur vollen Größe auf, ehe seine dunkle Stimme ertönt: "Dies ist mein Schatzzzz!  Er wird durch einen starken  Zauber geschützt. Nur wer die drei Fragen richtig beantwortet  wird den Zauber brechen können.
+JANEINENTSCHEIDUNG:
+ 
+Bist du bereit die Rätsel zu lösen?"
+JA:   [300]
+NEIN: [55]
+ 
+ 
+[55]
+Du setzt deine Erkundungen fort.
+WEITER: [7]
+ 
+[56]
+Du setzt deine Erkundungen fort.
+WEITER: [13]
+ 
+[60]
+Sitzend gleitest du den Gang nach unten bis du letzten Endes in eine Höhle fällst.
+WEITER: [4]
+ 
+[61]
+Sitzend gleitest du den Gang nach unten bis du letzten Endes in eine Höhle fällst.
+WEITER: [36]
+ 
+[160]
+ZUFALLSENTSCHEIDUNG:
+A: [165]
+B: [166]
+C: [167]
+D: [168]
+ 
+[165]
+ENTSCHEIDUNG:
+Sage mir, wie viele Helme hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [170]    
+DREI: [500]  
+VIER: [500]   
+ 
+[166]
+ENTSCHEIDUNG:
+Sage mir, wie viele Schilde hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500]    
+DREI: [500]  
+VIER: [170]   
+ 
+[167]
+ENTSCHEIDUNG:
+Sage mir, wie viele Beutel hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500]    
+DREI: [170]  
+VIER: [500]  
+ 
+[168]
+ENTSCHEIDUNG:
+Sage mir, wie viele Skelette hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500]    
+DREI: [500]  
+VIER: [170]  
+ 
+ 
+[170]
+"Die Antwort ist richtig, der Weg ist nun frei!"
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [9]    
+HINTEN: [31]     
+SEITLICH: [32]   
+ 
+[200]
+ZUFALLSENTSCHEIDUNG:
+A: [205]
+B: [206]
+C: [207]
+D: [208]
+ 
+ 
+[205]
+ENTSCHEIDUNG:
+Sage mir, wie viele Helme hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [210]    
+DREI: [500]  
+VIER: [500]   
+ 
+[206]
+ENTSCHEIDUNG:
+Sage mir, wie viele Schwerter hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500]    
+DREI: [210]  
+VIER: [500]   
+ 
+[207]
+ENTSCHEIDUNG:
+Sage mir, wie viele Beutel hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500]    
+DREI: [500]  
+VIER: [210]  
+ 
+[208]
+ENTSCHEIDUNG:
+Sage mir, wie viele Skelette hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500] 
+DREI: [210]  
+VIER: [500]  
+ 
+ 
+[210]
+"Die Antwort ist richtig, der Weg ist nun frei!"
+Ein Ausgang ist verschüttet!
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [19]    
+SEITLICH: [29]   
+ 
+ 
+[230]
+ZUFALLSENTSCHEIDUNG:
+A: [235]
+B: [236]
+C: [237]
+D: [238]
+ 
+[235]
+ENTSCHEIDUNG:
+Sage mir, wie viele Helme hast du in meinen drei Höhlen gezählt?
+EINS: [240]   
+ZWEI: [500]  
+DREI: [500]  
+VIER: [500]   
+ 
+[236]
+ENTSCHEIDUNG:
+Sage mir, wie viele Schwerter hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500]    
+DREI: [240]  
+VIER: [500]   
+ 
+[237]
+ENTSCHEIDUNG:
+Sage mir, wie viele Kisten hast du in meinen drei Höhlen gezählt?
+EINS: [500]   
+ZWEI: [500]    
+DREI: [500]  
+VIER: [240]  
+ 
+[238]
+ENTSCHEIDUNG:
+Sage mir, wie viele Skelette hast du in meinen drei Höhlen gezählt?
+EINS: [240]   
+ZWEI: [500]    
+DREI: [500]  
+VIER: [500]  
+ 
+ 
+[240]
+"Die Antwort ist richtig, der Weg ist nun frei!"
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [36]    
+HINTEN: [26]     
+SEITLICH: [35]   
+ 
+[300]
+RÄTSEL:
+Erste Frage:" Wie viele Kobolde bewachen mein Höhlensystem?"
+ 
+ANTWORT(drei): Das war richtig! [301]
+FEHLVERSUCHE(1): [510]
+AUFGEBEN: [305]
+ 
+[301]
+RÄTSEL:
+Nun zur zweiten Frage:
+" Wie viele Abenteurer haben bisher vergebens versucht meinen Schatz zu stehlen? Mögen Ihre Gebeine zu Staub zerfallen!"
+ANTWORT(neun): Das war ebenfalls richtig! [302]
+FEHLVERSUCHE(1): [510]
+AUFGEBEN: [305]
+ 
+[302]
+RÄTSEL:
+Nun die letzte entscheidende  Frage:
+ " Wie viele Züge sind notwendig um auf dem schnellsten Wege ins Freie zu gelangen!"
+ANTWORT(sieben): [303]
+FEHLVERSUCHE(1): [510]
+AUFGEBEN: [305]
+ 
+[303]
+Der Drache brüllt erzürnt: " Nein … das kann nicht sein! Wie ist das möglich?  Der Zauber ist gebrochen!"
+Getrieben vom nahenden Wahnsinn  verschwindet der Drache in den Tiefen des Höhlensystems.
+Gratuliere! Du hast es geschafft!   
+Der sagenhafte Schatz des Drachen Mordor ist dein.
+Ein sorgenfreies Leben in Wohlstand und Reichtum steht dir nun bevor.
+Das Abenteuer ist zu Ende.
+WEITER: [ENDE]
+ 
+[305]
+ENTSCHEIDUNG:
+In welcher Richtung möchtest du die Höhle mit dem Schatz wieder verlassen?
+VORNE: [7]  
+HINTEN: [13]  
+ 
+[400]
+In dieser Höhle siehst du 12 alte Münzen auf einem alten Tisch liegen.
+Der Spalt im Boden ist nun sichtbar. Er kann gefahrlos umgangen werden.
+ENTSCHEIDUNG:
+Welchen Stollen möchtest du weiter erkunden?
+VORNE: [25]   
+HINTEN: [39]     
+SEITLICH: [22]   
+ 
+[401]
+Nachdem du die Höhle betrittst gibt der Boden unter deinen Füßen nach.
+Du fällst durch einen Spalt nach unten!
+Obwohl du hart am Felsboden aufschlägst, überstehst du diesen Sturz ohne Verletzungen.
+WEITER: [8]
+ 
+[500]
+"Die Antwort ist falsch!"
+Der Kobold schließt seine Augen und spricht  dabei einen  Zauber. 
+Begleitet von einem Gefühl in die Tiefe zu stürzen wirst du in eine andere Höhle teleportiert.
+Vielleicht warst du schon einmal an diesem Ort?
+WEITER: [600]
+ 
+[510]
+"Die Antwort ist falsch!" 
+Der Drache Mordor  führt kräftige Flügelschläge durch. Die erzeugten Winde wirbeln dich durch das Höhlensystem.
+Mit dem Kopf wirst du gegen den Fels geschleudert und verlierst die Besinnung.
+Als du wieder erwachst befindest du dich an einem anderen Ort.
+WEITER: [600]
+ 
+[600]
+ZUFALLSENTSCHEIDUNG:
+A: [3]
+B: [5]
+C: [9]
+D: [12]
+E: [15]
+F: [35]
+G: [40]
+ 
+[SCHNELLENDE]
+Komme wieder wenn du die Höhlen weiter erkunden möchtest.
+WEITER: [ENDE]
+ 
+[ENDE]
+Ich hoffe, dieses Abenteuer hat Spaß gemacht und ich würde mich über Lob, Kritik
+und Verbesserungsvorschläge freuen. Meine EMail Adresse ist guenther.winkler@hotmail.com
